@@ -2,13 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import {
-    Box,
-    Button,
-    Container,
-    Typography,
-} from "@mui/material"; // Importing MUI components
-import useMediaQuery from "@mui/material/useMediaQuery"; // For responsiveness
+import { Box, Button, Container, Typography, } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Header() {
     const sponsors = [
@@ -25,12 +20,11 @@ export default function Header() {
         { src: "/images/background2.png", alt: "Background 2" },
     ];
 
-    // For responsiveness
-    const isSmallScreen = useMediaQuery("(max-width:600px)");
+    const isSmallScreen = useMediaQuery("(max-width:650px)");
 
     return (
         <Box position="relative" sx={{ height: "100vh", overflow: "hidden" }}>
-            {/* Background Swiper */}
+
             <Swiper
                 modules={[Autoplay]}
                 spaceBetween={0}
@@ -68,14 +62,13 @@ export default function Header() {
                 ))}
             </Swiper>
 
-            {/* Logo at the top */}
             <Box
                 sx={{
                     position: "absolute",
-                    top: "20px", // Adjust this for spacing from the top
+                    top: "20px",
                     left: "50%",
-                    transform: "translateX(-50%)", // Center horizontally
-                    zIndex: 3, // Ensure it's above the background
+                    transform: "translateX(-50%)",
+                    zIndex: 3,
                 }}
             >
                 <img
@@ -87,40 +80,37 @@ export default function Header() {
                 />
             </Box>
 
-            {/* Overlay Content */}
             <Box
                 sx={{
                     position: "absolute",
                     top: "50%",
                     left: "50%",
-                    transform: "translate(-50%, -50%)", // Center the content vertically and horizontally
+                    transform: "translate(-50%, -50%)",
                     zIndex: 2,
                     textAlign: "center",
                     color: "white",
-                    padding: "0 20px", // Add padding for better responsiveness
-                    maxWidth: "90vw", // Ensure it doesn't overflow
+                    padding: "0 20px",
+                    maxWidth: "90vw",
                 }}
             >
                 <Container>
                     <Box>
-                        {/* Heading */}
                         <Typography
                             variant={isSmallScreen ? "h4" : "h2"}
                             fontWeight={isSmallScreen ? "bold" : "medium"}
                             gutterBottom
-                            sx={{ wordWrap: "break-word", whiteSpace: "normal" }} // Ensure text wraps
+                            sx={{ wordWrap: "break-word", whiteSpace: "normal" }}
                         >
                             Join the fight for a{" "}
                             <span style={{ color: "#32BFC2" }}>better world</span>
                         </Typography>
 
-                        {/* Subheading */}
                         <Typography
                             variant="body2"
                             sx={{
                                 mb: 3,
                                 fontSize: isSmallScreen ? "1rem" : "1.2rem",
-                                wordWrap: "break-word", // Ensure text wraps properly
+                                wordWrap: "break-word",
                                 whiteSpace: "normal",
                             }}
                         >
@@ -129,7 +119,6 @@ export default function Header() {
                             since 2020.
                         </Typography>
 
-                        {/* Responsive Button */}
                         <Button
                             variant="contained"
                             color="primary"
@@ -140,12 +129,11 @@ export default function Header() {
                     </Box>
                 </Container>
 
-                {/* Sponsors Section */}
                 <Container sx={{ mt: 10 }}>
                     <Swiper
                         modules={[Autoplay]}
                         spaceBetween={30}
-                        slidesPerView={isSmallScreen ? 2 : 4} // Responsive number of slides
+                        slidesPerView={isSmallScreen ? 2 : 4}
                         autoplay={{ delay: 5000, disableOnInteraction: false }}
                         loop={true}
                         speed={1500}

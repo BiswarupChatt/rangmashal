@@ -122,7 +122,14 @@ export default function Header() {
                         <Button
                             variant="contained"
                             color="primary"
-                            sx={{ padding: isSmallScreen ? "8px 16px" : "10px 20px" }}
+                            sx={{
+                                padding: isSmallScreen ? "8px 16px" : "10px 20px", backgroundColor: "#32BFC2",
+                                transition: "background-color 0.3s ease", 
+                                "&:hover": {
+                                    backgroundColor: "#FFD041", 
+                                    color: 'black'
+                                }
+                            }}
                         >
                             Donate Now
                         </Button>

@@ -1,11 +1,18 @@
+import { createTheme, ThemeProvider } from '@mui/material';
 import Home from './pages/Home';
-import './App.css';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Montserrat, Arial, sans-serif'
+  }
+})
 
 function App() {
   return (
-    <div className="App">
+    <ThemeProvider theme={theme}>
       <Home />
-    </div>
+    </ThemeProvider>
+
   );
 }
 

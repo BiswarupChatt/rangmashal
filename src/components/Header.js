@@ -7,13 +7,13 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Header() {
     const sponsors = [
-        { id: 1, img: "/images/sponsor1.png", alt: "Sponsor 1" },
-        { id: 2, img: "/images/sponsor2.png", alt: "Sponsor 2" },
-        { id: 3, img: "/images/sponsor3.png", alt: "Sponsor 3" },
-        { id: 4, img: "/images/sponsor4.png", alt: "Sponsor 4" },
-        { id: 5, img: "/images/sponsor5.png", alt: "Sponsor 5" },
-        { id: 6, img: "/images/sponsor6.png", alt: "Sponsor 6" },
-    ];
+        { id: 1, img: "/images/sponsor4.png", alt: "Abzooba", url: "https://sponsor4.com" },
+        { id: 2, img: "/images/sponsor3.png", alt: "Worly", url: "https://sponsor3.com" },
+        { id: 3, img: "/images/canara-bank.png", alt: "Canara Bank", url: "https://canarabank.com/" },
+        { id: 4, img: "/images/kidzee.png", alt: "Kidzee", url: "https://www.kidzee.com/" },
+        { id: 5, img: "/images/apsara.png", alt: "Apsara", url: "https://sponsor5.com" },
+        { id: 6, img: "/images/sponsor6.png", alt: "Mouth Melto", url: "https://sponsor6.com" },
+    ]
 
     const backgroundImages = [
         { src: "/images/background1.png", alt: "Background 1" },
@@ -124,9 +124,9 @@ export default function Header() {
                             color="primary"
                             sx={{
                                 padding: isSmallScreen ? "8px 16px" : "10px 20px", backgroundColor: "#32BFC2",
-                                transition: "background-color 0.3s ease", 
+                                transition: "background-color 0.3s ease",
                                 "&:hover": {
-                                    backgroundColor: "#FFD041", 
+                                    backgroundColor: "#FFD041",
                                     color: 'black'
                                 }
                             }}
@@ -147,15 +147,18 @@ export default function Header() {
                     >
                         {sponsors.map((sponsor) => (
                             <SwiperSlide key={sponsor.id}>
-                                <img
-                                    src={sponsor.img}
-                                    alt={sponsor.alt}
-                                    style={{
-                                        width: "100px",
-                                        height: "auto",
-                                        margin: "0 10px",
-                                    }}
-                                />
+                                <a href={sponsor.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+                                    <img
+                                        src={sponsor.img}
+                                        alt={sponsor.alt}
+                                        style={{
+                                            width: "100px",
+                                            height: "auto",
+                                            margin: "0 10px",
+                                            cursor: "pointer",
+                                        }}
+                                    />
+                                </a>
                             </SwiperSlide>
                         ))}
                     </Swiper>

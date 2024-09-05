@@ -137,6 +137,9 @@ export default function Header() {
                 </Container>
 
                 <Container sx={{ mt: 10 }}>
+                    <Typography variant="body1" marginBottom={3}>
+                        Our Partners
+                    </Typography>
                     <Swiper
                         modules={[Autoplay]}
                         spaceBetween={30}

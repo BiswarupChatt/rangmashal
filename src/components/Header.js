@@ -11,7 +11,7 @@ export default function Header() {
         { id: 2, img: "/images/sponsor3.png", alt: "Worly", url: "https://sponsor3.com" },
         { id: 3, img: "/images/canara-bank.png", alt: "Canara Bank", url: "https://canarabank.com/" },
         { id: 4, img: "/images/kidzee.png", alt: "Kidzee", url: "https://www.kidzee.com/" },
-        { id: 5, img: "/images/apsara.png", alt: "Apsara", url: "https://sponsor5.com" },
+        { id: 5, img: "/images/apsara.png", alt: "Apsara", url: "https://www.hindustanpencils.com/category/products/apsara/apsara-pencils/" },
         { id: 6, img: "/images/sponsor6.png", alt: "Mouth Melto", url: "https://sponsor6.com" },
     ]
 

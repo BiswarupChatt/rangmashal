@@ -1,9 +1,11 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay } from "swiper/modules";
-import { Box, Button, Container, Typography, } from "@mui/material";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import React, { useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/css"
+import LazyLoad from "react-lazyload"
+import { Autoplay } from "swiper/modules"
+import { Box, Container, Typography, } from "@mui/material"
+import DonateButton from "./reusable/DonateButton"
+import useMediaQuery from "@mui/material/useMediaQuery"
 
 export default function Header() {
     const sponsors = [
@@ -21,36 +23,21 @@ export default function Header() {
     const backgroundImages = [
         { src: "/images/background1.png", alt: "Background 1" },
         { src: "/images/background2.png", alt: "Background 2" },
-    ];
+    ]
 
-    const isMediumScreen = useMediaQuery("(max-width:650px)");
-    const isSmallScreen = useMediaQuery("(max-width:350px)");
+    const isMediumScreen = useMediaQuery("(max-width:650px)")
+    const isSmallScreen = useMediaQuery("(max-width:350px)")
 
     return (
         <Box position="relative" sx={{ height: "100vh", overflow: "hidden" }}>
 
-            <Swiper
-                modules={[Autoplay]}
-                spaceBetween={0}
-                slidesPerView={1}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
-                loop={true}
-                speed={1500}
-                className="background-swiper"
-            >
+            <Swiper spaceBetween={0} slidesPerView={1} autoplay={{ delay: 5000 }} loop={true} speed={1500}>
                 {backgroundImages.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <Box
-                            component="div"
-                            sx={{
-                                backgroundImage: `url(${image.src})`,
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                                width: "100%",
-                                height: "100vh",
-                                position: "relative",
-                                "::before": {
-                                    content: '""',
+                        <Box sx={{ position: "relative", width: "100%", height: "100vh" }}>
+                            <LazyLoadImageWithBlur src={image.src} alt={image.alt} />
+                            <Box
+                                sx={{
                                     position: "absolute",
                                     top: 0,
                                     left: 0,
@@ -59,9 +46,9 @@ export default function Header() {
                                     background:
                                         "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))",
                                     zIndex: 1,
-                                },
-                            }}
-                        />
+                                }}
+                            />
+                        </Box>
                     </SwiperSlide>
                 ))}
             </Swiper>
@@ -118,25 +105,13 @@ export default function Header() {
                                 whiteSpace: "normal",
                             }}
                         >
-                            Welcome to Rangmashal Foundation, India&apos;s leading NGO that has
+                            Welcome to Rangmashal Foundation, India&aposs leading NGO that has
                             been empowering underprivileged children and women across India
                             since 2020.
                         </Typography>
 
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            sx={{
-                                padding: isMediumScreen ? "8px 16px" : "10px 20px", backgroundColor: "#32BFC2",
-                                transition: "background-color 0.3s ease",
-                                "&:hover": {
-                                    backgroundColor: "#FFD041",
-                                    color: 'black'
-                                }
-                            }}
-                        >
-                            Donate Now
-                        </Button>
+                        <DonateButton label="Donate Now" />
+
                     </Box>
                 </Container>
 
@@ -172,5 +147,27 @@ export default function Header() {
                 </Container>
             </Box>
         </Box>
+    )
+}
+
+
+const LazyLoadImageWithBlur = ({ src, alt }) => {
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    return (
+        <LazyLoad height={100} once>
+            <img
+                src={src}
+                alt={alt}
+                onLoad={() => setIsLoaded(true)}
+                style={{
+                    width: "100%",
+                    height: "100vh",
+                    objectFit: "cover",
+                    filter: isLoaded ? "none" : "blur(10px)",
+                    transition: "filter 0.5s ease",
+                }}
+            />
+        </LazyLoad>
     );
 }

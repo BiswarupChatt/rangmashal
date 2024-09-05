@@ -20,7 +20,8 @@ export default function Header() {
         { src: "/images/background2.png", alt: "Background 2" },
     ];
 
-    const isSmallScreen = useMediaQuery("(max-width:650px)");
+    const isMediumScreen = useMediaQuery("(max-width:650px)");
+    const isSmallScreen = useMediaQuery("(max-width:350px)");
 
     return (
         <Box position="relative" sx={{ height: "100vh", overflow: "hidden" }}>
@@ -75,7 +76,7 @@ export default function Header() {
                     src="/images/logo.png"
                     alt="Organization Logo"
                     style={{
-                        width: isSmallScreen ? "200px" : "350px",
+                        width: isSmallScreen ? "150px" : isMediumScreen ? "200px" : "350px",
                     }}
                 />
             </Box>
@@ -96,8 +97,8 @@ export default function Header() {
                 <Container>
                     <Box>
                         <Typography
-                            variant={isSmallScreen ? "h4" : "h2"}
-                            fontWeight={isSmallScreen ? "bold" : "medium"}
+                            variant={isMediumScreen ? "h4" : "h2"}
+                            fontWeight={isMediumScreen ? "bold" : "medium"}
                             gutterBottom
                             sx={{ wordWrap: "break-word", whiteSpace: "normal" }}
                         >
@@ -109,12 +110,12 @@ export default function Header() {
                             variant="body2"
                             sx={{
                                 mb: 3,
-                                fontSize: isSmallScreen ? "1rem" : "1.2rem",
+                                fontSize: isMediumScreen ? "1rem" : "1.2rem",
                                 wordWrap: "break-word",
                                 whiteSpace: "normal",
                             }}
                         >
-                            Welcome to Rangmashal Foundation, India’s leading NGO that has
+                            Welcome to Rangmashal Foundation, India&apos;s leading NGO that has
                             been empowering underprivileged children and women across India
                             since 2020.
                         </Typography>
@@ -123,7 +124,7 @@ export default function Header() {
                             variant="contained"
                             color="primary"
                             sx={{
-                                padding: isSmallScreen ? "8px 16px" : "10px 20px", backgroundColor: "#32BFC2",
+                                padding: isMediumScreen ? "8px 16px" : "10px 20px", backgroundColor: "#32BFC2",
                                 transition: "background-color 0.3s ease",
                                 "&:hover": {
                                     backgroundColor: "#FFD041",
@@ -143,7 +144,7 @@ export default function Header() {
                     <Swiper
                         modules={[Autoplay]}
                         spaceBetween={30}
-                        slidesPerView={isSmallScreen ? 2 : 4}
+                        slidesPerView={isSmallScreen ? 1 : isMediumScreen ? 2 : 4}
                         autoplay={{ delay: 5000, disableOnInteraction: false }}
                         loop={true}
                         speed={1500}

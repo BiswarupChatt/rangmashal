@@ -2,6 +2,7 @@ import React from 'react'
 import { createTheme, ThemeProvider, CssBaseline } from '@mui/material'
 // import Home from './pages/Home'
 import AppRoutes from './routes/AppRoutes'
+import Navbar from './components/Navbar'
 
 const theme = createTheme({
   typography: {
@@ -34,8 +35,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Navbar />
       <AppRoutes />
-      {/* <Home /> */}
     </ThemeProvider>
   )
 }

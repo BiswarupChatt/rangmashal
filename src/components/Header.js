@@ -31,7 +31,13 @@ export default function Header() {
     return (
         <Box position="relative" sx={{ height: "100vh", overflow: "hidden" }}>
 
-            <Swiper spaceBetween={0} slidesPerView={1} autoplay={{ delay: 5000 }} loop={true} speed={1500}>
+            <Swiper
+                spaceBetween={0}
+                slidesPerView={1}
+                autoplay={{ delay: 5000 }}
+                loop={true} speed={1500}
+            >
+
                 {backgroundImages.map((image, index) => (
                     <SwiperSlide key={index}>
                         <Box sx={{ position: "relative", width: "100%", height: "100vh" }}>

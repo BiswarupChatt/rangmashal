@@ -1,11 +1,11 @@
-import React from 'react';
-import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
-import Home from './pages/Home'; 
-
+import React from 'react'
+import { createTheme, ThemeProvider, CssBaseline } from '@mui/material'
+// import Home from './pages/Home'
+import AppRoutes from './routes/AppRoutes'
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'Montserrat, Arial, sans-serif', 
+    fontFamily: 'Montserrat, Arial, sans-serif',
   },
   palette: {
     primary: {
@@ -15,7 +15,7 @@ const theme = createTheme({
       main: '#FFD041',
     },
     background: {
-      default: '#f5f5f5',
+      default: '#f7f7f7',
     },
   },
   spacing: 8,
@@ -28,15 +28,16 @@ const theme = createTheme({
   //     },
   //   },
   // },
-});
+})
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Home />
+      <AppRoutes />
+      {/* <Home /> */}
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App

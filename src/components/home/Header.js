@@ -1,43 +1,41 @@
-import React, { useState } from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css"
-import LazyLoad from "react-lazyload"
-import { Autoplay } from "swiper/modules"
-import { Box, Container, Typography, } from "@mui/material"
-import DonateButton from "../reusable/DonateButton"
-import useMediaQuery from "@mui/material/useMediaQuery"
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay"; // Make sure to import the autoplay CSS
+import LazyLoad from "react-lazyload";
+import { Autoplay } from "swiper/modules";
+import { Box, Container, Typography } from "@mui/material";
+import DonateButton from "../reusable/DonateButton";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Header() {
     const sponsors = [
-        // { id: 1, img: "/images/sponsor4.png", alt: "Abzooba", url: "https://sponsor4.com" },
-        // { id: 2, img: "/images/sponsor3.png", alt: "Worly", url: "https://sponsor3.com" },
         { id: 1, img: "/images/kidzee.png", alt: "Kidzee", url: "https://www.kidzee.com/" },
         { id: 2, img: "/images/canara-bank.png", alt: "Canara Bank", url: "https://canarabank.com/" },
         { id: 3, img: "/images/apsara.png", alt: "Apsara", url: "https://www.hindustanpencils.com/category/products/apsara/apsara-pencils/" },
         { id: 4, img: "/images/kidzee.png", alt: "Kidzee", url: "https://www.kidzee.com/" },
         { id: 5, img: "/images/canara-bank.png", alt: "Canara Bank", url: "https://canarabank.com/" },
         { id: 6, img: "/images/apsara.png", alt: "Apsara", url: "https://www.hindustanpencils.com/category/products/apsara/apsara-pencils/" },
-        // { id: 6, img: "/images/sponsor6.png", alt: "Mouth Melto", url: "https://sponsor6.com" },
-    ]
+    ];
 
     const backgroundImages = [
         { src: "/images/background1.png", alt: "Background 1" },
         { src: "/images/background2.png", alt: "Background 2" },
-    ]
+    ];
 
-    const isMediumScreen = useMediaQuery("(max-width:650px)")
-    const isSmallScreen = useMediaQuery("(max-width:350px)")
+    const isMediumScreen = useMediaQuery("(max-width:650px)");
+    const isSmallScreen = useMediaQuery("(max-width:350px)");
 
     return (
         <Box position="relative" sx={{ height: "100vh", overflow: "hidden" }}>
-
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
-                autoplay={{ delay: 5000 }}
-                loop={true} speed={1500}
+                autoplay={{ delay: 5000, disableOnInteraction: false }} 
+                loop={true}
+                speed={1500}
+                modules={[Autoplay]} 
             >
-
                 {backgroundImages.map((image, index) => (
                     <SwiperSlide key={index}>
                         <Box sx={{ position: "relative", width: "100%", height: "100vh" }}>
@@ -49,8 +47,7 @@ export default function Header() {
                                     left: 0,
                                     width: "100%",
                                     height: "100%",
-                                    background:
-                                        "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))",
+                                    background: "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))",
                                     zIndex: 1,
                                 }}
                             />
@@ -59,6 +56,7 @@ export default function Header() {
                 ))}
             </Swiper>
 
+            {/* Logo and Main Content */}
             <Box
                 sx={{
                     position: "absolute",
@@ -111,16 +109,14 @@ export default function Header() {
                                 whiteSpace: "normal",
                             }}
                         >
-                            Welcome to Rangmashal Foundation, India&aposs leading NGO that has
-                            been empowering underprivileged children and women across India
-                            since 2020.
+                            Welcome to Rangmashal Foundation, India&aposs leading NGO that has been empowering underprivileged children and women across India since 2020.
                         </Typography>
 
                         <DonateButton label="Donate Now" />
-
                     </Box>
                 </Container>
 
+                {/* Sponsors Section */}
                 <Container sx={{ mt: 10 }}>
                     <Typography variant="body1" marginBottom={3}>
                         Our Partners
@@ -153,9 +149,8 @@ export default function Header() {
                 </Container>
             </Box>
         </Box>
-    )
+    );
 }
-
 
 const LazyLoadImageWithBlur = ({ src, alt }) => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -176,4 +171,4 @@ const LazyLoadImageWithBlur = ({ src, alt }) => {
             />
         </LazyLoad>
     );
-}
+};

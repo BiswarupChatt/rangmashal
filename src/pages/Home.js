@@ -1,11 +1,11 @@
 import Header from "../components/Header"
-import AboutUs from "../components/AboutUs"
+import About from "../components/About"
 
 export default function Home() {
     return (
         <>
             <Header />
-            <AboutUs />
+            <About />
         </>
     )
 }

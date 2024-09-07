@@ -9,18 +9,21 @@ import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, 
 
 const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Resources', path: '/resources' },
-    { name: 'About Us', path: '/about-us' },
-    { name: 'Contact Us', path: '/contact-us' },
+    { name: 'Programmes', path: '/' },
+    { name: 'Get Involved', path: '/' },
+    { name: 'Moments', path: '/' },
     {
-        name: 'Join Our Team',
+        name: 'Projects',
         subItems: [
-            { name: 'Our Roles', path: '/team-roles' },
-            { name: 'Internships', path: '/internships' },
-            { name: 'Volunteer Opportunities', path: '/volunteer' }
+            { name: 'Vision', path: '/team-roles' },
+            { name: 'Mission', path: '/internships' }
         ]
-    }
-];
+    },
+    { name: 'About Us', path: '/about' },
+    { name: 'Contact Us', path: '/' },
+    { name: 'Blog', path: '/' },
+
+]
 
 const HideOnScroll = (props) => {
     const { children, window } = props;
@@ -92,8 +95,16 @@ const ItemDisplay = ({ items }) => {
                                 aria-controls="team-menu"
                                 aria-haspopup="true"
                                 onClick={(event) => handleMenuOpen(event, ele.subItems)}
-                                sx={{ color: '#000', textTransform: 'none', margin: '0 10px', fontSize: '1rem' }}
-                                endIcon={isOpen ? <ExpandLess /> : <ExpandMore />} // Add ExpandLess/ExpandMore here
+                                sx={{
+                                    color: '#000',
+                                    textTransform: 'none',
+                                    margin: '0 10px',
+                                    fontSize: '1rem',
+                                    '&:hover': {
+                                        color: 'primary.main'
+                                    }
+                                }}
+                                endIcon={isOpen ? <ExpandLess /> : <ExpandMore />}
                             >
                                 {ele.name}
                             </Button>
@@ -116,6 +127,11 @@ const ItemDisplay = ({ items }) => {
                                         onClick={handleMenuClose}
                                         component={Link}
                                         to={subItem.path}
+                                        sx={{
+                                            '&:hover': {
+                                                color: 'primary.main'
+                                            }
+                                        }}
                                     >
                                         {subItem.name}
                                     </MenuItem>
@@ -130,7 +146,15 @@ const ItemDisplay = ({ items }) => {
                             key={ele.name}
                             component={Link}
                             to={ele.path}
-                            sx={{ color: '#000', textTransform: 'none', margin: '0 10px', fontSize: '1rem' }}
+                            sx={{
+                                color: '#000',
+                                textTransform: 'none',
+                                margin: '0 10px',
+                                fontSize: '1rem',
+                                '&:hover': {
+                                    color: 'primary.main'
+                                }
+                            }}
                         >
                             {ele.name}
                         </Button>
@@ -140,6 +164,7 @@ const ItemDisplay = ({ items }) => {
         </Box>
     );
 };
+
 
 
 const ItemDisplayDrawer = ({ items, handleDrawerToggle }) => {
@@ -161,7 +186,12 @@ const ItemDisplayDrawer = ({ items, handleDrawerToggle }) => {
                             <ListItem disablePadding>
                                 <ListItemButton
                                     onClick={() => handleToggle(ele.name)}
-                                    sx={{ textAlign: 'center' }}
+                                    sx={{
+                                        textAlign: 'center',
+                                        '&:hover': {
+                                            color: 'primary.main'
+                                        }
+                                    }}
                                 >
                                     <ListItemText primary={ele.name} />
                                     {openStates[ele.name] ? <ExpandLess /> : <ExpandMore />}
@@ -174,7 +204,12 @@ const ItemDisplayDrawer = ({ items, handleDrawerToggle }) => {
                                             key={subItem.name}
                                             component={Link}
                                             to={subItem.path}
-                                            sx={{ pl: 4 }}
+                                            sx={{
+                                                pl: 4,
+                                                '&:hover': {
+                                                    color: 'primary.main'
+                                                }
+                                            }}
                                             onClick={handleDrawerToggle}
                                         >
                                             <ListItemText primary={subItem.name} />
@@ -188,7 +223,12 @@ const ItemDisplayDrawer = ({ items, handleDrawerToggle }) => {
                             <ListItemButton
                                 component={Link}
                                 to={ele.path}
-                                sx={{ textAlign: 'center' }}
+                                sx={{
+                                    textAlign: 'center',
+                                    '&:hover': {
+                                        color: 'primary.main'
+                                    }
+                                }}
                                 onClick={handleDrawerToggle}
                             >
                                 <ListItemText primary={ele.name} />
@@ -200,6 +240,7 @@ const ItemDisplayDrawer = ({ items, handleDrawerToggle }) => {
         </List>
     );
 };
+
 
 
 

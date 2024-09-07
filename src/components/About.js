@@ -3,7 +3,7 @@ import { Box, Container, Typography, Grid } from '@mui/material';
 import DonateButton from './reusable/DonateButton';
 
 
-export default function AboutUs() {
+export default function About() {
 
     return (
         <Container sx={{ my: 10 }}>
@@ -26,12 +26,9 @@ export default function AboutUs() {
                 <Grid item xs={12} md={6}>
 
                     <Box sx={{ position: 'relative', display: 'inline-block', }}>
-
                         <Box
                             sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'primary.main', transform: 'rotate(-5deg)', zIndex: 1, borderRadius: '20px', boxShadow: 20 }}
                         />
-
-
                         <Box sx={{ position: 'relative', zIndex: 2 }} >
                             <img src="/images/background1.png" alt="Kids Learning" style={{ width: '100%', borderRadius: '20px', }} />
                         </Box>

@@ -4,7 +4,7 @@ import "swiper/css"
 import LazyLoad from "react-lazyload"
 import { Autoplay } from "swiper/modules"
 import { Box, Container, Typography, } from "@mui/material"
-import DonateButton from "./reusable/DonateButton"
+import DonateButton from "../reusable/DonateButton"
 import useMediaQuery from "@mui/material/useMediaQuery"
 
 export default function Header() {

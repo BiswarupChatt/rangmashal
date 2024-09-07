@@ -9,19 +9,19 @@ import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, 
 
 const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Programmes', path: '/' },
-    { name: 'Get Involved', path: '/' },
-    { name: 'Moments', path: '/' },
-    {
-        name: 'Projects',
-        subItems: [
-            { name: 'Vision', path: '/team-roles' },
-            { name: 'Mission', path: '/internships' }
-        ]
-    },
+    // { name: 'Programmes', path: '/' },
+    // { name: 'Get Involved', path: '/' },
+    // { name: 'Moments', path: '/' },
+    // {
+    //     name: 'Projects',
+    //     subItems: [
+    //         { name: 'Vision', path: '/team-roles' },
+    //         { name: 'Mission', path: '/internships' }
+    //     ]
+    // },
     { name: 'About Us', path: '/about' },
-    { name: 'Contact Us', path: '/' },
-    { name: 'Blog', path: '/' },
+    // { name: 'Contact Us', path: '/' },
+    // { name: 'Blog', path: '/' },
 
 ]
 

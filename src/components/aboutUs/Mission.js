@@ -2,7 +2,7 @@ import { Box, Typography, Grid, Container } from '@mui/material';
 
 export default function Mission() {
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{ width: '100%', backgroundColor: 'rgba(255, 208, 65, 0.2)' }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
                 <Grid container spacing={4} alignItems="center">
                     <Grid item xs={12} md={6}>

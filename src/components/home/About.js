@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
-import DonateButton from './reusable/DonateButton';
+import DonateButton from '../reusable/DonateButton';
 
 
 export default function About() {

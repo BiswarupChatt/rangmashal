@@ -18,10 +18,10 @@ export default function Vision() {
                     <Grid item xs={12} md={6}>
                         <Box sx={{ padding: { xs: '20px 0', md: '0 20px' } }}>
                             <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
-                                Our Mission: Helping Millions of Organizations Grow Better
+                                Our Vision
                             </Typography>
                             <Typography variant="body1">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti voluptas tenetur mollitia maiores numquam natus sapiente nihil vero, voluptatibus ad. Ratione veritatis sint dolore facere dolores placeat nesciunt aliquam mollitia, labore rerum atque. Tempore, delectus praesentium rerum vero reprehenderit ut? Doloribus architecto minus enim ad alias provident hic quidem assumenda.
+                                Our vision is to create a world where all children and women have equal opportunities, regardless of their background. We believe that proper education, better living conditions, and access to healthcare are key to empowering them to reach their full potential and break the cycle of poverty that they were not born to live in.
                             </Typography>
                         </Box>
                     </Grid>

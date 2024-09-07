@@ -1,6 +1,17 @@
-import { Box, Typography, Grid, Container } from '@mui/material';
+import { Box, Typography, Grid, Container, Collapse, } from '@mui/material';
+import { useState } from 'react';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 export default function Mission() {
+
+    const [expand, setExpand] = useState(false)
+
+    const handleToggle = () => {
+        setExpand((ele) => {
+            return (!ele)
+        })
+    }
     return (
         <Box sx={{ width: '100%', backgroundColor: 'rgba(255, 208, 65, 0.2)' }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
@@ -8,11 +19,39 @@ export default function Mission() {
                     <Grid item xs={12} md={6}>
                         <Box sx={{ padding: { xs: '20px 0', md: '0 20px' } }}>
                             <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
-                                Our Story
+                                Our Mission
                             </Typography>
                             <Typography variant="body1">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam perspiciatis, assumenda illo nemo cupiditate. Aperiam illum maxime nesciunt perferendis quos. Doloribus consequatur beatae accusamus incidunt, totam laborum quos similique reiciendis eligendi ipsam, maxime molestias corrupti dolorem fuga autem! Perferendis quam ea tempora possimus quo nostrum expedita porro placeat aperiam omnis qui officia iure fuga iste, beatae corporis illum autem, consequatur veniam, natus necessitatibus! Autem minima amet mollitia distinctio numquam placeat, ut, animi accusamus voluptatibus nisi ipsa vero itaque tenetur enim vitae porro cumque modi corrupti voluptate perferendis sapiente consequatur cupiditate dolor. Magnam, quibusdam dolor alias veniam quas nesciunt blanditiis.
+                                Our mission is to provide underprivileged children and women across India with the support they need to succeed in life. Whether it be through education, healthcare, or improved living conditions, we are committed to creating a brighter future for the next generation.
                             </Typography>
+
+                            <Collapse in={expand} timeout="auto" unmountOnExit>
+                                <Typography variant="body1">
+                                    We invite you to join us on this journey of building a better future for the future generation of India. Together, we can make a lasting difference in the lives of those who need it most. Every small effort can make a big impact, and with your support, we can ensure that every child and woman has access to equal opportunity as their privileged counterparts.
+                                    <br /><br />
+                                    As our supporter, you will be a part of a community of like-minded individuals who are committed to making a difference in the lives of those who are deprived of even the basic needs for survival. From supporting our education endeavors to providing healthcare and improved living conditions, your support will make a tangible difference in the lives of those we serve.
+                                    <br /><br />
+                                    We believe that every child and woman has the right to a brighter future, and we are dedicated to making that a reality. Join us in our mission to unlock potential and build futures for underprivileged children and women in India. Together, we can create a world where every child and woman has the opportunity to reach their full potential.
+                                </Typography>
+                            </Collapse>
+
+                            <Box sx={{ display: 'flex', justifyContent: 'left', mt: 2 }}>
+                                <Typography
+                                    component="span"
+                                    onClick={handleToggle}
+                                    sx={{
+                                        cursor: 'pointer',
+                                        color: 'primary.main',
+                                        fontWeight: 'bold',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        '&:hover': { textDecoration: 'underline' }
+                                    }}
+                                >
+                                    {expand ? 'Read Less' : 'Read More'}
+                                    {expand ? <ExpandLessIcon sx={{ ml: 1 }} /> : <ExpandMoreIcon sx={{ ml: 1 }} />}
+                                </Typography>
+                            </Box>
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>

@@ -26,6 +26,7 @@ export default function Mission() {
                                     </Typography>
                                     <Typography variant="body1">
                                         Our mission is to provide underprivileged children and women across India with the support they need to succeed in life. Whether it be through education, healthcare, or improved living conditions, we are committed to creating a brighter future for the next generation.
+                                        <br /><br />
                                     </Typography>
 
                                     <Collapse in={expand} timeout="auto" unmountOnExit>

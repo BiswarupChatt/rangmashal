@@ -24,14 +24,14 @@ export default function About() {
                                 navigateTo="/about"
                                 bgColor='primary.main'
                                 bgColorHover='primary.main'
-                                sx={{ marginRight: '10px' }}
+                                sx={{ margin: '5px' }}
                             />
                             <DonateButton
                                 label="Yes! I want to help"
                                 color="secondary"
                                 bgColor='secondary.main'
                                 bgColorHover='primary.main'
-                                sx={{ marginRight: '10px' }}
+                                sx={{ margin: '5px' }}
                             />
                         </Grid>
 

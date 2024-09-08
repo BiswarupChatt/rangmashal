@@ -25,49 +25,6 @@ const navItems = [
 
 ]
 
-const HideOnScroll = (props) => {
-    const { children, window } = props;
-    const trigger = useScrollTrigger({
-        target: window ? window() : undefined,
-    });
-
-    return (
-        <Slide appear={false} direction="down" in={!trigger}>
-            {children}
-        </Slide>
-    );
-};
-
-const ScrollTop = (props) => {
-    const { children, window } = props;
-    const trigger = useScrollTrigger({
-        target: window ? window() : undefined,
-        disableHysteresis: true,
-        threshold: 100,
-    });
-
-    const handleClick = (event) => {
-        const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
-        if (anchor) {
-            anchor.scrollIntoView({
-                block: 'center',
-            });
-        }
-    };
-
-    return (
-        <Fade in={trigger}>
-            <Box
-                onClick={handleClick}
-                role="presentation"
-                sx={{ position: 'fixed', bottom: 16, right: 16 }}
-            >
-                {children}
-            </Box>
-        </Fade>
-    );
-};
-
 
 const ItemDisplay = ({ items }) => {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -257,7 +214,6 @@ export default function Navbar(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <HideOnScroll {...props}>
                 <AppBar
                     component="nav"
                     sx={{
@@ -291,7 +247,6 @@ export default function Navbar(props) {
                         <ItemDisplay items={navItems} />
                     </Toolbar>
                 </AppBar>
-            </HideOnScroll>
 
             <nav>
                 <Drawer
@@ -322,25 +277,11 @@ export default function Navbar(props) {
 
             <Toolbar id="back-to-top-anchor" />
 
-            <ScrollTop {...props}>
-                <Fab size="small" aria-label="scroll back to top">
-                    <KeyboardArrowUpIcon />
-                </Fab>
-            </ScrollTop>
+            
         </Box>
     );
 }
 
 Navbar.propTypes = {
-    window: PropTypes.func,
-};
-
-HideOnScroll.propTypes = {
-    children: PropTypes.element.isRequired,
-    window: PropTypes.func,
-};
-
-ScrollTop.propTypes = {
-    children: PropTypes.element.isRequired,
     window: PropTypes.func,
 };

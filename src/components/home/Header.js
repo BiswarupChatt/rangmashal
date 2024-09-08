@@ -139,5 +139,6 @@ const LazyLoadImageWithBlur = ({ src, alt }) => {
                 }}
             />
         </LazyLoad>
-    );
+  
+);
 };

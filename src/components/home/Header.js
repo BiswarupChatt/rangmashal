@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/autoplay"; // Make sure to import the autoplay CSS
+import "swiper/css/autoplay"; 
 import LazyLoad from "react-lazyload";
 import { Autoplay } from "swiper/modules";
 import { Box, Container, Typography } from "@mui/material";
 import DonateButton from "../reusable/DonateButton";
 import useMediaQuery from "@mui/material/useMediaQuery";
-// import Partners from "./Partners";
 
 export default function Header() {
 
@@ -34,7 +33,7 @@ export default function Header() {
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                autoplay={{ delay: 5000,}}
                 loop={true}
                 speed={1500}
                 modules={[Autoplay]}
@@ -111,7 +110,6 @@ export default function Header() {
                         <DonateButton label="Donate Now" />
                     </Box>
 
-                    {/* <Partners /> */}
 
                 </Container>
 

@@ -31,7 +31,7 @@ export default function Partners() {
                     modules={[Autoplay]}
                     spaceBetween={30}
                     slidesPerView={isSmallScreen ? 1 : isMediumScreen ? 2 : 3}
-                    autoplay={{ delay: 5000, disableOnInteraction: false }}
+                    autoplay={{ delay: 5000 }}
                     loop={true}
                     speed={1500}
                 >

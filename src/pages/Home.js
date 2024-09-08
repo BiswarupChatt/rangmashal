@@ -1,11 +1,9 @@
-import Header from "../components/home/Header"
-import About from "../components/home/About"
+import Index from "../components/home/Index"
 
 export default function Home() {
     return (
         <>
-            <Header />
-            <About />
+            <Index />
         </>
     )
 }

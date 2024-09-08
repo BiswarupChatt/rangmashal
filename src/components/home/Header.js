@@ -7,16 +7,9 @@ import { Autoplay } from "swiper/modules";
 import { Box, Container, Typography } from "@mui/material";
 import DonateButton from "../reusable/DonateButton";
 import useMediaQuery from "@mui/material/useMediaQuery";
+// import Partners from "./Partners";
 
 export default function Header() {
-    const sponsors = [
-        { id: 1, img: "/images/kidzee.png", alt: "Kidzee", url: "https://www.kidzee.com/" },
-        { id: 2, img: "/images/canara-bank.png", alt: "Canara Bank", url: "https://canarabank.com/" },
-        { id: 3, img: "/images/apsara.png", alt: "Apsara", url: "https://www.hindustanpencils.com/category/products/apsara/apsara-pencils/" },
-        { id: 4, img: "/images/kidzee.png", alt: "Kidzee", url: "https://www.kidzee.com/" },
-        { id: 5, img: "/images/canara-bank.png", alt: "Canara Bank", url: "https://canarabank.com/" },
-        { id: 6, img: "/images/apsara.png", alt: "Apsara", url: "https://www.hindustanpencils.com/category/products/apsara/apsara-pencils/" },
-    ];
 
     const backgroundImages = [
         { src: "/images/background1.png", alt: "Background 1" },
@@ -27,27 +20,37 @@ export default function Header() {
     const isSmallScreen = useMediaQuery("(max-width:350px)");
 
     return (
-        <Box position="relative" sx={{ height: "100vh", overflow: "hidden" }}>
+        <Box
+            position="relative"
+            top="15px"
+            sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100vh',
+                overflow: 'hidden',
+            }}
+        >
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
-                autoplay={{ delay: 5000, disableOnInteraction: false }} 
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
                 loop={true}
                 speed={1500}
-                modules={[Autoplay]} 
+                modules={[Autoplay]}
             >
                 {backgroundImages.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <Box sx={{ position: "relative", width: "100%", height: "100vh" }}>
+                        <Box sx={{ position: 'relative', width: '100%', height: '100vh' }}>
                             <LazyLoadImageWithBlur src={image.src} alt={image.alt} />
                             <Box
                                 sx={{
-                                    position: "absolute",
+                                    position: 'absolute',
                                     top: 0,
                                     left: 0,
-                                    width: "100%",
-                                    height: "100%",
-                                    background: "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))",
+                                    width: '100%',
+                                    height: '100%',
+                                    background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))',
                                     zIndex: 1,
                                 }}
                             />
@@ -56,99 +59,65 @@ export default function Header() {
                 ))}
             </Swiper>
 
-            {/* Logo and Main Content */}
             <Box
                 sx={{
-                    position: "absolute",
-                    top: "20px",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    zIndex: 3,
-                }}
-            >
-                <img
-                    src="/images/logo.png"
-                    alt="Organization Logo"
-                    style={{
-                        width: isSmallScreen ? "150px" : isMediumScreen ? "200px" : "350px",
-                    }}
-                />
-            </Box>
-
-            <Box
-                sx={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
+                    position: 'absolute',
+                    top: '40%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
                     zIndex: 2,
-                    textAlign: "center",
-                    color: "white",
-                    padding: "0 20px",
-                    maxWidth: "90vw",
+                    textAlign: 'center',
+                    color: 'white',
+                    padding: '0 20px',
+                    maxWidth: '90vw',
                 }}
             >
                 <Container>
                     <Box>
+                        <img
+                            src="/images/logo.png"
+                            alt="Organization Logo"
+                            style={{
+                                width: isSmallScreen ? '150px' : isMediumScreen ? '250px' : '350px',
+                            }}
+                        />
+                    </Box>
+
+                    <Box>
                         <Typography
-                            variant={isMediumScreen ? "h4" : "h2"}
-                            fontWeight={isMediumScreen ? "bold" : "medium"}
+                            variant={isMediumScreen ? 'h4' : 'h2'}
+                            fontWeight={isMediumScreen ? 'bold' : 'medium'}
                             gutterBottom
-                            sx={{ wordWrap: "break-word", whiteSpace: "normal" }}
+                            sx={{ wordWrap: 'break-word', whiteSpace: 'normal' }}
                         >
-                            Join the fight for a{" "}
-                            <span style={{ color: "#32BFC2" }}>better world</span>
+                            Join the fight for a{' '}
+                            <span style={{ color: '#32BFC2' }}>better world</span>
                         </Typography>
 
                         <Typography
                             variant="body2"
                             sx={{
                                 mb: 3,
-                                fontSize: isMediumScreen ? "1rem" : "1.2rem",
-                                wordWrap: "break-word",
-                                whiteSpace: "normal",
+                                fontSize: isMediumScreen ? '1rem' : '1.2rem',
+                                textAlign: 'justify',
+                                textAlignLast: "center", 
+                                whiteSpace: 'normal',
                             }}
                         >
-                            Welcome to Rangmashal Foundation, India&aposs leading NGO that has been empowering underprivileged children and women across India since 2020.
+                            Welcome to Rangmashal Foundation, India&apos;s leading NGO that has been empowering
+                            underprivileged children and women across India since 2020.
                         </Typography>
 
                         <DonateButton label="Donate Now" />
                     </Box>
+
+                    {/* <Partners /> */}
+
                 </Container>
 
-                {/* Sponsors Section */}
-                <Container sx={{ mt: 10 }}>
-                    <Typography variant="body1" marginBottom={3}>
-                        Our Partners
-                    </Typography>
-                    <Swiper
-                        modules={[Autoplay]}
-                        spaceBetween={30}
-                        slidesPerView={isSmallScreen ? 1 : isMediumScreen ? 2 : 3}
-                        autoplay={{ delay: 5000, disableOnInteraction: false }}
-                        loop={true}
-                        speed={1500}
-                    >
-                        {sponsors.map((sponsor) => (
-                            <SwiperSlide key={sponsor.id}>
-                                <a href={sponsor.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
-                                    <img
-                                        src={sponsor.img}
-                                        alt={sponsor.alt}
-                                        style={{
-                                            width: "100px",
-                                            height: "auto",
-                                            margin: "0 10px",
-                                            cursor: "pointer",
-                                        }}
-                                    />
-                                </a>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </Container>
             </Box>
         </Box>
+
     );
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Typography, Grid, Container, Button, Collapse } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-
+import { Slide, Fade } from 'react-awesome-reveal';
 export default function About() {
     const [expanded, setExpanded] = useState(false);
 
@@ -16,7 +16,9 @@ export default function About() {
         <Box >
             {/* The Genesis of Rangmashal Foundation Section with Image in the middle */}
             <Box sx={{ backgroundColor: '#f5f5f5', width: '100%' }}>
+
                 <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
+
                     <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 3, textAlign: 'center', color: 'primary.main' }}>
                         About Us
                     </Typography>

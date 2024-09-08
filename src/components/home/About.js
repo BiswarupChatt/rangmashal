@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
 import DonateButton from '../reusable/DonateButton';
+import Button from '../reusable/Button';
 
 
 export default function About() {
@@ -20,6 +21,14 @@ export default function About() {
                     <DonateButton
                         label="Yes! I want to help"
                         color="secondary"
+                        sx={{ marginRight: '10px' }}
+                    />
+                    <Button
+                        label="More About Us"
+                        navigateTo="/about"
+                        bgColor='secondary.main'
+                        bgColorHover='secondary.main'
+                        sx={{ marginRight: '10px' }}
                     />
                 </Grid>
 

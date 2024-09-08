@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@mui/material';
 
 // Reusable Custom Button Component
-export default function DonateButton({ label, color = 'secondary' }) {
+export default function DonateButton({ label, color = 'secondary', sx }) {
 
     const url = "https://rzp.io/l/6zdTAmHMnG"
 
@@ -25,6 +25,7 @@ export default function DonateButton({ label, color = 'secondary' }) {
                 borderRadius: '10px',
                 fontWeight: 'bold',
                 textTransform: 'none',
+                ...sx,
             }}
             onClick={handleClick}
         >

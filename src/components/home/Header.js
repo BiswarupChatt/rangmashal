@@ -134,8 +134,8 @@ const LazyLoadImageWithBlur = ({ src, alt }) => {
                     width: "100%",
                     height: "100vh",
                     objectFit: "cover",
-                    filter: isLoaded ? "none" : "blur(10px)",
-                    transition: "filter 0.5s ease",
+                    filter: isLoaded ? "none" : "blur(20px)",
+                    transition: "filter 1s ease",
                 }}
             />
         </LazyLoad>

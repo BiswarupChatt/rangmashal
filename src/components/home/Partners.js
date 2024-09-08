@@ -21,40 +21,46 @@ export default function Partners() {
     const isSmallScreen = useMediaQuery("(max-width:350px)");
 
     return (
-        <Container sx={{ mt: 10 }}>
-            <Typography variant="body1" marginBottom={3}>
-                Our Partners
-            </Typography>
-            <Swiper
-                modules={[Autoplay]}
-                spaceBetween={30}
-                slidesPerView={isSmallScreen ? 1 : isMediumScreen ? 2 : 3}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
-                loop={true}
-                speed={1500}
-            >
-                {sponsors.map((sponsor) => (
-                    <SwiperSlide key={sponsor.id}>
-                        <a
-                            href={sponsor.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ textDecoration: 'none', color: 'inherit' }}
-                        >
-                            <img
-                                src={sponsor.img}
-                                alt={sponsor.alt}
-                                style={{
-                                    width: '100px',
-                                    height: 'auto',
-                                    margin: '0 10px',
-                                    cursor: 'pointer',
-                                }}
-                            />
-                        </a>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </Container>
+        <Box sx={{backgroundColor:'rgba(50, 191, 194, 0.1)', padding:'10px'}}>
+
+            <Container sx={{ my: '30px', }}>
+                <Typography variant="h4" marginBottom={3} sx={{ textAlign: 'center', fontWeight: 'bold' }}>
+                    Our Partners
+                </Typography>
+                <Swiper
+                    modules={[Autoplay]}
+                    spaceBetween={30}
+                    slidesPerView={isSmallScreen ? 1 : isMediumScreen ? 2 : 3}
+                    autoplay={{ delay: 5000, disableOnInteraction: false }}
+                    loop={true}
+                    speed={1500}
+                >
+                    {sponsors.map((sponsor) => (
+                        <SwiperSlide key={sponsor.id}>
+                            <a
+                                href={sponsor.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ textDecoration: 'none', color: 'inherit' }}
+                            >
+                                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                                    <img
+                                        src={sponsor.img}
+                                        alt={sponsor.alt}
+                                        style={{
+                                            width: '100px',
+                                            height: 'auto',
+                                            margin: '0 10px',
+                                            cursor: 'pointer',
+                                        }}
+                                    />
+                                </Box>
+                            </a>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+
+            </Container>
+        </Box>
     )
 }

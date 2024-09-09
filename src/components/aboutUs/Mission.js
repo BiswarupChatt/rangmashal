@@ -64,7 +64,7 @@ export default function Mission() {
                                         sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'primary.main', transform: 'rotate(-5deg)', zIndex: 1, borderRadius: '20px', boxShadow: 20 }}
                                     />
                                     <Box sx={{ position: 'relative', zIndex: 2 }} >
-                                        <img src="/images/background1.png" alt="Kids Learning" style={{ width: '100%', borderRadius: '20px', }} />
+                                        <img src="https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg" alt="Kids Learning" style={{ width: '100%', borderRadius: '20px', }} />
                                     </Box>
                                 </Box>
                             </Grid>

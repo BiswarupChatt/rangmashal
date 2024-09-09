@@ -11,8 +11,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 export default function Header() {
 
     const backgroundImages = [
-        { src: "/images/background1.png", alt: "Background 1" },
-        { src: "/images/background2.png", alt: "Background 2" },
+        { src: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg", alt: "Background 1" },
+        { src: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899302/Website/nt81qnkkkvjcch48v53k.jpg", alt: "Background 2" },
     ];
 
     const isMediumScreen = useMediaQuery("(max-width:650px)");

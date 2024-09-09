@@ -45,7 +45,7 @@ export default function About() {
                             boxShadow: '8px 8px 15px rgba(0, 0, 0, 0.4)',
                             marginBottom: '20px'
                         }}
-                        src="/images/background2.png"
+                        src="https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899302/Website/nt81qnkkkvjcch48v53k.jpg"
                         alt="Genesis of Rangmashal"
                     />
 

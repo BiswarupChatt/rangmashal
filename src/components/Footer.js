@@ -33,12 +33,18 @@ export default function Footer() {
         >
             <Grid container spacing={2} justifyContent="center" alignItems="top">
 
-                <Grid item xs={12} md={3} textAlign="center">
-                    <Avatar
-                        alt="Your Company Logo"
-                        src="../images/logo-black.png"
-                        sx={{ width: 200, height: 'auto', mx: 'auto' }}
-                    />
+                <Grid item xs={12} md={3} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+                    <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                        <Avatar
+                            alt="Your Company Logo"
+                            src="../images/logo-black.png"
+                            sx={{ width: 200, height: 'auto' }}
+                        />
+                    </Box>
+                    
+                    <Typography variant="body2" color="textSecondary" gutterBottom sx={{ mt: 2, px: 5 }} textAlign='justify'>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </Typography>
                 </Grid>
 
                 <Grid item xs={12} md={3} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
@@ -46,18 +52,23 @@ export default function Footer() {
                         Quick Links
                     </Typography>
                     {quickLinks.map((link, index) => (
-                        <Link
+                        <Typography
+                            variant="body2"
+                            component={Link}
                             key={index}
                             to={link.path}
-                            style={{
+                            sx={{
                                 color: 'inherit',
                                 textDecoration: 'none',
                                 display: 'block',
-                                marginBottom: '1rem',
+                                mb: 1,
+                                '&:hover': {
+                                    color: 'primary.main',
+                                }
                             }}
                         >
                             {link.name}
-                        </Link>
+                        </Typography>
                     ))}
                 </Grid>
 

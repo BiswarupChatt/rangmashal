@@ -51,7 +51,7 @@ export default function Milestones() {
                                             <Box>{counter.icon}</Box>
 
                                             <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', mb: 1 }}>
-                                                <CountUp start={0} end={counter.count} duration={5} suffix={counter.suffix} />
+                                                <CountUp start={0} end={counter.count} duration={7} suffix={counter.suffix} />
                                             </Typography>
 
                                             <Typography variant="h6" color="primary" gutterBottom>

@@ -4,11 +4,10 @@ import React, { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Button,  Menu, MenuItem, Collapse } from '@mui/material';
+import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Button, Menu, MenuItem, Collapse } from '@mui/material';
 
 const navItems = [
     { name: 'Home', path: '/' },
-    // { name: 'Programmes', path: '/' },
     // { name: 'Get Involved', path: '/' },
     // { name: 'Moments', path: '/' },
     // {
@@ -19,6 +18,7 @@ const navItems = [
     //     ]
     // },
     { name: 'About Us', path: '/about' },
+    { name: 'Projects', path: '/projects' },
     // { name: 'Contact Us', path: '/' },
     // { name: 'Blog', path: '/' },
 
@@ -213,39 +213,39 @@ export default function Navbar(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-                <AppBar
-                    component="nav"
-                    sx={{
-                        backgroundColor: 'rgba(247, 247, 247, 0.7)',
-                        backdropFilter: 'blur(10px)',
-                        boxShadow: 'none',
-                        zIndex: 10
-                    }}
-                >
-                    <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
-                            <Button component={Link} to="/" sx={{ padding: 0 }}>
-                                <img
-                                    src="../images/logo-only.png"
-                                    alt="Rangmashal Logo"
-                                    style={{ width: '80px', height: 'auto', padding: '10px' }}
-                                />
-                            </Button>
-                        </Box>
+            <AppBar
+                component="nav"
+                sx={{
+                    backgroundColor: 'rgba(247, 247, 247, 0.7)',
+                    backdropFilter: 'blur(10px)',
+                    boxShadow: 'none',
+                    zIndex: 10
+                }}
+            >
+                <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+                        <Button component={Link} to="/" sx={{ padding: 0 }}>
+                            <img
+                                src="../images/logo-only.png"
+                                alt="Rangmashal Logo"
+                                style={{ width: '80px', height: 'auto', padding: '10px' }}
+                            />
+                        </Button>
+                    </Box>
 
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            edge="start"
-                            onClick={handleDrawerToggle}
-                            sx={{ mr: 2, display: { md: 'none' } }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
+                    <IconButton
+                        color="inherit"
+                        aria-label="open drawer"
+                        edge="start"
+                        onClick={handleDrawerToggle}
+                        sx={{ mr: 2, display: { md: 'none' } }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
 
-                        <ItemDisplay items={navItems} />
-                    </Toolbar>
-                </AppBar>
+                    <ItemDisplay items={navItems} />
+                </Toolbar>
+            </AppBar>
 
             <nav>
                 <Drawer
@@ -276,7 +276,7 @@ export default function Navbar(props) {
 
             <Toolbar id="back-to-top-anchor" />
 
-            
+
         </Box>
     );
 }

@@ -23,14 +23,7 @@ export default function Footer() {
     ]
 
     return (
-        <Box
-            sx={{
-                backgroundColor: '#f8f8f8',
-                p: 4,
-                borderTop: '1px solid #e0e0e0',
-                mt: 4,
-            }}
-        >
+        <Box sx={{ backgroundColor: '#f8f8f8', p: 4, borderTop: '1px solid #e0e0e0', }}>
             <Grid container spacing={2} justifyContent="center" alignItems="top">
 
                 <Grid item xs={12} md={3} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
@@ -41,7 +34,7 @@ export default function Footer() {
                             sx={{ width: 200, height: 'auto' }}
                         />
                     </Box>
-                    
+
                     <Typography variant="body2" color="textSecondary" gutterBottom sx={{ mt: 2, px: 5 }} textAlign='justify'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </Typography>

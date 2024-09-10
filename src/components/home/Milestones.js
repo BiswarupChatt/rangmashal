@@ -48,20 +48,16 @@ export default function Milestones() {
                                 {counters.map((counter, index) => (
                                     <Grid item xs={12} md={4} key={index}>
                                         <Box textAlign="center">
-                                            {/* Icon */}
                                             <Box>{counter.icon}</Box>
 
-                                            {/* Animated Count */}
                                             <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', mb: 1 }}>
                                                 <CountUp start={0} end={counter.count} duration={5} suffix={counter.suffix} />
                                             </Typography>
 
-                                            {/* Label */}
                                             <Typography variant="h6" color="primary" gutterBottom>
                                                 {counter.label}
                                             </Typography>
 
-                                            {/* Description */}
                                             <Typography variant="body2" color="textSecondary">
                                                 {counter.description}
                                             </Typography>

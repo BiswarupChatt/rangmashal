@@ -15,10 +15,10 @@ export default function Footer() {
     ];
 
     const socialLinks = [
-        { icon: <FacebookIcon />, path: '/https://www.facebook.com/rangmashalfoundation?mibextid=LQQJ4d' },
-        { icon: <InstagramIcon />, path: '/https://www.instagram.com/rangmashalorg?igsh=c2J2aXVjZmNrYnc5' },
-        { icon: <LinkedInIcon />, path: '/https://www.linkedin.com/company/rangmashalfoundation/' },
-        { icon: <YouTubeIcon />, path: '/https://youtube.com/@rangmashalfoundation?si=SYWJm9kKjk4H9IZZ' },
+        { icon: <FacebookIcon />, url: 'https://www.facebook.com/rangmashalfoundation?mibextid=LQQJ4d' },
+        { icon: <InstagramIcon />, url: 'https://www.instagram.com/rangmashalorg?igsh=c2J2aXVjZmNrYnc5' },
+        { icon: <LinkedInIcon />, url: 'https://www.linkedin.com/company/rangmashalfoundation/' },
+        { icon: <YouTubeIcon />, url: 'https://youtube.com/@rangmashalfoundation?si=SYWJm9kKjk4H9IZZ' },
     ]
 
     return (
@@ -28,7 +28,7 @@ export default function Footer() {
                 <Grid item xs={12} md={3} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
                     <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
                         <Avatar
-                            alt="Your Company Logo"
+                            alt="Rangmashal Logo"
                             src="../images/logo-black.png"
                             sx={{ width: 200, height: 'auto' }}
                         />
@@ -102,7 +102,26 @@ export default function Footer() {
                     </Typography>
                     <Box>
                         {socialLinks.map((social, index) => (
-                            <IconButton key={index} component={Link} to={social.path} sx={{ color: 'primary.main', padding: '0px 15px 0px 0px' }}>
+                            <IconButton
+                                key={index}
+                                href={social.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                sx={{
+                                    color: 'primary.main',
+                                    padding: '0px 15px 0px 0px',
+                                    transition: 'transform 0.3s ease, color 0.3s ease',
+                                    '&:hover': {
+                                        color: 'secondary.main',
+                                        transform: 'scale(1.2)',
+                                        backgroundColor: 'transparent',
+                                    },
+                                    '&:focus': {
+                                        outline: 'none',
+                                        boxShadow: 'none',
+                                    },
+                                }}
+                            >
                                 {social.icon}
                             </IconButton>
                         ))}

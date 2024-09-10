@@ -2,10 +2,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Button, Fab, useScrollTrigger, Slide, Fade, Menu, MenuItem, Collapse } from '@mui/material';
+import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Button,  Menu, MenuItem, Collapse } from '@mui/material';
 
 const navItems = [
     { name: 'Home', path: '/' },

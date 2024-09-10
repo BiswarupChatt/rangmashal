@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Box, Typography, Grid, Container, Button, Collapse } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import { Slide, Fade } from 'react-awesome-reveal';
 export default function About() {
     const [expanded, setExpanded] = useState(false);
 
@@ -14,7 +13,6 @@ export default function About() {
 
     return (
         <Box >
-            {/* The Genesis of Rangmashal Foundation Section with Image in the middle */}
             <Box sx={{ backgroundColor: '#f5f5f5', width: '100%' }}>
 
                 <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
@@ -26,7 +24,6 @@ export default function About() {
                         The Genesis of Rangmashal Foundation
                     </Typography>
 
-                    {/* First part of the text */}
                     <Typography variant="body1" sx={{ textAlign: 'justify', mb: 3 }}>
                         On a cold winter evening, a group of friends passing there free time in a garden. Engaged in light banter and laughter, they reveled in the comfort of each other's company, blissfully unaware that the evening would take an unexpected turn, setting them on a transformative journey of compassion and service to society.
                         <br /><br />
@@ -35,7 +32,6 @@ export default function About() {
                         In that moment of spontaneity and empathy, the term "Rangmashal" emerged—a Bengali term translating to "lantern." It signified not only a source of light in the literal darkness but also a metaphorical beacon of hope amidst life's challenges. Rangmashal became a conduit for positive change, focusing particularly on uplifting the lives of women and children facing adversity.
                     </Typography>
 
-                    {/* Image in the middle of the text */}
                     <Box
                         component="img"
                         sx={{

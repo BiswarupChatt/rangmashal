@@ -3,9 +3,8 @@ import { Box, Grid, Typography, IconButton, Avatar } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Link } from 'react-router-dom';
-import { LineWeight } from '@mui/icons-material';
 
 export default function Footer() {
 
@@ -16,10 +15,10 @@ export default function Footer() {
     ];
 
     const socialLinks = [
-        { icon: <LinkedInIcon />, path: '/linkedin' },
-        { icon: <FacebookIcon />, path: '/facebook' },
-        { icon: <InstagramIcon />, path: '/instagram' },
-        { icon: <TwitterIcon />, path: '/twitter' },
+        { icon: <FacebookIcon />, path: '/https://www.facebook.com/rangmashalfoundation?mibextid=LQQJ4d' },
+        { icon: <InstagramIcon />, path: '/https://www.instagram.com/rangmashalorg?igsh=c2J2aXVjZmNrYnc5' },
+        { icon: <LinkedInIcon />, path: '/https://www.linkedin.com/company/rangmashalfoundation/' },
+        { icon: <YouTubeIcon />, path: '/https://youtube.com/@rangmashalfoundation?si=SYWJm9kKjk4H9IZZ' },
     ]
 
     return (

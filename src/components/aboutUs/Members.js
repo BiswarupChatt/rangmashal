@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Box, Typography, Avatar, IconButton, Dialog, DialogTitle, DialogContent, DialogContentText, Link, Container } from '@mui/material';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import { Grid, Box, Typography, Avatar, Dialog, DialogTitle, DialogContent, DialogContentText, Link, Container } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';

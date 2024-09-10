@@ -15,7 +15,7 @@ export default function About() {
                             <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 2 }}>
                                 About Us
                             </Typography>
-                            <Typography variant="body1" sx={{ mb: 3, color: 'text.secondary' }}>
+                            <Typography variant="body1" sx={{ mb: 3, color: 'text.secondary' }} textAlign='justify'>
                                 At Rangmashal Foundation, we believe that every child and woman has the potential to succeed, regardless of their background. That is why we have dedicated ourselves to empowering them and providing them with the resources they need irrespective of their background since our establishment in 2020.
                             </Typography>
 

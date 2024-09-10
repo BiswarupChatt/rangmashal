@@ -24,13 +24,13 @@ export default function Mission() {
                                     <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
                                         Our Mission
                                     </Typography>
-                                    <Typography variant="body1">
+                                    <Typography variant="body1" textAlign='justify'>
                                         Our mission is to provide underprivileged children and women across India with the support they need to succeed in life. Whether it be through education, healthcare, or improved living conditions, we are committed to creating a brighter future for the next generation.
                                         <br /><br />
                                     </Typography>
 
                                     <Collapse in={expand} timeout="auto" unmountOnExit>
-                                        <Typography variant="body1">
+                                        <Typography variant="body1" textAlign='justify'>
                                             We invite you to join us on this journey of building a better future for the future generation of India. Together, we can make a lasting difference in the lives of those who need it most. Every small effort can make a big impact, and with your support, we can ensure that every child and woman has access to equal opportunity as their privileged counterparts.
                                             <br /><br />
                                             As our supporter, you will be a part of a community of like-minded individuals who are committed to making a difference in the lives of those who are deprived of even the basic needs for survival. From supporting our education endeavors to providing healthcare and improved living conditions, your support will make a tangible difference in the lives of those we serve.

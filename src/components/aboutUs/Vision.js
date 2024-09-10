@@ -23,7 +23,7 @@ export default function Vision() {
                                     <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
                                         Our Vision
                                     </Typography>
-                                    <Typography variant="body1">
+                                    <Typography variant="body1" textAlign='justify'>
                                         Our vision is to create a world where all children and women have equal opportunities, regardless of their background. We believe that proper education, better living conditions, and access to healthcare are key to empowering them to reach their full potential and break the cycle of poverty that they were not born to live in.
                                     </Typography>
                                 </Box>

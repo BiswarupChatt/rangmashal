@@ -1,10 +1,10 @@
 import Hero from "./Hero"
-import ProjectCards from "./ProojectCards"
+import AllProjects from "./AllProjects"
 export default function Index() {
     return (
         <>
             <Hero />
-            <ProjectCards />
+            <AllProjects />
         </>
     )
 }

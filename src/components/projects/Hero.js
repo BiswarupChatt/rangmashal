@@ -62,9 +62,6 @@ export default function HeroSection() {
                     pariatur, eveniet molestiae blanditiis nobis et quis labore sequi nemo placeat, eaque adipisci ullam
                     nesciunt obcaecati aut temporibus!
                 </Typography>
-                <Button variant="contained" color="primary" sx={{ borderRadius: 2 }}>
-                    Learn More
-                </Button>
             </Box>
         </Box>
     );

@@ -12,18 +12,18 @@ import DonateButton from '../../reusable/DonateButton';
 
 const events = [
     {
-        title: 'Blood Donation Camp: Part 1',
-        description: 'On the occasion of International Mother Language Day to pay homage to our brave martyrs, we organized a blood donation camp in association with Ashok Laboratory at Subodhpark Saptarshi Friend’s Association club. This was our very first project after Government registration as Rangmashal Foundation.',
-        date: '21st February, 2021',
+        title: 'Kumartuli',
+        description: 'On 2nd June, 2020 we extended our hands to Kumartuli, which was devastated by the cyclone “Amphan”. There we distributed near about 50 packets of ration. In this project we were assisted by Mr. Apurba Pal, one of the sculptors of the Kumartuli. He was a great help to us for that project.',
+        date: '2nd June, 2020',
         images: [
             'https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899302/Website/nt81qnkkkvjcch48v53k.jpg',
             'https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg',
         ],
     },
     {
-        title: 'Blood Donation Camp: Part 2',
-        description: 'Rangmashal Foundation organized a blood donation camp in association with Baruipur Sub-divisional Hospital at Garfa North Star Association. It was our second Blood Donation Camp after the first on 21st February 2021.',
-        date: '16th October',
+        title: 'Sundarban',
+        description: 'We also extended our hands towards the Sundarban, which was devastated by the cyclone Amphan. Our members went there and gave away day to day necessary items like medicine, sanitary napkins and other items. We also gave away new clothes and a packet of ration to the people there.',
+        date: '14th June, 2020',
         images: [
             'https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899302/Website/nt81qnkkkvjcch48v53k.jpg',
             'https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg',
@@ -36,7 +36,7 @@ const truncateText = (text, limit) => {
     return text.split(" ").slice(0, limit).join(" ") + "...";
 };
 
-export default function BloodDonationCamp(backgroundColor) {
+export default function AmphanReliefWork(backgroundColor) {
     const [open, setOpen] = useState(false);
     const [selectedEvent, setSelectedEvent] = useState(null);
 
@@ -57,20 +57,9 @@ export default function BloodDonationCamp(backgroundColor) {
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
                 <Grid container spacing={4} alignItems="center">
 
-                    <Grid item xs={12} md={6} >
-                        <Box sx={{ padding: { xs: '20px 0', md: '0 20px' } }}>
-                            <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
-                                Blood Donation
-                            </Typography>
-                            <Typography variant="body1" textAlign="justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque voluptates, corrupti iusto quos dolore voluptatum eaque reprehenderit dolores sequi nisi minima, dolorum expedita consectetur incidunt, corporis quidem eveniet delectus libero non pariatur excepturi nulla minus illo? Amet veritatis iusto harum, quibusdam recusandae non! Iure nemo corrupti exercitationem doloremque debitis?
-                            </Typography>
-                            <DonateButton label='Yes! I want to donate.' sx={{ marginTop: 2 }} />
-                        </Box>
-                    </Grid>
-
-
-                    <Grid item xs={12} md={6} >
+                    <Grid item xs={12} md={6} sx={{
+                        order: { xs: 2, md: 1 },
+                    }}>
                         <Swiper
                             modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
                             spaceBetween={10}
@@ -127,6 +116,18 @@ export default function BloodDonationCamp(backgroundColor) {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
+                    </Grid>
+
+                    <Grid item xs={12} md={6} sx={{ order: { xs: 1, md: 2 } }}>
+                        <Box sx={{ padding: { xs: '20px 0', md: '0 20px' } }}>
+                            <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
+                                Amphan Relief Work
+                            </Typography>
+                            <Typography variant="body1" textAlign="justify">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque voluptates, corrupti iusto quos dolore voluptatum eaque reprehenderit dolores sequi nisi minima, dolorum expedita consectetur incidunt, corporis quidem eveniet delectus libero non pariatur excepturi nulla minus illo? Amet veritatis iusto harum, quibusdam recusandae non! Iure nemo corrupti exercitationem doloremque debitis?
+                            </Typography>
+                            <DonateButton label='I Want to Contribute' bgColor='secondary.main' bgColorHover='primary.main' sx={{ marginTop: 2 }} />
+                        </Box>
                     </Grid>
                 </Grid>
             </Container>

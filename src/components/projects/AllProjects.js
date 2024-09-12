@@ -8,4 +8,5 @@ export default function AllProjects() {
             <AmphanReliefWork backgroundColor='rgba(255, 208, 65, 0.2)' />
         </>
     )
+
 }

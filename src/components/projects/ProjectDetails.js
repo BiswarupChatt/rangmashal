@@ -7,51 +7,35 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
 import CloseIcon from '@mui/icons-material/Close';
-import DonateButton from '../../reusable/DonateButton';
+import DonateButton from '../reusable/DonateButton';
 import { Slide, Fade } from 'react-awesome-reveal';
-
-
-const events = [
-    {
-        title: 'Blood Donation Camp: Part 1',
-        description: 'On the occasion of International Mother Language Day to pay homage to our brave martyrs, we organized a blood donation camp in association with Ashok Laboratory at Subodhpark Saptarshi Friend’s Association club. This was our very first project after Government registration as Rangmashal Foundation.',
-        date: '21st February, 2021',
-        images: [
-            'https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899302/Website/nt81qnkkkvjcch48v53k.jpg',
-            'https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg',
-        ],
-    },
-    {
-        title: 'Blood Donation Camp: Part 2',
-        description: 'Rangmashal Foundation organized a blood donation camp in association with Baruipur Sub-divisional Hospital at Garfa North Star Association. It was our second Blood Donation Camp after the first on 21st February 2021.',
-        date: '16th October',
-        images: [
-            'https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899302/Website/nt81qnkkkvjcch48v53k.jpg',
-            'https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg',
-        ],
-    },
-];
-
 
 const truncateText = (text, limit) => {
     return text.split(" ").slice(0, limit).join(" ") + "...";
 };
 
-export default function BloodDonationCamp(backgroundColor) {
+export default function ProjectDetails({ events, order }) {
     const [open, setOpen] = useState(false);
     const [selectedEvent, setSelectedEvent] = useState(null);
-
 
     const handleOpen = (event) => {
         setSelectedEvent(event);
         setOpen(true);
     };
 
-
     const handleClose = () => {
         setOpen(false);
         setSelectedEvent(null);
     };
+
+    const backgroundColor = order % 2 === 0 ? 'rgba(50, 191, 194, 0.1)' : 'rgba(255, 208, 65, 0.2)';
+
+    const gridOrder = {
+        xsFirst: order % 2 === 0 ? 1 :2,  
+        xsSecond: order % 2 === 0 ? 1 : 2,
+        mdFirst: order % 2 === 0 ? 2 : 1,  
+        mdSecond: order % 2 === 0 ? 1 : 2,
+    }
 
     return (
         <Box sx={{ backgroundColor: backgroundColor, width: '100%' }}>
@@ -60,20 +44,8 @@ export default function BloodDonationCamp(backgroundColor) {
                     <Fade cascade triggerOnce>
                         <Grid container spacing={4} alignItems="center">
 
-                            <Grid item xs={12} md={6} >
-                                <Box sx={{ padding: { xs: '20px 0', md: '0 20px' } }}>
-                                    <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
-                                        Blood Donation
-                                    </Typography>
-                                    <Typography variant="body1" textAlign="justify">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque voluptates, corrupti iusto quos dolore voluptatum eaque reprehenderit dolores sequi nisi minima, dolorum expedita consectetur incidunt, corporis quidem eveniet delectus libero non pariatur excepturi nulla minus illo? Amet veritatis iusto harum, quibusdam recusandae non! Iure nemo corrupti exercitationem doloremque debitis?
-                                    </Typography>
-                                    <DonateButton label='Yes! I want to donate.' sx={{ marginTop: 2 }} />
-                                </Box>
-                            </Grid>
-
-
-                            <Grid item xs={12} md={6} >
+                            {/* Left Side: Swiper with clickable images */}
+                            <Grid item xs={12} md={6} sx={{ order: { xs: gridOrder.xsFirst, md: gridOrder.mdFirst } }}>
                                 <Swiper
                                     modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
                                     spaceBetween={10}
@@ -93,10 +65,10 @@ export default function BloodDonationCamp(backgroundColor) {
                                         slideShadows: true,
                                     }}
                                 >
-                                    {events.map((event, index) => (
-                                        <SwiperSlide key={index} onClick={() => handleOpen(event)}>
-                                            <Box sx={{ position: 'relative', width: '100%', height: '400px', borderRadius: '20px', overflow: 'hidden', cursor: 'pointer' }} >
-                                                <img src={event.images[0]} alt={event.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    {events.subEvents.map((subEvent, index) => (
+                                        <SwiperSlide key={index} onClick={() => handleOpen(subEvent)}>
+                                            <Box sx={{ position: 'relative', width: '100%', height: '400px', borderRadius: '20px', overflow: 'hidden', cursor: 'pointer' }}>
+                                                <img src={subEvent.images[0]} alt={subEvent.subTitle} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                                 <Box
                                                     sx={{
                                                         position: 'absolute',
@@ -113,16 +85,16 @@ export default function BloodDonationCamp(backgroundColor) {
                                                     }}
                                                 >
                                                     <Box sx={{ padding: 5 }}>
-                                                        <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 1, fontSize: { xs: '1.25rem', md: '1.5rem' }, }}>
-                                                            {event.title}
+                                                        <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 1, fontSize: { xs: '1.25rem', md: '1.5rem' } }}>
+                                                            {subEvent.subTitle}
                                                         </Typography>
 
                                                         <Typography variant="body1" sx={{ mb: 2, fontSize: { xs: '0.875rem', md: '1rem' }, textAlign: 'justify' }}>
-                                                            {truncateText(event.description, 20)}
+                                                            {truncateText(subEvent.subDescription, 20)}
                                                         </Typography>
 
-                                                        <Typography variant="body2" sx={{ fontWeight: 'bold', fontSize: { xs: '0.75rem', md: '0.875rem' }, }} >
-                                                            {event.date}
+                                                        <Typography variant="body2" sx={{ fontWeight: 'bold', fontSize: { xs: '0.75rem', md: '0.875rem' } }}>
+                                                            {subEvent.date}
                                                         </Typography>
                                                     </Box>
                                                 </Box>
@@ -131,16 +103,30 @@ export default function BloodDonationCamp(backgroundColor) {
                                     ))}
                                 </Swiper>
                             </Grid>
+
+                            {/* Right Side: Title, Description, and Donate Button */}
+                            <Grid item xs={12} md={6} sx={{ order: { xs: gridOrder.xsSecond, md: gridOrder.mdSecond } }}>
+                                <Box sx={{ padding: { xs: '20px 0', md: '0 20px' } }}>
+                                    <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
+                                        {events.title}
+                                    </Typography>
+                                    <Typography variant="body1" textAlign="justify">
+                                        {events.description}
+                                    </Typography>
+                                    <DonateButton label='I Want to Contribute' bgColor='secondary.main' bgColorHover='primary.main' sx={{ marginTop: 2 }} />
+                                </Box>
+                            </Grid>
                         </Grid>
                     </Fade>
                 </Slide>
             </Container>
 
+            {/* Dialog to show full details */}
             <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
                 {selectedEvent && (
                     <>
                         <DialogTitle>
-                            {selectedEvent.title}
+                            {selectedEvent.subTitle}
                             <IconButton
                                 aria-label="close"
                                 onClick={handleClose}
@@ -155,7 +141,6 @@ export default function BloodDonationCamp(backgroundColor) {
                             </IconButton>
                         </DialogTitle>
                         <DialogContent dividers>
-
                             <Swiper
                                 modules={[Navigation, Pagination, Autoplay]}
                                 spaceBetween={10}
@@ -181,7 +166,7 @@ export default function BloodDonationCamp(backgroundColor) {
                                 {selectedEvent.date}
                             </Typography>
                             <Typography variant="body1" textAlign="justify" marginTop={1}>
-                                {selectedEvent.description}
+                                {selectedEvent.subDescription}
                             </Typography>
                             <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 3 }}>
                                 <DonateButton label='Yes! I want to donate.' />

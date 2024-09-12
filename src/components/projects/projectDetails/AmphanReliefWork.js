@@ -60,9 +60,7 @@ export default function AmphanReliefWork(backgroundColor) {
                     <Fade cascade triggerOnce>
                         <Grid container spacing={4} alignItems="center">
 
-                            <Grid item xs={12} md={6} sx={{
-                                order: { xs: 2, md: 1 },
-                            }}>
+                            <Grid item xs={12} md={6} sx={{ order: { xs: 2, md: 1 }, }}>
                                 <Swiper
                                     modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
                                     spaceBetween={10}
@@ -73,6 +71,7 @@ export default function AmphanReliefWork(backgroundColor) {
                                     effect={'coverflow'}
                                     grabCursor={true}
                                     loop={true}
+                                    speed={1500}
                                     coverflowEffect={{
                                         rotate: 50,
                                         stretch: 0,
@@ -80,7 +79,7 @@ export default function AmphanReliefWork(backgroundColor) {
                                         modifier: 1,
                                         slideShadows: true,
                                     }}
-                                >
+                                    >
                                     {events.map((event, index) => (
                                         <SwiperSlide key={index} onClick={() => handleOpen(event)}>
                                             <Box sx={{ position: 'relative', width: '100%', height: '400px', borderRadius: '20px', overflow: 'hidden', cursor: 'pointer' }} >
@@ -161,6 +160,7 @@ export default function AmphanReliefWork(backgroundColor) {
                                 spaceBetween={10}
                                 slidesPerView={1}
                                 navigation
+                                speed={1500}
                                 pagination={{ clickable: true }}
                                 autoplay={{ delay: 4000, disableOnInteraction: false }}
                                 loop={true}

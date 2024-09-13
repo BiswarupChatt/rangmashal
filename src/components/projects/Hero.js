@@ -28,7 +28,7 @@ export default function HeroSection() {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
                 }}
             />
 
@@ -46,7 +46,9 @@ export default function HeroSection() {
                     sx={{
                         fontWeight: 'bold',
                         mb: 2,
+                        color: 'primary.main',
                         fontSize: { xs: '1.8rem', sm: '2.5rem', md: '3rem', },
+                        
                     }}
                 >
                     Our Projects
@@ -56,11 +58,12 @@ export default function HeroSection() {
                     sx={{
                         mb: 4,
                         fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem', },
+                        textAlign: 'justify',
+                        textAlignLast: "center", 
                     }}
                 >
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur qui dolorum laudantium,
-                    pariatur, eveniet molestiae blanditiis nobis et quis labore sequi nemo placeat, eaque adipisci ullam
-                    nesciunt obcaecati aut temporibus!
+                    Discover our impactful projects that bring hope and change to communities in need. From blood donation drives to disaster relief efforts,
+                    our initiatives are aimed at creating a brighter future for those we serve.
                 </Typography>
             </Box>
         </Box>

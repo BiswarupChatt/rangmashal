@@ -1,9 +1,6 @@
 
-import ProjectDetails from "./ProjectDetails"
+import ProjectDetails from "./components/ProjectDetails"
 import eventsData from "./eventsData";
-
-
-
 
 
 export default function AllProjects() {

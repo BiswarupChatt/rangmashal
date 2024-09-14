@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Typography, Grid, Container, Dialog, DialogTitle, DialogContent, IconButton } from '@mui/material';
+import { Box, Typography, Grid, Container, Dialog, DialogTitle, DialogContent, IconButton, Divider } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
 import CloseIcon from '@mui/icons-material/Close';
-import DonateButton from '../reusable/DonateButton';
+import DonateButton from '../../reusable/DonateButton';
 import { Slide, Fade } from 'react-awesome-reveal';
 
 const truncateText = (text, limit) => {
@@ -31,9 +31,9 @@ export default function ProjectDetails({ events, order }) {
     const backgroundColor = order % 2 === 0 ? 'rgba(50, 191, 194, 0.1)' : 'rgba(255, 208, 65, 0.2)';
 
     const gridOrder = {
-        xsFirst: order % 2 === 0 ? 1 :2,  
+        xsFirst: order % 2 === 0 ? 1 : 2,
         xsSecond: order % 2 === 0 ? 1 : 2,
-        mdFirst: order % 2 === 0 ? 2 : 1,  
+        mdFirst: order % 2 === 0 ? 2 : 1,
         mdSecond: order % 2 === 0 ? 1 : 2,
     }
 
@@ -44,7 +44,6 @@ export default function ProjectDetails({ events, order }) {
                     <Fade cascade triggerOnce>
                         <Grid container spacing={4} alignItems="center">
 
-                            {/* Left Side: Swiper with clickable images */}
                             <Grid item xs={12} md={6} sx={{ order: { xs: gridOrder.xsFirst, md: gridOrder.mdFirst } }}>
                                 <Swiper
                                     modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
@@ -104,7 +103,6 @@ export default function ProjectDetails({ events, order }) {
                                 </Swiper>
                             </Grid>
 
-                            {/* Right Side: Title, Description, and Donate Button */}
                             <Grid item xs={12} md={6} sx={{ order: { xs: gridOrder.xsSecond, md: gridOrder.mdSecond } }}>
                                 <Box sx={{ padding: { xs: '20px 0', md: '0 20px' } }}>
                                     <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
@@ -121,7 +119,6 @@ export default function ProjectDetails({ events, order }) {
                 </Slide>
             </Container>
 
-            {/* Dialog to show full details */}
             <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
                 {selectedEvent && (
                     <>
@@ -140,7 +137,7 @@ export default function ProjectDetails({ events, order }) {
                                 <CloseIcon />
                             </IconButton>
                         </DialogTitle>
-                        <DialogContent dividers>
+                        <DialogContent>
                             <Swiper
                                 modules={[Navigation, Pagination, Autoplay]}
                                 spaceBetween={10}

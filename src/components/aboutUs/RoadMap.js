@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { Fade, Slide } from 'react-awesome-reveal';
 
 const roadmapData = [
     {
@@ -31,110 +32,119 @@ const roadmapData = [
 
 export default function RoadMap() {
     return (
-        <Container sx={{ py: 8, position: 'relative' }}>
-            <Typography variant="h4" sx={{ fontWeight: 'bold', textAlign: 'center', mb: 5, position: 'relative', }}>
-                Our Journey So Far
-            </Typography>
+        <Box sx={{ width: '100%' }}>
+            <Container sx={{ py: 8, position: 'relative' }}>
+                <Slide direction="up" cascade damping={1} triggerOnce>
+                    <Fade cascade triggerOnce>
 
-            <Swiper
-                modules={[Pagination, Navigation, Autoplay]}
-                spaceBetween={40}
-                grabCursor={true}
-                autoplay={{ delay: 6000, disableOnInteraction: false }}
-                loop={true}
-                speed={1500}
-                pagination={{ clickable: true }}
-                navigation={{ nextEl: '.custom-swiper-button-next', prevEl: '.custom-swiper-button-prev' }}
-                breakpoints={{
-                    640: { slidesPerView: 1, spaceBetween: 20 },
-                    768: { slidesPerView: 2, spaceBetween: 30 },
-                    1024: { slidesPerView: 3, spaceBetween: 40 },
-                }}
-                style={{
-                    padding: '10px 30px 60px 20px'
-                }}
-            >
-                {roadmapData.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        <Box
-                            sx={{
-                                border: '2px solid rgba(0,0,0,0.1)',
-                                borderRadius: '12px',
-                                padding: '30px',
-                                backgroundColor: '#fff',
-                                boxShadow: index % 2 === 0 ? '10px 10px 0 #32BFC2' : '10px 10px 0 #FFD041',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                transition: 'transform 0.3s ease-in-out',
-                                '&:hover': {
-                                    transform: 'scale(1.03)',
-                                },
-                                height: '100%',
-                                minHeight: '300px', // Ensure minimum height
-                            }}
-                        >
-                            <Typography
-                                variant="h5"
-                                sx={{
-                                    textAlign: 'center',
-                                    fontWeight: 'bold',
-                                    mb: 2,
-                                    background: index % 2 === 0 ? '#32BFC2' : '#FFD041',
-                                    color: '#fff',
-                                    padding: '10px 20px',
-                                    borderRadius: '8px',
-                                    width: 'fit-content',
-                                    margin: '0 auto',
-                                }}
-                            >
-                                {item.year}
+                        <Box>
+                            <Typography variant="h4" sx={{ fontWeight: 'bold', textAlign: 'center', mb: 5, position: 'relative', }}>
+                                Our Journey So Far
                             </Typography>
 
-                            <Typography
-                                variant="body1"
-                                sx={{
-                                    textAlign: 'justify',
-                                    color: '#333',
-                                    fontSize: '1rem',
-                                    lineHeight: 1.6,
+                            <Swiper
+                                modules={[Pagination, Navigation, Autoplay]}
+                                spaceBetween={40}
+                                grabCursor={true}
+                                autoplay={{ delay: 6000, disableOnInteraction: false }}
+                                loop={true}
+                                speed={1500}
+                                pagination={{ clickable: true }}
+                                navigation={{ nextEl: '.custom-swiper-button-next', prevEl: '.custom-swiper-button-prev' }}
+                                breakpoints={{
+                                    640: { slidesPerView: 1, spaceBetween: 20 },
+                                    768: { slidesPerView: 2, spaceBetween: 30 },
+                                    1024: { slidesPerView: 3, spaceBetween: 40 },
+                                }}
+                                style={{
+                                    padding: '10px 30px 60px 20px'
                                 }}
                             >
-                                {item.description}
-                            </Typography>
+                                {roadmapData.map((item, index) => (
+                                    <SwiperSlide key={index}>
+                                        <Box
+                                            sx={{
+                                                border: '2px solid rgba(0,0,0,0.1)',
+                                                borderRadius: '12px',
+                                                padding: '30px',
+                                                backgroundColor: '#fff',
+                                                boxShadow: index % 2 === 0 ? '10px 10px 0 #32BFC2' : '10px 10px 0 #FFD041',
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                justifyContent: 'center',
+                                                transition: 'transform 0.3s ease-in-out',
+                                                '&:hover': {
+                                                    transform: 'scale(1.03)',
+                                                },
+                                                height: '100%',
+                                            }}
+                                        >
+                                            <Typography
+                                                variant="h5"
+                                                sx={{
+                                                    textAlign: 'center',
+                                                    fontWeight: 'bold',
+                                                    mb: 2,
+                                                    background: index % 2 === 0 ? '#32BFC2' : '#FFD041',
+                                                    color: '#fff',
+                                                    padding: '10px 20px',
+                                                    borderRadius: '8px',
+                                                    width: 'fit-content',
+                                                    margin: '0 auto',
+                                                }}
+                                            >
+                                                {item.year}
+                                            </Typography>
+
+                                            <Typography
+                                                variant="body1"
+                                                sx={{
+                                                    textAlign: 'justify',
+                                                    color: '#333',
+                                                    fontSize: '1rem',
+                                                    lineHeight: 1.6,
+                                                }}
+                                            >
+                                                {item.description}
+                                            </Typography>
+                                        </Box>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
                         </Box>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                    </Fade>
+                </Slide>
 
-            <div
-                className="custom-swiper-button-next"
-                style={{
-                    color: '#333',
-                    fontSize: '4rem',
-                    right: '20px',
-                    top: '50%',
-                    position: 'absolute',
-                    zIndex: 10,
-                    cursor: 'pointer',
-                }}
-            >
-                &#8250;
-            </div>
-            <div
-                className="custom-swiper-button-prev"
-                style={{
-                    color: '#333',
-                    fontSize: '4rem',
-                    left: '20px',
-                    top: '50%',
-                    position: 'absolute',
-                    zIndex: 10,
-                    cursor: 'pointer',
-                }}
-            >
-                &#8249;
-            </div>
-        </Container >
+                <div
+                    className="custom-swiper-button-next"
+                    style={{
+                        color: '#333',
+                        fontSize: '4rem',
+                        right: '20px',
+                        top: '50%',
+                        position: 'absolute',
+                        zIndex: 10,
+                        cursor: 'pointer',
+                    }}
+                >
+                    &#8250;
+                </div>
+                <div
+                    className="custom-swiper-button-prev"
+                    style={{
+                        color: '#333',
+                        fontSize: '4rem',
+                        left: '20px',
+                        top: '50%',
+                        position: 'absolute',
+                        zIndex: 10,
+                        cursor: 'pointer',
+                    }}
+                >
+                    &#8249;
+                </div>
+
+            </Container >
+        </Box>
     );
 }

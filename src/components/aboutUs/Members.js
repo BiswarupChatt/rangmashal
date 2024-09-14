@@ -3,8 +3,7 @@ import { Grid, Box, Typography, Avatar, Dialog, DialogTitle, DialogContent, Dial
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-
-import { Divider } from "@mui/material"
+import { Fade, Slide } from 'react-awesome-reveal';
 
 const teamMembers = [
     {
@@ -87,65 +86,69 @@ function TeamSection() {
     };
 
     return (
-        <Container>
-            <Divider sx={{ marginTop: '50px' }} />
-            <Box sx={{ width: '100%', padding: 4 }}>
-                <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 4 }} textAlign="center">
-                    Volunteer
-                </Typography>
-                <Grid container spacing={4} justifyContent="center">
-                    {teamMembers.map((member) => (
-                        <Grid item xs={12} sm={6} md={3} key={member.name} onClick={() => handleClickOpen(member)}>
-                            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', cursor: 'pointer' }}>
-                                <Avatar src={member.imageUrl} alt={member.name} sx={{ width: 90, height: 90, mb: 2 }} />
-                                <Typography variant="h6">{member.name}</Typography>
-                                <Typography variant="body2" color="textSecondary">{member.position}</Typography>
-                            </Box>
-                        </Grid>
-                    ))}
-                </Grid>
+        <Box sx={{ backgroundColor: 'rgba(50, 191, 194, 0.1)', width: '100%' }}>
+            <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
+                <Slide direction="up" cascade damping={1} triggerOnce>
+                    <Fade cascade triggerOnce>
+                        <Box sx={{ width: '100%', padding: 4 }}>
+                            <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 4 }} textAlign="center">
+                                Volunteer
+                            </Typography>
+                            <Grid container spacing={4} justifyContent="center">
+                                {teamMembers.map((member) => (
+                                    <Grid item xs={12} sm={6} md={3} key={member.name} onClick={() => handleClickOpen(member)}>
+                                        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', cursor: 'pointer' }}>
+                                            <Avatar src={member.imageUrl} alt={member.name} sx={{ width: 90, height: 90, mb: 2 }} />
+                                            <Typography variant="h6">{member.name}</Typography>
+                                            <Typography variant="body2" color="textSecondary">{member.position}</Typography>
+                                        </Box>
+                                    </Grid>
+                                ))}
+                            </Grid>
 
-                <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
-                    <DialogTitle textAlign='center'>
-                        {selectedMember.name} - {selectedMember.position}
-                    </DialogTitle>
-                    <DialogContent>
-                        <Grid container spacing={2} alignItems="center" justifyContent="center">
-                            <Grid item >
-                                <Avatar
-                                    src={selectedMember.imageUrl}
-                                    alt={selectedMember.name}
-                                    sx={{ width: 120, height: 120, mx: 'auto' }}
-                                />
-                            </Grid>
-                            <Grid item >
-                                <DialogContentText textAlign='justify'>
-                                    {selectedMember.description}
-                                </DialogContentText>
-                                <Box display="flex" justifyContent="center" mt={2}>
-                                    {selectedMember.linkedIn && (
-                                        <Link href={selectedMember.linkedIn} target="_blank" rel="noopener" sx={{ mx: 1 }}>
-                                            <LinkedInIcon fontSize="large" color="primary" />
-                                        </Link>
-                                    )}
-                                    {selectedMember.facebook && (
-                                        <Link href={selectedMember.facebook} target="_blank" rel="noopener" sx={{ mx: 1 }}>
-                                            <FacebookIcon fontSize="large" color="primary" />
-                                        </Link>
-                                    )}
-                                    {selectedMember.instagram && (
-                                        <Link href={selectedMember.instagram} target="_blank" rel="noopener" sx={{ mx: 1 }}>
-                                            <InstagramIcon fontSize="large" color="primary" />
-                                        </Link>
-                                    )}
-                                </Box>
-                            </Grid>
-                        </Grid>
-                    </DialogContent>
-                </Dialog>
-            </Box>
-            <Divider sx={{ marginBottom: '50px' }} />
-        </Container>
+                            <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
+                                <DialogTitle textAlign='center'>
+                                    {selectedMember.name} - {selectedMember.position}
+                                </DialogTitle>
+                                <DialogContent>
+                                    <Grid container spacing={2} alignItems="center" justifyContent="center">
+                                        <Grid item >
+                                            <Avatar
+                                                src={selectedMember.imageUrl}
+                                                alt={selectedMember.name}
+                                                sx={{ width: 120, height: 120, mx: 'auto' }}
+                                            />
+                                        </Grid>
+                                        <Grid item >
+                                            <DialogContentText textAlign='justify'>
+                                                {selectedMember.description}
+                                            </DialogContentText>
+                                            <Box display="flex" justifyContent="center" mt={2}>
+                                                {selectedMember.linkedIn && (
+                                                    <Link href={selectedMember.linkedIn} target="_blank" rel="noopener" sx={{ mx: 1 }}>
+                                                        <LinkedInIcon fontSize="large" color="primary" />
+                                                    </Link>
+                                                )}
+                                                {selectedMember.facebook && (
+                                                    <Link href={selectedMember.facebook} target="_blank" rel="noopener" sx={{ mx: 1 }}>
+                                                        <FacebookIcon fontSize="large" color="primary" />
+                                                    </Link>
+                                                )}
+                                                {selectedMember.instagram && (
+                                                    <Link href={selectedMember.instagram} target="_blank" rel="noopener" sx={{ mx: 1 }}>
+                                                        <InstagramIcon fontSize="large" color="primary" />
+                                                    </Link>
+                                                )}
+                                            </Box>
+                                        </Grid>
+                                    </Grid>
+                                </DialogContent>
+                            </Dialog>
+                        </Box>
+                    </Fade>
+                </Slide>
+            </Container>
+        </Box>
     );
 }
 

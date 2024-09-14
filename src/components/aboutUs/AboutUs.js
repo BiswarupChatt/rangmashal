@@ -13,10 +13,8 @@ export default function About() {
 
     return (
         <Box >
-            <Box sx={{ backgroundColor: '#f5f5f5', width: '100%' }}>
-
+            <Box sx={{ width: '100%' }}>
                 <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
-
                     <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 3, textAlign: 'center', color: 'primary.main' }}>
                         About Us
                     </Typography>

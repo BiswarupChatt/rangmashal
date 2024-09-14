@@ -29,6 +29,8 @@ export default function ProjectDetails({ events, order }) {
     };
 
     const backgroundColor = order % 2 === 0 ? 'rgba(50, 191, 194, 0.1)' : 'rgba(255, 208, 65, 0.2)';
+    const buttonColor = order % 2 === 0 ? 'secondary.main' : 'primary.main'
+    const buttonColorHover = order % 2 === 0 ? 'primary.main' : 'secondary.main'
 
     const gridOrder = {
         xsFirst: order % 2 === 0 ? 1 : 2,
@@ -111,7 +113,7 @@ export default function ProjectDetails({ events, order }) {
                                     <Typography variant="body1" textAlign="justify">
                                         {events.description}
                                     </Typography>
-                                    <DonateButton label='I Want to Contribute' bgColor='secondary.main' bgColorHover='primary.main' sx={{ marginTop: 2 }} />
+                                    <DonateButton label={events.buttonTitle} bgColor={buttonColor} bgColorHover={buttonColorHover} sx={{ marginTop: 2 }} />
                                 </Box>
                             </Grid>
                         </Grid>
@@ -166,7 +168,7 @@ export default function ProjectDetails({ events, order }) {
                                 {selectedEvent.subDescription}
                             </Typography>
                             <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 3 }}>
-                                <DonateButton label='Yes! I want to donate.' />
+                                <DonateButton label={events.buttonTitle} bgColor={buttonColor} bgColorHover={buttonColorHover} />
                             </Box>
                         </DialogContent>
                     </>

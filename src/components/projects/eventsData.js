@@ -2,6 +2,7 @@ const eventsData = [
     {
         title: 'Blood Donation Camp',
         description: 'Our blood donation initiatives include two impactful camps aimed at contributing to the community. The first was organized in February 2021, on International Mother Language Day, in collaboration with Ashok Laboratory, and the second in October 2021 with Baruipur Sub-divisional Hospital. Both camps had remarkable success in saving lives and promoting the importance of blood donations.',
+        buttonTitle: 'I want to Donate',
         subEvents: [
             {
                 subTitle: 'Blood Donation Camp: Part 1',
@@ -26,6 +27,7 @@ const eventsData = [
     {
         title: 'Amphan Relief Work',
         description: 'Our efforts during the Amphan cyclone relief work focused on providing critical support to two key areas: Kumartuli and Sundarban. In June 2020, we distributed ration and essential items to sculptors in Kumartuli and the residents of Sundarban who were severely affected by the cyclone.',
+        buttonTitle: 'I Wish to Donate',
         subEvents: [
             {
                 subTitle: 'Kumartuli',
@@ -50,6 +52,7 @@ const eventsData = [
     {
         title: 'Yaas Relief Work',
         description: 'Our relief efforts during the aftermath of Cyclone Yaas focused on supporting the communities in Sundarban and Mandarmani. Through compassion and care, we helped over 750 individuals by providing food, clothing, and essential assistance in these affected regions.',
+        buttonTitle: 'I want to Contribute',
         subEvents: [
             {
                 subTitle: 'Sundarban-e Rangmashal',
@@ -74,6 +77,7 @@ const eventsData = [
     {
         title: 'Blanket Distribution',
         description: 'Our blanket distribution events are aimed at providing warmth and care to the homeless during cold winter nights.',
+        buttonTitle: 'I want to Contribute',
         subEvents: [
             {
                 subTitle: 'Prothom Porikolpona',
@@ -92,6 +96,7 @@ const eventsData = [
     {
         title: 'Sharadiyar Parash',
         description: 'Our initiatives around Durga Puja focus on bringing joy to the underprivileged through gifts, meals, and essential items.',
+        buttonTitle: 'I Wish to Help Others',
         subEvents: [
             {
                 subTitle: 'Sharodiyar Porosh 1.0 - Phase 1',
@@ -122,6 +127,7 @@ const eventsData = [
     {
         title: 'Charity Work',
         description: 'Rangmashal Foundation’s charity work focuses on helping underprivileged communities through donations, meals, and essential supplies.',
+        buttonTitle: 'I want to Contribute',
         subEvents: [
             {
                 subTitle: 'Boisakhi Somarohe',
@@ -146,6 +152,7 @@ const eventsData = [
     {
         title: 'Health Camp',
         description: 'Our health camps aim to provide free medical checkups and essential health services to underserved communities.',
+        buttonTitle: 'I want to Contribute',
         subEvents: [
             {
                 subTitle: 'Health Camp',
@@ -158,6 +165,7 @@ const eventsData = [
     {
         title: 'COVID Relief Work',
         description: 'During the COVID-19 pandemic, we provided critical relief, including free oxygen, medicines, and essential commodities to affected patients.',
+        buttonTitle: 'I want to Contribute',
         subEvents: [
             {
                 subTitle: 'Asomoye Tomader Pashe',
@@ -170,6 +178,7 @@ const eventsData = [
     {
         title: 'CSR Initiatives',
         description: 'We collaborate with various organizations for CSR activities, helping to spread joy and support to the underprivileged.',
+        buttonTitle: 'I want to Contribute',
         subEvents: [
             {
                 subTitle: 'Workshop organized by Canara Bank',
@@ -188,6 +197,7 @@ const eventsData = [
     {
         title: 'Talent Hunt',
         description: 'Our talent hunt events focus on nurturing the skills of underprivileged children, providing them with a platform to shine.',
+        buttonTitle: 'I want to Contribute',
         subEvents: [
             {
                 subTitle: 'Ignite',

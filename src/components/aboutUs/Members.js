@@ -18,7 +18,7 @@ const teamMembers = [
     {
         name: 'Turja Chowdhury',
         position: 'Vice President',
-        imageUrl: 'https://i.pravatar.cc/150?img=14',
+        imageUrl: '',
         description: `Turja Chowdhury, a Jadavpur University Philosophy Postgraduate, ardently supports the Rangmashal Foundation's grassroots initiatives. Currently pursuing a PG in Journalism, his adept understanding of societal intricacies fuels his proactive engagement. With a passion for social change, Turja seamlessly integrates academic insights with practical endeavors for a better tomorrow.`,
         linkedIn: '',
         facebook: 'https://www.facebook.com/turja.chowdhury.3',
@@ -54,7 +54,7 @@ const teamMembers = [
     {
         name: 'Moutushi Mitra',
         position: 'Resource Allocation',
-        imageUrl: 'https://i.pravatar.cc/150?img=46',
+        imageUrl: '',
         description: `I am a sincere, honest, and hardworking individual now engaged with PNB Metlife India as an Insurance Distribution Manager. I lead a team of insurance advisors and am responsible for driving agency channel sales through my team. As director of Resource Mobilization at Rangmashal, I am responsible for generating funds, finding and mobilizing skilled personnel for social projects, and networking with other organizations that are willing to support our cause.`,
         linkedIn: 'https://www.linkedin.com/in/moutushi-mitra-57093b52/',
         facebook: 'https://www.facebook.com/moutushi.mitra.52',

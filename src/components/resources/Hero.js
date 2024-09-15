@@ -48,7 +48,7 @@ export default function Hero() {
                         mb: 2,
                         color: 'primary.main',
                         fontSize: { xs: '1.8rem', sm: '2.5rem', md: '3rem', },
-
+                        
                     }}
                 >
                     Our Projects
@@ -59,7 +59,7 @@ export default function Hero() {
                         mb: 4,
                         fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem', },
                         textAlign: 'justify',
-                        textAlignLast: "center",
+                        textAlignLast: "center", 
                     }}
                 >
                     Discover our impactful projects that bring hope and change to communities in need. From blood donation drives to disaster relief efforts,

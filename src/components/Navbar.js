@@ -18,6 +18,7 @@ const navItems = [
     //     ]
     // },
     { name: 'About Us', path: '/about' },
+    { name: 'Resources', path: '/resources' },
     { name: 'Projects', path: '/projects' },
     // { name: 'Contact Us', path: '/' },
     // { name: 'Blog', path: '/' },

@@ -81,7 +81,7 @@ export default function Footer() {
                             Phone: <br />
                         </span>
                         <a href="tel:+916290442860" style={{ color: 'inherit', textDecoration: 'none' }}>
-                            +91 62904 42860
+                            +91 90739 11933
                         </a>
                     </Typography>
                     <Typography variant="body2" color="textSecondary" gutterBottom sx={{ mt: 2 }}>

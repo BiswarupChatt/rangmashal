@@ -9,12 +9,10 @@ import { Autoplay } from "swiper/modules";
 export default function Partners() {
 
     const sponsors = [
-        { id: 1, img: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1725902228/Website/partners-logo/jovhjshsdoj5pj2somho.png", alt: "Kidzee", url: "https://www.kidzee.com/" },
-        { id: 2, img: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1725902228/Website/partners-logo/axzyxacnw7h0y7bcg7th.png", alt: "Canara-bank", url: "https://canarabank.com/" },
-        { id: 3, img: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1725902228/Website/partners-logo/mxijbwrg2y2z7xu3evln.png", alt: "Apsara", url: "https://www.hindustanpencils.com/category/products/apsara/apsara-pencils/" },
-        { id: 4, img: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1726316341/Website/partners-logo/z9ywprk1xgfsu1lfwlcu.png", alt: "Abzooba", url: "https://abzooba.com/" },
-        { id: 5, img: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1726317505/Website/partners-logo/hkqdwm9h8irlsldnxybz.png", alt: "Worly", url: "https://www.worley.com/" },
-        { id: 6, img: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1726316042/Website/partners-logo/sqm12ut28vuikb5aygtv.png", alt: "Mouth-melto", url: "https://www.example.com/" },
+        { id: 1, img: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1725902228/Website/partners-logo/axzyxacnw7h0y7bcg7th.png", alt: "Canara-bank", url: "https://canarabank.com/" },
+        { id: 2, img: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1726316341/Website/partners-logo/z9ywprk1xgfsu1lfwlcu.png", alt: "Abzooba", url: "https://abzooba.com/" },
+        { id: 3, img: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1726317505/Website/partners-logo/hkqdwm9h8irlsldnxybz.png", alt: "Worly", url: "https://www.worley.com/" },
+        { id: 4, img: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1726316042/Website/partners-logo/sqm12ut28vuikb5aygtv.png", alt: "Mouth-melto",  },
     ];
 
     const isMediumScreen = useMediaQuery("(max-width:650px)");

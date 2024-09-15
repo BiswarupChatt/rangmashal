@@ -33,10 +33,6 @@ export default function Footer() {
                             sx={{ width: 200, height: 'auto' }}
                         />
                     </Box>
-
-                    <Typography variant="body2" color="textSecondary" gutterBottom sx={{ mt: 2, px: 5 }} textAlign='justify'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </Typography>
                 </Grid>
 
                 <Grid item xs={12} md={3} sx={{ textAlign: { xs: 'center', md: 'left' } }}>

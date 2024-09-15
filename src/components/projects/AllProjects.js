@@ -15,7 +15,7 @@ export default function AllProjects() {
         (currentPage - 1) * projectPerPage, currentPage * projectPerPage
     )
 
-    const handlePageChange = (event, value) => {
+    const handlePageChange = (_, value) => {
         setCurrentPage(value);
     }
 
@@ -38,7 +38,7 @@ export default function AllProjects() {
                     page={currentPage}
                     onChange={handlePageChange}
                     color="primary"
-                    size="large"
+                    size="medium"
                     shape="rounded"
                     variant="outlined"
                     siblingCount={1}

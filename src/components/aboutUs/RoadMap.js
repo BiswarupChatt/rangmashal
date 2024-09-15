@@ -90,7 +90,7 @@ export default function RoadMap() {
                                                     padding: '10px 20px',
                                                     borderRadius: '8px',
                                                     width: 'fit-content',
-                                                    margin: '0 auto',
+                                                    margin: '0px auto 10px auto',
                                                 }}
                                             >
                                                 {item.year}

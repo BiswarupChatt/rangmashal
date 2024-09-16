@@ -5,9 +5,9 @@ import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf'
 import { Fade, Slide } from 'react-awesome-reveal';
 
 const reportData = [
-    { year: '2020-2021', auditReports: '', annualReports: 'https://drive.google.com/file/d/1KTjzM0BuaG9qKViqug32F3XiOKr9ZrIt/view?usp=sharing', },
+    { year: '2022-2023', auditReports: 'https://drive.google.com/file/d/1xRiFVA_LjeHFQA7Lei_GQzDP9p0ZnCA0/view?usp=sharing', annualReports: 'https://drive.google.com/file/d/1esJblclcr1W4IeIoEcW-bGheWIrwlBn6/view?usp=sharing', },
     { year: '2021-2022', auditReports: 'https://drive.google.com/file/d/1NJfnqYLFPxagkT52RoGeD5B5Q7jWxNj1/view?usp=sharing', annualReports: 'https://drive.google.com/file/d/1tc27JTOhWPb2Z-o7zUFm1LGes3_5T_BY/view?usp=sharing', },
-    { year: '2022-2023', auditReports: 'https://drive.google.com/file/d/1xRiFVA_LjeHFQA7Lei_GQzDP9p0ZnCA0/view?usp=sharing', annualReports: 'https://drive.google.com/file/d/1esJblclcr1W4IeIoEcW-bGheWIrwlBn6/view?usp=sharing', }
+    { year: '2020-2021', auditReports: '', annualReports: 'https://drive.google.com/file/d/1KTjzM0BuaG9qKViqug32F3XiOKr9ZrIt/view?usp=sharing', },
 ];
 
 
@@ -15,13 +15,13 @@ export default function Reports() {
     return (
         <>
             <Box sx={{ width: '100%' }}>
-                <Container sx={{ py: { xs: '20px', md: '50px' } }}>
+                <Container sx={{ py: { xs: '30px', md: '50px' } }}>
                     <Slide direction="up" cascade damping={1} triggerOnce>
                         <Fade cascade triggerOnce>
                             <Typography
                                 variant="h4"
                                 marginBottom={5}
-                                sx={{ textAlign: 'center', fontWeight: 'bold', color: 'primary.main', textTransform: 'uppercase' }}
+                                sx={{ textAlign: 'center', fontWeight: 'bold', color: 'primary.main', textTransform: 'uppercase', fontSize: { xs: '1.8rem', sm: '2.5rem', md: '3rem', }}}
                             >
                                 Yearly <span style={{ color: '#FFD041' }}>Reports</span>
                             </Typography>

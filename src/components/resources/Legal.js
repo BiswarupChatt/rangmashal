@@ -16,13 +16,13 @@ const documentData = [
 export default function Legal() {
     return (
         <Box sx={{ width: '100%', backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
-            <Container sx={{ py: { xs: '20px', md: '50px' } }}>
+            <Container sx={{ py: { xs: '30px', md: '50px' } }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>
                         <Grid>
                             <Typography
                                 variant="h4"
-                                sx={{ textAlign: 'center', fontWeight: 'bold', color: 'primary.main', mb: 4 }}
+                                sx={{ textAlign: 'center', fontWeight: 'bold', color: 'primary.main', mb: 4, fontSize: { xs: '1.8rem', sm: '2.5rem', md: '3rem', } }}
                             >
                                 LEGAL <span style={{ color: '#FFD041' }}>DOCUMENTS</span>
                             </Typography>

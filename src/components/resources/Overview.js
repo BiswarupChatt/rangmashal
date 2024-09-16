@@ -13,7 +13,7 @@ export default function Overview() {
                             <Grid item xs={12} md={6}>
                                 <Typography
                                     variant="body1"
-                                    sx={{ fontSize: '1.2rem', textAlign: 'left', paddingRight: '10px' }}
+                                    sx={{ fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem', }, textAlign: 'left', paddingRight: '10px' }}
                                 >
                                     <Box component='span' sx={{ color: 'primary.main', fontWeight: 'bold' }}>Rangmashal Foundation</Box> proudly stands as a non-religious, non-political NGO, formally registered under the <Box component='span' sx={{ color: 'primary.main', fontWeight: 'bold' }}>West Bengal Societies Registration Act. 1961.</Box>
                                     <br /><br />

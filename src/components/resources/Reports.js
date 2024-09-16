@@ -15,7 +15,7 @@ export default function Reports() {
     return (
         <>
             <Box sx={{ width: '100%' }}>
-                <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
+                <Container sx={{ py: { xs: '20px', md: '50px' } }}>
                     <Slide direction="up" cascade damping={1} triggerOnce>
                         <Fade cascade triggerOnce>
                             <Typography

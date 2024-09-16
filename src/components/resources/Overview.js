@@ -6,7 +6,7 @@ import { Fade, Slide } from 'react-awesome-reveal';
 export default function Overview() {
     return (
         <Box sx={{ width: '100%', backgroundColor: 'rgba(255, 208, 65, 0.2)' }}>
-            <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
+            <Container sx={{ py: '50px' }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>
                         <Grid container spacing={4} alignItems="center">
@@ -30,7 +30,7 @@ export default function Overview() {
 
                                 <Box sx={{ position: 'relative', display: 'inline-block', }}>
                                     <Box
-                                        sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'primary.main', transform: 'rotate(-5deg)', zIndex: 1, borderRadius: '20px', boxShadow: 20 }}
+                                        sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'primary.main', transform: 'rotate(-3deg)', zIndex: 1, borderRadius: '20px', boxShadow: 20 }}
                                     />
                                     <Box sx={{ position: 'relative', zIndex: 2 }} >
                                         <img src="https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg" alt="Kids Learning" style={{ width: '100%', borderRadius: '20px', }} />

@@ -1,13 +1,13 @@
-import Index from "../components/aboutUs/Index"
 import { Helmet } from "react-helmet"
 
-export default function AboutUs() {
+export default function Elevate() {
+
     return (
         <>
             <Helmet>
                 <title>About Rangmashal Foundation</title>
             </Helmet>
-            <Index />
+            <h2>Elevate Screen</h2>
         </>
     )
 }

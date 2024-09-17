@@ -10,15 +10,14 @@ const navItems = [
     { name: 'Home', path: '/' },
     // { name: 'Get Involved', path: '/' },
     // { name: 'Moments', path: '/' },
-    // {
-    //     name: 'Projects',
-    //     subItems: [
-    //         { name: 'Vision', path: '/team-roles' },
-    //         { name: 'Mission', path: '/internships' }
-    //     ]
-    // },
     { name: 'About Us', path: '/about' },
     { name: 'Resources', path: '/resources' },
+    {
+        name: 'Programmes',
+        subItems: [
+            { name: 'Elevate', path: '/programmes/elevate' },
+        ]
+    },
     { name: 'Projects', path: '/projects' },
     // { name: 'Contact Us', path: '/' },
     // { name: 'Blog', path: '/' },
@@ -162,14 +161,14 @@ const ItemDisplayDrawer = ({ items, handleDrawerToggle }) => {
                                             component={Link}
                                             to={subItem.path}
                                             sx={{
-                                                pl: 4,
+                                                textAlign: 'center',
                                                 '&:hover': {
                                                     color: 'primary.main'
                                                 }
                                             }}
                                             onClick={handleDrawerToggle}
                                         >
-                                            <ListItemText primary={subItem.name} />
+                                            <ListItemText primary={subItem.name}/>
                                         </ListItemButton>
                                     ))}
                                 </List>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { createTheme, ThemeProvider, CssBaseline } from '@mui/material'
-// import Home from './pages/Home'
 import AppRoutes from './routes/AppRoutes'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -21,15 +20,6 @@ const theme = createTheme({
     },
   },
   spacing: 8,
-  // components: {
-  //   MuiCssBaseline: {
-  //     styleOverrides: {
-  //       body: {
-  //         margin: '20px', 
-  //       },
-  //     },
-  //   },
-  // },
 })
 
 function App() {

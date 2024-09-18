@@ -12,13 +12,13 @@ const navItems = [
     // { name: 'Moments', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Resources', path: '/resources' },
+    { name: 'Projects', path: '/projects' },
     {
         name: 'Programmes',
         subItems: [
             { name: 'Elevate', path: '/programmes/elevate' },
         ]
     },
-    { name: 'Projects', path: '/projects' },
     // { name: 'Contact Us', path: '/' },
     // { name: 'Blog', path: '/' },
 
@@ -168,7 +168,7 @@ const ItemDisplayDrawer = ({ items, handleDrawerToggle }) => {
                                             }}
                                             onClick={handleDrawerToggle}
                                         >
-                                            <ListItemText primary={subItem.name}/>
+                                            <ListItemText primary={subItem.name} />
                                         </ListItemButton>
                                     ))}
                                 </List>

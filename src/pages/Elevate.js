@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet"
+import Index from "../components/elevate/Index"
 
 export default function Elevate() {
 
@@ -7,7 +8,7 @@ export default function Elevate() {
             <Helmet>
                 <title>About Rangmashal Foundation</title>
             </Helmet>
-            <h2>Elevate Screen</h2>
+            <Index />
         </>
     )
 }

@@ -8,10 +8,9 @@ import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, 
 
 const navItems = [
     { name: 'Home', path: '/' },
-    // { name: 'Get Involved', path: '/' },
-    // { name: 'Moments', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Resources', path: '/resources' },
+    { name: 'Create Moments', path: '/create-moments' },
     { name: 'Projects', path: '/projects' },
     {
         name: 'Programmes',
@@ -19,6 +18,7 @@ const navItems = [
             { name: 'Elevate', path: '/programmes/elevate' },
         ]
     },
+    { name: 'Careers', path: '/careers' },
     // { name: 'Contact Us', path: '/' },
     // { name: 'Blog', path: '/' },
 

@@ -37,20 +37,31 @@ export default function About() {
 
                         <Grid item xs={12} md={6}>
 
-                            <Box sx={{ position: 'relative', display: 'inline-block', }}>
+                            <Box sx={{ position: 'relative', display: 'inline-block', width: '100%' }}>
                                 <Box
                                     sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'primary.main', transform: 'rotate(-5deg)', zIndex: 1, borderRadius: '20px', boxShadow: 20 }}
                                 />
                                 <Box sx={{ position: 'relative', zIndex: 2 }} >
-                                    <img src="https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg" alt="Kids Learning" style={{ width: '100%', borderRadius: '20px', }} />
+
+                                    {/* <img src="https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg" alt="Kids Learning" style={{ width: '100%', borderRadius: '20px', }} /> */}
+
+                                    <iframe
+                                        width="100%"
+                                        height="315"
+                                        src="https://www.youtube.com/embed/bNjkKVJlpvo"
+                                        title="YouTube video player"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        style={{ borderRadius: '20px', minHeight: '350px' }}
+                                    ></iframe>
+                                    
                                 </Box>
                             </Box>
                         </Grid>
                     </Grid>
                 </Fade>
             </Slide>
-
-
         </Container>
     );
 }

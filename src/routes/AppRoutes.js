@@ -7,7 +7,7 @@ import PageNotFound from '../pages/PageNotFound'
 import Resources from '../pages/Resources'
 import Elevate from '../pages/Elevate'
 import Careers from '../pages/Careers'
-import CreateMoments from '../pages/CreateMoments'
+import CreateMemories from '../pages/CreateMemories'
 
 export default function AppRoutes() {
     return (
@@ -17,7 +17,7 @@ export default function AppRoutes() {
             <Route path='/projects' element={<Projects />} />
             <Route path='/resources' element={<Resources />} />
             <Route path='/careers' element={<Careers />} />
-            <Route path='/create-moments' element={<CreateMoments />} />
+            <Route path='/create-memories' element={<CreateMemories />} />
             <Route path='/programmes/elevate' element={<Elevate />} />
             <Route path='*' element={<PageNotFound />} />
         </Routes>

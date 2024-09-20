@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Tabs, Tab, Box, Typography, Container, Paper, Button } from '@mui/material';
+import { Slide, Fade } from 'react-awesome-reveal';
 
 export default function TabSection() {
     const [value, setValue] = useState(0);
@@ -44,77 +45,81 @@ export default function TabSection() {
     return (
         <Box sx={{ width: '100%', backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
-                <Box sx={{ width: '100%', marginTop: 1 }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
-                        <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
-                            <Tabs
-                                value={value}
-                                onChange={handleChange}
-                                variant="scrollable"
-                                scrollButtons
-                                allowScrollButtonsMobile
-                                aria-label="Occasion Tabs"
-                                sx={{ width: { xs: '100%', md: 'auto' }, display: 'flex', justifyContent: 'center' }}
-                            >
-                                {occasions.map((occasion, index) => (
-                                    <Tab
-                                        key={index}
-                                        label={occasion.title}
-                                        {...a11yProps(index)}
-                                        sx={{
-                                            textTransform: 'none',
-                                            fontWeight: 'bold',
-                                            fontSize: '1rem',
-                                        }}
-                                    />
-                                ))}
-                            </Tabs>
+                <Slide direction="up" cascade damping={1} triggerOnce>
+                    <Fade cascade triggerOnce>
+                        <Box sx={{ width: '100%', marginTop: 1 }}>
+                            <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+                                <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
+                                    <Tabs
+                                        value={value}
+                                        onChange={handleChange}
+                                        variant="scrollable"
+                                        scrollButtons
+                                        allowScrollButtonsMobile
+                                        aria-label="Occasion Tabs"
+                                        sx={{ width: { xs: '100%', md: 'auto' }, display: 'flex', justifyContent: 'center' }}
+                                    >
+                                        {occasions.map((occasion, index) => (
+                                            <Tab
+                                                key={index}
+                                                label={occasion.title}
+                                                {...a11yProps(index)}
+                                                sx={{
+                                                    textTransform: 'none',
+                                                    fontWeight: 'bold',
+                                                    fontSize: '1rem',
+                                                }}
+                                            />
+                                        ))}
+                                    </Tabs>
+                                </Box>
+                            </Box>
+
+                            {occasions.map((occasion, index) => (
+                                <div
+                                    role="tabpanel"
+                                    hidden={value !== index}
+                                    id={`simple-tabpanel-${index}`}
+                                    aria-labelledby={`simple-tab-${index}`}
+                                    key={index}
+                                >
+                                    {value === index && (
+                                        <Paper elevation={8} component={Box} sx={{ p: 3, backgroundColor: '#f9f9f9', borderRadius: 2, boxShadow: 1 }}>
+                                            <Box component="img"
+                                                src={occasion.image}
+                                                alt={occasion.title}
+                                                sx={{ width: '100%', maxHeight: '300px', objectFit: 'cover', borderRadius: 2, marginBottom: 2 }}
+                                            />
+                                            <Typography variant="h5" fontWeight='bold' gutterBottom color="primary">{occasion.title}</Typography>
+                                            <Typography variant="body1" textAlign='justify'>{occasion.content}</Typography>
+
+                                            <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 3 }}>
+                                                <Button
+                                                    variant="contained"
+                                                    sx={{
+                                                        padding: '10px 20px',
+                                                        backgroundColor: 'primary.main',
+                                                        transition: 'background-color 0.3s ease',
+                                                        '&:hover': {
+                                                            backgroundColor: 'secondary.main',
+                                                            color: 'black',
+                                                        },
+                                                        borderRadius: '10px',
+                                                        fontWeight: 'bold',
+                                                        textTransform: 'none',
+                                                    }}
+                                                >
+                                                    {occasion.button}
+                                                </Button>
+                                            </Box>
+
+                                        </Paper>
+                                    )}
+                                </div>
+                            ))}
                         </Box>
-                    </Box>
-
-                    {occasions.map((occasion, index) => (
-                        <div
-                            role="tabpanel"
-                            hidden={value !== index}
-                            id={`simple-tabpanel-${index}`}
-                            aria-labelledby={`simple-tab-${index}`}
-                            key={index}
-                        >
-                            {value === index && (
-                                <Paper elevation={8} component={Box} sx={{ p: 3, backgroundColor: '#f9f9f9', borderRadius: 2, boxShadow: 1 }}>
-                                    <Box component="img"
-                                        src={occasion.image}
-                                        alt={occasion.title}
-                                        sx={{ width: '100%', maxHeight: '300px', objectFit: 'cover', borderRadius: 2, marginBottom: 2 }}
-                                    />
-                                    <Typography variant="h5" fontWeight='bold' gutterBottom color="primary">{occasion.title}</Typography>
-                                    <Typography variant="body1" textAlign='justify'>{occasion.content}</Typography>
-
-                                    <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 3 }}>
-                                        <Button
-                                            variant="contained"
-                                            sx={{
-                                                padding: '10px 20px',
-                                                backgroundColor: 'primary.main',
-                                                transition: 'background-color 0.3s ease',
-                                                '&:hover': {
-                                                    backgroundColor: 'secondary.main',
-                                                    color: 'black',
-                                                },
-                                                borderRadius: '10px',
-                                                fontWeight: 'bold',
-                                                textTransform: 'none',
-                                            }}
-                                        >
-                                            {occasion.button}
-                                        </Button>
-                                    </Box>
-
-                                </Paper>
-                            )}
-                        </div>
-                    ))}
-                </Box>
+                    </Fade>
+                </Slide>
             </Container>
         </Box>
     );

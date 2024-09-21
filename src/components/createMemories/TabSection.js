@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
-import { Tabs, Tab, Box, Typography, Container, Paper, Button } from '@mui/material';
+import { Tabs, Tab, Box, Typography, Container, Paper, Button, Dialog, DialogTitle, DialogContent, IconButton } from '@mui/material';
 import { Slide, Fade } from 'react-awesome-reveal';
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function TabSection() {
-    const [value, setValue] = useState(0);
+    const [value, setValue] = useState(0)
+    const [open, setOpen] = useState(false)
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
+    };
+
+    const handleClickOpen = () => {
+        setOpen(true)
+    }
+
+    const handleClose = () => {
+        setOpen(false);
     };
 
     const occasions = [
@@ -108,6 +118,7 @@ export default function TabSection() {
                                                         fontWeight: 'bold',
                                                         textTransform: 'none',
                                                     }}
+                                                    onClick={() => handleClickOpen()}
                                                 >
                                                     {occasion.button}
                                                 </Button>
@@ -121,6 +132,30 @@ export default function TabSection() {
                     </Fade>
                 </Slide>
             </Container>
+
+            <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
+                <DialogTitle>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <Typography variant="h6">Fill the Form</Typography>
+                        <IconButton onClick={handleClose}>
+                            <CloseIcon />
+                        </IconButton>
+                    </Box>
+                </DialogTitle>
+                <DialogContent dividers>
+                    <iframe
+                        src='https://docs.google.com/forms/d/e/1FAIpQLSeZM_mXGnxCZGG4rII2M-N19AsG_O8mS5EQkUrsvsqaFPUBWw/viewform?embedded=true'
+                        width="100%"
+                        height="500px"
+                        frameBorder="0"
+                        marginHeight="0"
+                        marginWidth="0"
+                        title="Google Form"
+                    >
+                        Loading…
+                    </iframe>
+                </DialogContent>
+            </Dialog>
         </Box>
     );
 }

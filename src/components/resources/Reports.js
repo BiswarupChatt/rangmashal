@@ -49,7 +49,9 @@ export default function Reports() {
                                             <TableBody>
                                                 {reportData.map((ele, index) => (
                                                     <TableRow key={index} sx={{ backgroundColor: 'transparent' }}>
-                                                        <TableCell sx={{ border: '1px solid rgba(0, 0, 0, 0.1)', textAlign: 'center', alignItems: 'center' }}>{ele.year}</TableCell>
+                                                        <TableCell sx={{ border: '1px solid rgba(0, 0, 0, 0.1)', textAlign: 'center', alignItems: 'center' }}>
+                                                            {ele.year}
+                                                        </TableCell>
                                                         <TableCell sx={{ border: '1px solid rgba(0, 0, 0, 0.1)', textAlign: 'center' }}>
                                                             {ele.annualReports ? (
                                                                 <IconButton href={ele.annualReports} target="_blank">
@@ -61,7 +63,7 @@ export default function Reports() {
                                                         </TableCell>
                                                         <TableCell sx={{ border: '1px solid rgba(0, 0, 0, 0.1)', textAlign: 'center' }}>
                                                             {ele.auditReports ? (
-                                                                <IconButton href={ele.annualReports} target="_blank">
+                                                                <IconButton href={ele.auditReports} target="_blank">
                                                                     <PictureAsPdfIcon />
                                                                 </IconButton>
                                                             ) : (

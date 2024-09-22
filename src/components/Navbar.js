@@ -5,23 +5,41 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Button, Menu, MenuItem, Collapse } from '@mui/material';
+import DonateButton from './reusable/DonateButton';
 
 const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Resources', path: '/resources' },
-    { name: 'Create Memories', path: '/create-memories' },
-    { name: 'Projects', path: '/projects' },
     {
-        name: 'Programmes',
+        name: 'Who We Are',
         subItems: [
-            { name: 'Elevate', path: '/programmes/elevate' },
+            { name: 'About Us', path: '/programmes/elevate' },
+            { name: 'Resources', path: '/programmes/elevate' },
         ]
     },
-    { name: 'Careers', path: '/careers' },
-    // { name: 'Contact Us', path: '/' },
-    // { name: 'Blog', path: '/' },
-
+    {
+        name: 'What We Do',
+        subItems: [
+            { name: 'Elevate', path: '/programmes/elevate' },
+            { name: 'Create Memories', path: '/programmes/elevate' },
+            { name: 'Sharodiyar Porosh', path: '/programmes/elevate' },
+            { name: 'Health & Blood Donation', path: '/programmes/elevate' },
+            { name: 'Past Projects', path: '/programmes/elevate' },
+        ]
+    },
+    {
+        name: 'Get Involved',
+        subItems: [
+            { name: 'Volunteering & Internship', path: '/programmes/elevate' },
+            { name: 'CSR Activity', path: '/programmes/elevate' },
+        ]
+    },
+    {
+        name: 'Resources',
+        subItems: [
+            { name: 'Blog', path: '/programmes/elevate' },
+            { name: 'Media', path: '/programmes/elevate' },
+        ]
+    },
 ]
 
 
@@ -40,7 +58,11 @@ const ItemDisplay = ({ items }) => {
     };
 
     return (
-        <Box sx={{ display: { xs: 'none', md: 'block' }, marginLeft: 'auto' }}>
+        <Box sx={{
+            // display: { xs: 'none', md: 'block' }, 
+            display: { xs: 'none', '@media (min-width:980px)': { display: 'block' } },
+            marginLeft: 'auto'
+        }}>
             {items.map((ele) => {
                 if (ele.subItems) {
                     const isOpen = Boolean(anchorEl) && currentSubItems === ele.subItems;
@@ -54,7 +76,7 @@ const ItemDisplay = ({ items }) => {
                                 sx={{
                                     color: '#000',
                                     textTransform: 'none',
-                                    margin: '0 10px',
+                                    margin: '0 5px',
                                     fontSize: '1rem',
                                     '&:hover': {
                                         color: 'primary.main'
@@ -105,7 +127,7 @@ const ItemDisplay = ({ items }) => {
                             sx={{
                                 color: '#000',
                                 textTransform: 'none',
-                                margin: '0 10px',
+                                margin: '0 5px',
                                 fontSize: '1rem',
                                 '&:hover': {
                                     color: 'primary.main'
@@ -117,6 +139,8 @@ const ItemDisplay = ({ items }) => {
                     );
                 }
             })}
+
+            <DonateButton label='I want to Donate' />
         </Box>
     );
 };
@@ -193,6 +217,9 @@ const ItemDisplayDrawer = ({ items, handleDrawerToggle }) => {
                     )}
                 </React.Fragment>
             ))}
+            <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 2 }}>
+                <DonateButton label='I want to Donate' />
+            </Box>
         </List>
     );
 };
@@ -238,7 +265,11 @@ export default function Navbar(props) {
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { md: 'none' } }}
+                        sx={{
+                            mr: 2,
+                            // display: { md: 'none' },
+                            display: { xs: 'block', '@media (min-width:980px)': { display: 'none' } }
+                        }}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -255,7 +286,8 @@ export default function Navbar(props) {
                     onClose={handleDrawerToggle}
                     anchor="right"
                     sx={{
-                        display: { xs: 'block', md: 'none' },
+                        // display: { xs: 'block', md: 'none' },
+                        display: { xs: 'block', '@media (min-width:980px)': { display: 'none' } },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '60%' },
                     }}
                 >

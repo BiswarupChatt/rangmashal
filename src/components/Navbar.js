@@ -12,34 +12,34 @@ const navItems = [
     {
         name: 'Who We Are',
         subItems: [
-            { name: 'About Us', path: '/programmes/elevate' },
-            { name: 'Resources', path: '/programmes/elevate' },
+            { name: 'About Us', path: '/who-we-are/about' },
+            { name: 'Resources', path: '/who-we-are/resources' },
         ]
     },
     {
         name: 'What We Do',
         subItems: [
-            { name: 'Elevate', path: '/programmes/elevate' },
-            { name: 'Create Memories', path: '/programmes/elevate' },
-            { name: 'Sharodiyar Porosh', path: '/programmes/elevate' },
-            { name: 'Health & Blood Donation', path: '/programmes/elevate' },
-            { name: 'Past Projects', path: '/programmes/elevate' },
+            { name: 'Elevate', path: '/what-we-do/elevate' },
+            { name: 'Create Memories', path: '/what-we-do/create-memories' },
+            // { name: 'Sharodiyar Porosh', path: '/what-we-do/' },
+            // { name: 'Health & Blood Donation', path: '/what-we-do/' },
+            { name: 'Past Projects', path: '/what-we-do/past-projects' },
         ]
     },
-    {
-        name: 'Get Involved',
-        subItems: [
-            { name: 'Volunteering & Internship', path: '/programmes/elevate' },
-            { name: 'CSR Activity', path: '/programmes/elevate' },
-        ]
-    },
-    {
-        name: 'Resources',
-        subItems: [
-            { name: 'Blog', path: '/programmes/elevate' },
-            { name: 'Media', path: '/programmes/elevate' },
-        ]
-    },
+    // {
+    //     name: 'Get Involved',
+    //     subItems: [
+    //         { name: 'Volunteering & Internship', path: '/get-involved/careers' },
+    //         { name: 'CSR Activity', path: '/get-involved/csr' },
+    //     ]
+    // },
+    // {
+    //     name: 'Resources',
+    //     subItems: [
+    //         { name: 'Blog', path: '/resources/blog' },
+    //         { name: 'Media', path: '/resources/media' },
+    //     ]
+    // },
 ]
 
 

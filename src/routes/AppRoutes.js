@@ -13,12 +13,15 @@ export default function AppRoutes() {
     return (
         <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/about' element={<AboutUs />} />
-            <Route path='/projects' element={<Projects />} />
-            <Route path='/resources' element={<Resources />} />
-            <Route path='/careers' element={<Careers />} />
-            <Route path='/create-memories' element={<CreateMemories />} />
-            <Route path='/programmes/elevate' element={<Elevate />} />
+
+            <Route path='/who-we-are/about' element={<AboutUs />} />
+            <Route path='/who-we-are/resources' element={<Resources />} />
+
+            <Route path='/what-we-do/elevate' element={<Elevate />} />
+            <Route path='/what-we-do/create-memories' element={<CreateMemories />} />
+            <Route path='/what-we-do/past-projects' element={<Projects />} />
+
+            <Route path='/get-involved/careers' element={<Careers />} />
             <Route path='*' element={<PageNotFound />} />
         </Routes>
     )

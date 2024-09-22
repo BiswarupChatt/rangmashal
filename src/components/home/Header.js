@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/autoplay"; 
+import "swiper/css/autoplay";
 import LazyLoad from "react-lazyload";
 import { Autoplay } from "swiper/modules";
 import { Box, Container, Typography } from "@mui/material";
@@ -33,7 +33,7 @@ export default function Header() {
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
-                autoplay={{ delay: 5000,}}
+                autoplay={{ delay: 5000, }}
                 loop={true}
                 speed={1500}
                 modules={[Autoplay]}
@@ -89,8 +89,8 @@ export default function Header() {
                             gutterBottom
                             sx={{ wordWrap: 'break-word', whiteSpace: 'normal' }}
                         >
-                            Join the fight for a{' '}
-                            <span style={{ color: '#32BFC2' }}>better world</span>
+                            <span style={{ color: '#32BFC2' }}>Together we rise, {' '}</span>
+                            for a future that&#39;s wise.
                         </Typography>
 
                         <Typography
@@ -99,12 +99,11 @@ export default function Header() {
                                 mb: 3,
                                 fontSize: isMediumScreen ? '1rem' : '1.2rem',
                                 textAlign: 'justify',
-                                textAlignLast: "center", 
+                                textAlignLast: "center",
                                 whiteSpace: 'normal',
                             }}
                         >
-                            Welcome to Rangmashal Foundation, India&apos;s leading NGO that has been empowering
-                            underprivileged children and women across India since 2020.
+                            Welcome to Rangmashal Foundation, a youth-driven NGO empowering underprivileged children and women across India since 2020.
                         </Typography>
 
                         <DonateButton label="Donate Now" />
@@ -137,6 +136,6 @@ const LazyLoadImageWithBlur = ({ src, alt }) => {
                 }}
             />
         </LazyLoad>
-  
-);
+
+    );
 };

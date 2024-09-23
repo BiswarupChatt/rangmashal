@@ -26,13 +26,13 @@ const navItems = [
             { name: 'Past Projects', path: '/what-we-do/past-projects' },
         ]
     },
-    // {
-    //     name: 'Get Involved',
-    //     subItems: [
-    //         { name: 'Volunteering & Internship', path: '/get-involved/careers' },
-    //         { name: 'CSR Activity', path: '/get-involved/csr' },
-    //     ]
-    // },
+    {
+        name: 'Get Involved',
+        subItems: [
+            // { name: 'Volunteering & Internship', path: '/get-involved/careers' },
+            { name: 'CSR Activity', path: '/get-involved/csr' },
+        ]
+    },
     // {
     //     name: 'Resources',
     //     subItems: [

@@ -8,6 +8,7 @@ import Resources from '../pages/Resources'
 import Elevate from '../pages/Elevate'
 import Careers from '../pages/Careers'
 import CreateMemories from '../pages/CreateMemories'
+import CSR from '../pages/CSR'
 
 export default function AppRoutes() {
     return (
@@ -22,6 +23,7 @@ export default function AppRoutes() {
             <Route path='/what-we-do/past-projects' element={<Projects />} />
 
             <Route path='/get-involved/careers' element={<Careers />} />
+            <Route path='/get-involved/csr' element={<CSR />} />
             <Route path='*' element={<PageNotFound />} />
         </Routes>
     )

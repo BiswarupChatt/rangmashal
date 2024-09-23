@@ -1,32 +1,31 @@
 import React from 'react';
 import { Box, Typography, Grid, Container, Paper, colors } from '@mui/material';
-import SchoolIcon from '@mui/icons-material/School';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import EventIcon from '@mui/icons-material/Event';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 
 const data = [
     {
-        icon: <SchoolIcon sx={{ fontSize: 50, color: 'primary.main' }} />,
-        title: 'Support a Local Initiative',
-        description: 'Choose to uplift one of our grassroots projects that focus on education, empowerment, and dignity. By supporting a local initiative, your organization will be instrumental in fostering positive change.'
+        icon: <CalendarTodayIcon sx={{ fontSize: 50, color: 'primary.main' }} />,
+        title: 'Engage Through Events',
+        description: 'Join us in our events—from community celebrations to educational workshops. As a sponsor, you will help raise awareness about critical issues while gaining visibility for your brand. Your involvement can inspire others and contribute to meaningful community engagement.'
     },
     {
-        icon: <AccountBalanceIcon sx={{ fontSize: 50, color: 'primary.main' }} />,
-        title: 'Direct Contributions for Change',
-        description: 'Make a direct impact by contributing to causes aligned with your mission. Your contributions will support critical initiatives designed to uplift communities and foster holistic development.'
+        icon: <MonetizationOnIcon sx={{ fontSize: 50, color: 'primary.main' }} />,
+        title: 'Community Fundraising Initiatives',
+        description: 'Facilitate community involvement by hosting co-branded fundraising drives at your offices or retail locations. These initiatives offer your employees and customers the chance to contribute directly to our mission, reinforcing your organization’s commitment to social responsibility.'
     }
 ];
 
-export default function Partnering() {
+export default function Marketing() {
     return (
-        <Box sx={{ width: '100%', backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
+        <Box sx={{ width: '100%', backgroundColor: 'rgba(255, 208, 65, 0.2)' }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
                 <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', mb: 2 }}>
-                    Partnering with <Box component="span" sx={{ color: 'primary.main' }}>Rangmashal</Box>
+                    Marketing with a <Box component="span" sx={{ color: 'primary.main' }}>Purpose</Box>
                 </Typography>
 
                 <Typography variant="body1" align="center" sx={{ mb: 3, color: 'text.secondary' }}>
-                    We offer flexible and meaningful partnership avenues designed to resonate with your organization’s values and goals.
+                    Integrate your marketing efforts with our mission for social change. Collaborating with Rangmashal on purpose-driven campaigns will enhance your brand’s image while fostering community engagement, amplifying both social impact and business success.
                 </Typography>
 
                 <Grid container spacing={4}>

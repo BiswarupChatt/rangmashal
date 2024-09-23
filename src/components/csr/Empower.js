@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Grid, Container, Paper, colors } from '@mui/material';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+import DonateButton from '../reusable/DonateButton';
 
 
 const data = [
@@ -56,6 +57,9 @@ export default function Empower() {
                         </Grid>
                     ))}
                 </Grid>
+                <Box sx={{ display: 'flex', justifyContent: 'center', mt: 5 }}>
+                    <DonateButton label='I Want to Contribute ❤︎' />
+                </Box>
             </Container>
         </Box >
     );

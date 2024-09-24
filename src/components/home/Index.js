@@ -1,7 +1,6 @@
 import { useEffect } from "react"
 import About from "./About"
 import Header from "./Header"
-import Partners from "./Partners"
 import Milestones from "./Milestones"
 export default function Index() {
 
@@ -14,7 +13,6 @@ export default function Index() {
             <Header />
             <Milestones />
             <About />
-            <Partners />
         </>
     )
 }

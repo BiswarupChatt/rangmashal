@@ -33,13 +33,13 @@ const navItems = [
             { name: 'CSR Activity', path: '/get-involved/csr' },
         ]
     },
-    // {
-    //     name: 'Resources',
-    //     subItems: [
-    //         { name: 'Blog', path: '/resources/blog' },
-    //         { name: 'Media', path: '/resources/media' },
-    //     ]
-    // },
+    {
+        name: 'Resources',
+        subItems: [
+            { name: 'Blog', path: '/resources/blog' },
+            // { name: 'Media', path: '/resources/media' },
+        ]
+    },
 ]
 
 

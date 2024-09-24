@@ -1,17 +1,29 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Box, Typography, Container, Divider } from '@mui/material';
+import { useParams, useNavigate } from 'react-router-dom';
+import { Box, Typography, Container, Divider, Button } from '@mui/material';
 import { blogPosts } from '../blog/blogData';
 import PageNotFound from '../../pages/PageNotFound';
-import parse from 'html-react-parser'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import parse from 'html-react-parser';
+import moment from 'moment';
 
 export default function BlogDetails() {
     const { id } = useParams();
     const post = blogPosts.find((ele) => ele.id === parseInt(id));
+    const navigate = useNavigate();
 
     return (
         <Container sx={{ py: 4 }}>
 
+
+            <Button
+                variant="outlined"
+                startIcon={<ArrowBackIcon />}
+                onClick={() => navigate(-1)}
+                sx={{ mb: 4 }}
+            >
+                Back
+            </Button>
 
             {post ? (
                 <>
@@ -39,12 +51,13 @@ export default function BlogDetails() {
                         variant="subtitle2"
                         sx={{
                             mb: 4,
-                            textAlign: 'center',
+                            ml: 1,
+                            textAlign: 'left',
                             color: 'text.secondary',
                             fontSize: { xs: '0.875rem', sm: '1rem', md: '1.125rem' },
                         }}
                     >
-                        {post.date}
+                        {moment(post.date).format('Do MMMM YYYY')}
                     </Typography>
 
                     <Divider />
@@ -55,12 +68,14 @@ export default function BlogDetails() {
                             textAlign: 'justify',
                             lineHeight: 1.7,
                             color: 'text.primary',
-                            maxWidth: '800px',
+                            maxWidth: '850px',
                             margin: '0 auto',
                         }}
                     >
                         {parse(post.content)}
                     </Box>
+
+                    <Divider sx={{ mt: 4 }} />
                 </>
             ) : (
                 <Box>

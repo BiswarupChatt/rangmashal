@@ -1,9 +1,13 @@
-import ComingSoon from "../ComingSoon"
+import Hero from "./Hero"
+import WantToHelp from "./WantToHelp"
+import EmpowermentSection from "./Gallery"
 
 export default function Index() {
     return (
         <>
-            <ComingSoon />
+            <Hero />
+            <WantToHelp />
+            <EmpowermentSection />
         </>
     )
 }

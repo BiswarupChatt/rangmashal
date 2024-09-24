@@ -253,7 +253,7 @@ export default function Navbar(props) {
                     <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
                         <Button component={Link} to="/" sx={{ padding: 0 }}>
                             <img
-                                src="../images/logo-only.png"
+                                src="/images/logo-only.png"
                                 alt="Rangmashal Logo"
                                 style={{ width: '80px', height: 'auto', padding: '10px' }}
                             />
@@ -294,7 +294,7 @@ export default function Navbar(props) {
                     <Box>
                         <Button component={Link} to="/" sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
                             <img
-                                src="../images/logo-only.png"
+                                src="/images/logo-only.png"
                                 alt="Rangmashal Logo"
                                 style={{ width: '50px', height: 'auto' }}
                             />

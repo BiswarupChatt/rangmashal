@@ -29,7 +29,7 @@ export default function Footer() {
                     <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
                         <Avatar
                             alt="Rangmashal Logo"
-                            src="../images/logo-black.png"
+                            src="/images/logo-black.png"
                             sx={{ width: 200, height: 'auto' }}
                         />
                     </Box>

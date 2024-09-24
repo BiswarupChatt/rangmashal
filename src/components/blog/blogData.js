@@ -2,10 +2,10 @@
 
 export const blogPosts = [
     {
-      id: 1,
-      title: "Child Education: The Key to a Brighter Future",
-      date: "2023-09-12",
-      content: `
+        id: 1,
+        title: "Child Education: The Key to a Brighter Future",
+        date: "2023-09-12",
+        content: `
         <h2>Why Education Matters?</h2>
         <p>Education plays an essential role in breaking down socioeconomic barriers. It provides children from all backgrounds an equal chance to excel, fostering empathy and understanding along the way.</p>
         <p>Some core reasons why early and continuous education is vital include:</p>
@@ -15,12 +15,13 @@ export const blogPosts = [
         </ul>
         <p>... More content</p>
       `,
+        image: 'https://via.placeholder.com/1200x600',
     },
     {
-      id: 2,
-      title: "The Importance of Donations in Supporting Child Education",
-      date: "2023-10-05",
-      content: `
+        id: 2,
+        title: "The Importance of Donations in Supporting Child Education",
+        date: "2023-10-05",
+        content: `
         <h2>How Donations Contribute to Educational Equity?</h2>
         <p>Donations create lasting change by addressing the root causes of educational inequality. Here's how contributions help:</p>
         <ul>
@@ -29,7 +30,6 @@ export const blogPosts = [
         </ul>
         <p>... More content</p>
       `,
+        image: 'https://via.placeholder.com/1200x600',
     },
-    // Add more blog posts
-  ];
-  
+];

@@ -62,7 +62,7 @@ export default function Hero() {
                         textAlignLast: "center",
                     }}
                 >
-                    Celebrate your special occasions meaningfully with the Rangmashal Foundation. Spread joy and make a difference. Here are some ways to share your love with us
+                    Discover inspiring stories and impactful moments from Rangmashal Foundation. Stay informed and find new ways to make a difference in the lives we serve.
                 </Typography>
             </Box>
         </Box>

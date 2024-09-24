@@ -2,8 +2,14 @@ import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied'; import { Helmet } from "react-helmet"
+import { useEffect } from "react"
 
 export default function PageNotFound() {
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }, []);
+
     return (
         <>
             <Helmet>

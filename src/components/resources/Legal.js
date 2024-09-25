@@ -5,10 +5,10 @@ import { Fade, Slide } from 'react-awesome-reveal';
 
 const documentData = [
     { name: 'Corporate Social Responsibility', date: '03-01-2023', documentLink: 'https://drive.google.com/file/d/1zakAxeoZrPkCXiC5EDQg0Jn8n8zIgR-N/view?usp=sharing', registration: 'SRN-F55749006' },
-    { name: 'Registered as Society', date: '10-02-2021', documentLink: 'https://drive.google.com/file/d/1rF183MPq6kDRKII5RU93gD9N13CsvZO8/view?usp=sharing', registration: 'S0017003 of 2020-2021' },
-    { name: 'PAN', date: '24-09-202', documentLink: 'https://drive.google.com/file/d/1kO9yzSSrBSMh06BfnOEftpdIn-B9h4dO/view?usp=sharing', registration: 'AAETR7992J' },
     { name: '12A', date: '01-12-2022', documentLink: 'https://drive.google.com/file/d/1vcuVPubXA_Zz7zo0sAbfCuG5BGzjKaKp/view?usp=sharing', registration: 'AAETR7992JE2022101' },
     { name: '80-G', date: '03-12-2022', documentLink: 'https://drive.google.com/file/d/1JAD3sW69NkIeWwn6cXsmusk1trEWLr4f/view?usp=sharing', registration: 'AAETR7992JF2022101' },
+    { name: 'PAN', date: '24-09-2022', documentLink: 'https://drive.google.com/file/d/1kO9yzSSrBSMh06BfnOEftpdIn-B9h4dO/view?usp=sharing', registration: 'AAETR7992J' },
+    { name: 'Registered as Society', date: '10-02-2021', documentLink: 'https://drive.google.com/file/d/1rF183MPq6kDRKII5RU93gD9N13CsvZO8/view?usp=sharing', registration: 'S0017003 of 2020-2021' },
 ];
 
 

@@ -99,9 +99,6 @@ export default function Gallery() {
                     </Fade>
                 </Slide >
 
-
-
-
                 <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth>
                     <IconButton
                         aria-label="close"

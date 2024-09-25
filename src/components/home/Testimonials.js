@@ -11,7 +11,7 @@ import { Slide, Fade } from 'react-awesome-reveal';
 const testimonials = [
     {
         name: 'Trisha Das',
-        review: "They are doing a very wonderful job with full honesty which is very much needed in today's society. They are always active and completely dedicated to their work which makes them unique to me. More power to you Rangmashal Jadavpur✊❤️",
+        review: "They are doing a very wonderful job with full honesty which is very much needed in today's society. They are always active and completely dedicated to their work which makes them unique to me. More power to you Rangmashal✊❤️",
         image: 'https://lh3.googleusercontent.com/a-/ALV-UjWYsZ9xBKUYxM3eqN8ECQh-VTdYqQNDqdnHs2QiwgpMAuBsi0MC=w60-h60-p-rp-mo-br100',
     },
     {
@@ -31,7 +31,7 @@ const testimonials = [
     },
     {
         name: 'Pallabi Majee',
-        review: 'Rangmashal Jadavapur is doing great work towards the upliftment of needy people in Society. Members are very co operative and they are easy to reach out. May God Bless Them! ..',
+        review: 'Rangmashal is doing great work towards the upliftment of needy people in Society. Members are very co operative and they are easy to reach out. May God Bless Them! ..',
         image: 'https://lh3.googleusercontent.com/a-/ALV-UjVS_9HwNv7HqLUgbdP5pZV1mHsYrZFjR9zn5j66OiKx30qk91JcaA=w60-h60-p-rp-mo-br100',
     },
 ];
@@ -96,7 +96,7 @@ export default function Testimonials() {
                                                     fontSize: 60,
                                                     color: index % 2 === 0 ? 'primary.main' : 'secondary.main',
                                                     position: 'absolute',
-                                                    bottom: '5%',
+                                                    top: '5%',
                                                     right: '5%',
                                                 }}
                                             />

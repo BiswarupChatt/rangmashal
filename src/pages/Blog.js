@@ -1,5 +1,6 @@
 import Index from "../components/blog/Index"
 import { useEffect } from 'react';
+import { Helmet } from "react-helmet"
 
 export default function Blog() {
 
@@ -9,6 +10,9 @@ export default function Blog() {
 
     return (
         <>
+            <Helmet>
+                <title>Read our Latest Blogs || Rangmashal Blogs</title>
+            </Helmet>
             <Index />
         </>
     )

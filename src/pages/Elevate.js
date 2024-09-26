@@ -11,7 +11,7 @@ export default function Elevate() {
     return (
         <>
             <Helmet>
-                <title>About Rangmashal Foundation</title>
+                <title>Rangmashal Elevate</title>
             </Helmet>
             <Index />
         </>

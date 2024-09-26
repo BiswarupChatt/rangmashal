@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Box, Typography, Container, Divider, Button } from '@mui/material';
 import { blogPosts } from '../blog/blogData';
@@ -7,10 +7,17 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import parse from 'html-react-parser';
 import moment from 'moment';
 
-export default function BlogDetails() {
+export default function BlogDetails({ setTitle }) {
     const { id } = useParams();
     const post = blogPosts.find((ele) => ele.id === parseInt(id));
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (post && setTitle) {
+            setTitle(post.title)
+        }
+    })
+
 
     return (
         <Container sx={{ py: 4 }}>

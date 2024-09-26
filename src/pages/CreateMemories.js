@@ -1,5 +1,6 @@
 import Index from "../components/createMemories/Index";
 import { useEffect } from "react"
+import { Helmet } from "react-helmet"
 
 export default function CreateMemories() {
 
@@ -8,6 +9,11 @@ export default function CreateMemories() {
     }, []);
 
     return (
-        <Index />
+        <>
+            <Helmet>
+                <title>Create Memories With Rangmashal</title>
+            </Helmet>
+            <Index />
+        </>
     )
 }

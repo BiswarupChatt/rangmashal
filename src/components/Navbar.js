@@ -21,7 +21,7 @@ const navItems = [
         subItems: [
             { name: 'Elevate', path: '/what-we-do/elevate' },
             { name: 'Create Memories', path: '/what-we-do/create-memories' },
-            // { name: 'Sharodiyar Porosh', path: '/what-we-do/' },
+            { name: 'Sharodiyar Porosh', path: '/what-we-do/sharodiyar-porosh' },
             // { name: 'Health & Blood Donation', path: '/what-we-do/' },
             { name: 'Past Projects', path: '/what-we-do/past-projects' },
         ]

@@ -57,7 +57,7 @@ export default function Hero() {
                     variant="body1"
                     sx={{
                         mb: 4,
-                        fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem', },
+                        // 
                         textAlign: 'justify',
                         textAlignLast: "center",
                     }}

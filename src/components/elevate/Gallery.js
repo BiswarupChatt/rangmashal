@@ -34,13 +34,13 @@ export default function Gallery() {
     };
 
     return (
-        <Box sx={{ width: '100%', backgroundColor: 'rgba(255, 208, 65, 0.2)' }}>
+        <Box sx={{ width: '100%', backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>
                         <Box>
-                            <Typography variant="h4" sx={{ fontWeight: 'bold', textAlign: 'center', mb: 4 }}>
-                                Gallery
+                            <Typography variant="h4" sx={{ fontWeight: 'bold', textAlign: 'center', mb: 4, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } }}>
+                                Snap From <Box component='span' sx={{ color: 'primary.main' }}>Elevate</Box>
                             </Typography>
 
                             <Swiper

@@ -21,8 +21,8 @@ export default function Empower() {
                     <Fade cascade triggerOnce>
                         <Grid container spacing={4} alignItems="center">
                             <Grid item xs={12} md={6}>
-                                <Box sx={{ padding: { xs: '20px 0', md: '0 20px' }}}>
-                                    <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2,fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } }}>
+                                <Box sx={{ padding: { xs: '20px 0', md: '0 20px' } }}>
+                                    <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } }}>
                                         Empowering Children <Box component='span' sx={{ color: 'primary.main' }}>Through Education</Box>
                                     </Typography>
                                     <Typography variant="body1" textAlign='justify' >
@@ -46,7 +46,7 @@ export default function Empower() {
                                         </Typography>
                                     </Collapse>
 
-                                    <Box sx={{ display: 'flex', justifyContent: 'left', mt: 2 }}>
+                                    <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'left' }, mt: 2 }}>
                                         <Typography
                                             component="span"
                                             onClick={handleToggle}
@@ -63,7 +63,7 @@ export default function Empower() {
                                             {expand ? <ExpandLessIcon sx={{ ml: 1 }} /> : <ExpandMoreIcon sx={{ ml: 1 }} />}
                                         </Typography>
                                     </Box>
-                                    <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+                                    <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'left' }, mt: 2 }}>
                                         <DonateButton label='I want to Help Children ♡' />
                                     </Box>
                                 </Box>

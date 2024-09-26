@@ -51,7 +51,7 @@ export default function Hero() {
 
                     }}
                 >
-                    Sharodiya <span style={{ color: '#fff' }}>Porosh</span>
+                    Sharodiyar <span style={{ color: '#fff' }}>Porosh</span>
                 </Typography>
                 <Typography
                     variant="body1"

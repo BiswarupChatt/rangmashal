@@ -1,8 +1,9 @@
+import Index from "../components/healthBloodDonation/Index"
 import { Helmet } from "react-helmet"
 import { useEffect } from "react"
-import Index from "../components/elevate/Index"
 
-export default function Elevate() {
+
+export default function HealthBloodDonation() {
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -11,7 +12,7 @@ export default function Elevate() {
     return (
         <>
             <Helmet>
-                <title>Rangmashal Elevate</title>
+                <title>Blood Donation & Health Camp Organized by Rangmashal Foundation</title>
             </Helmet>
             <Index />
         </>

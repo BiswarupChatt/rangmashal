@@ -1,4 +1,4 @@
-import Index from "../components/sharodiyaPorosh/Index"
+import Index from "../components/sharodiyarPorosh/Index"
 import { useEffect } from "react"
 import { Helmet } from "react-helmet"
 

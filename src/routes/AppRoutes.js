@@ -11,7 +11,8 @@ import CreateMemories from '../pages/CreateMemories'
 import CSR from '../pages/CSR'
 import Blog from '../pages/Blog'
 import BlogDetails from '../pages/BlogDetails'
-import SharodiyarPorosh from '../pages/SharodiyaPorosh'
+import SharodiyarPorosh from '../pages/SharodiyarPorosh'
+import HealthBloodDonation from '../pages/HealthBloodDonation'
 
 export default function AppRoutes() {
     return (
@@ -24,6 +25,7 @@ export default function AppRoutes() {
             <Route path='/what-we-do/elevate' element={<Elevate />} />
             <Route path='/what-we-do/create-memories' element={<CreateMemories />} />
             <Route path='/what-we-do/sharodiyar-porosh' element={<SharodiyarPorosh />} />
+            <Route path='/what-we-do/health-blood-donation' element={<HealthBloodDonation />} />
             <Route path='/what-we-do/past-projects' element={<Projects />} />
 
             <Route path='/get-involved/careers' element={<Careers />} />

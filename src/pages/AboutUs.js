@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet"
 import { useEffect } from 'react';
 
 
-
 export default function AboutUs() {
 
     useEffect(() => {

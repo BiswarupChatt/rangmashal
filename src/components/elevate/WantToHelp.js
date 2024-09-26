@@ -5,7 +5,7 @@ import { Slide, Fade } from 'react-awesome-reveal';
 export default function WantToHelp() {
   return (
     <Box sx={{ py: 8, backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
-      <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
+      <Container sx={{ px: { xs: '20px', md: '50px' } }}>
         <Slide direction="up" cascade damping={1} triggerOnce>
           <Fade cascade triggerOnce>
             <Box>

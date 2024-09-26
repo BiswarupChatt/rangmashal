@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <>
             <Helmet>
-                <title>Rangmashal | One of the leading NGO in Kolkata</title>
+                <title>Rangmashal | Best NGO for Children and Women in Kolkata India</title>
             </Helmet>
             <Index />
         </>

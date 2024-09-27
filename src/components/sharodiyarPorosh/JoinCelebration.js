@@ -23,7 +23,7 @@ export default function JoinCelebration() {
                 </Typography>
 
                 <Typography variant="body1" sx={{ textAlign: 'justify', mb: 3 }}>
-                    Durga Puja is a time of celebration, togetherness, and reflection—a festival that embodies the victory of good over evil and the indomitable strength of Maa Durga. At Rangmashal, this festive season is not just about celebrations; it’s about extending our mission of spreading hope and creating positive change for those in need.
+                    Durga Puja is a time of celebration, togetherness, and reflection—a festival that embodies the victory of good over evil and the indomitable strength of Maa Durga. At Rangmashal, this festive season is not just about celebrations; it&apos;s about extending our mission of spreading hope and creating positive change for those in need.
                 </Typography>
 
                 <Box

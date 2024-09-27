@@ -1,7 +1,13 @@
+import Hero from "./Hero"
+import EmpowerHealth from "./EmpowerHealth"
+import Gallery from "./Gallery"
+
 export default function () {
     return (
         <>
-            <h2>Health & Blood Donation</h2>
+            <Hero />
+            <EmpowerHealth />
+            <Gallery />
         </>
     )
 }

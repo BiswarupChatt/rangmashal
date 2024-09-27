@@ -10,14 +10,14 @@ import DonateButton from './reusable/DonateButton';
 const navItems = [
     { name: 'Home', path: '/' },
     {
-        name: 'Who We Are',
+        name: 'Our Mission',
         subItems: [
             { name: 'About Us', path: '/who-we-are/about' },
             { name: 'Resources', path: '/who-we-are/resources' },
         ]
     },
     {
-        name: 'What We Do',
+        name: 'Our Initiatives',
         subItems: [
             { name: 'Elevate', path: '/what-we-do/elevate' },
             { name: 'Create Memories', path: '/what-we-do/create-memories' },
@@ -27,14 +27,14 @@ const navItems = [
         ]
     },
     {
-        name: 'Get Involved',
+        name: 'Join Us',
         subItems: [
             // { name: 'Volunteering & Internship', path: '/get-involved/careers' },
             { name: 'CSR Activity', path: '/get-involved/csr' },
         ]
     },
     {
-        name: 'Resources',
+        name: 'Learn More',
         subItems: [
             { name: 'Blog', path: '/resources/blog' },
             // { name: 'Media', path: '/resources/media' },

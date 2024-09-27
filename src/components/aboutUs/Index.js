@@ -12,7 +12,7 @@ export default function Index() {
             <Vision />
             <Mission />
             <RoadMap />
-            <Members />
+            {/* <Members /> */}
         </>
     )
 }

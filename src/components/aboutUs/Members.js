@@ -27,26 +27,27 @@ function TeamSection() {
         setOpen(false);
     };
 
+
     return (
         <>
             {
                 AllMembers.map((ele, index) => (
-                    <Box sx={{ backgroundColor: 'rgba(50, 191, 194, 0.1)', width: '100%', py: 5 }}>
+                    <Box sx={{ backgroundColor: index % 2 === 0 ? 'rgba(50, 191, 194, 0.1)' : 'rgba(255, 208, 65, 0.2)', width: '100%', py: 5 }}>
                         <Container>
                             <Slide direction="up" cascade damping={1} triggerOnce key={index}>
                                 <Fade cascade triggerOnce>
                                     <Grid container spacing={4} alignItems="center">
-                                        <Grid item xs={12} md={4}>
+                                        <Grid item xs={12} md={3} sx={{ order: { xs: 1, md: index % 2 === 0 ? 1 : 2 } }}>
                                             <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 4 }} textAlign="center">
                                                 {ele.categoryName}
                                             </Typography>
                                         </Grid>
-                                        <Grid item xs={12} md={8}>
+                                        <Grid item xs={12} md={9} sx={{ order: { xs: 2, md: index % 2 === 0 ? 2 : 1 } }}>
                                             <Box sx={{ width: '100%', padding: 4 }}>
                                                 <Swiper
                                                     modules={[Navigation, Pagination, Autoplay]}
                                                     spaceBetween={15}
-                                                    navigation
+                                                    // navigation
                                                     pagination={{ clickable: true }}
                                                     autoplay={{ delay: 6000, disableOnInteraction: false }}
                                                     effect={'coverflow'}
@@ -55,6 +56,7 @@ function TeamSection() {
                                                     speed={1500}
                                                     breakpoints={{
                                                         640: { slidesPerView: 1 },
+                                                        768: { slidesPerView: 2 },
                                                         1024: { slidesPerView: 3 },
                                                     }}
                                                 >
@@ -131,7 +133,7 @@ function TeamSection() {
                                 </Fade>
                             </Slide>
                         </Container>
-                    </Box>
+                    </Box >
                 ))
             }
         </>

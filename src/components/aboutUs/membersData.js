@@ -70,6 +70,15 @@ export const membersData = [
                 facebook: 'https://www.facebook.com/moutushi.mitra.52',
                 instagram: 'https://www.instagram.com/moutushi.1703/'
             },
+            {
+                name: 'Moutushi Mitra',
+                position: 'Resource Allocation',
+                imageUrl: '',
+                description: `I am a sincere, honest, and hardworking individual now engaged with PNB Metlife India as an Insurance Distribution Manager. I lead a team of insurance advisors and am responsible for driving agency channel sales through my team. As director of Resource Mobilization at Rangmashal, I am responsible for generating funds, finding and mobilizing skilled personnel for social projects, and networking with other organizations that are willing to support our cause.`,
+                linkedIn: 'https://www.linkedin.com/in/moutushi-mitra-57093b52/',
+                facebook: 'https://www.facebook.com/moutushi.mitra.52',
+                instagram: 'https://www.instagram.com/moutushi.1703/'
+            },
         ]
     }
 ]

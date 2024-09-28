@@ -46,7 +46,7 @@ export const membersData = [
             {
                 name: 'Ayush Mondal',
                 position: 'Co-Founder and Secretary',
-                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727534000/Website/partners-logo/members-image/ayush-mondal.png',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727534000/Website/members-image/ayush-mondal.png',
                 description: `Ayush holds a Master's degree in Economics from Visva-Bharati, Santiniketan, with a specialization in Development Economics. He believes that education is a fundamental means of expanding individual freedoms, enhancing capabilities, and enabling people to overcome socio-economic barriers to lead lives they value. Currently based in Delhi NCR, Ayush works as a Business Consultant, focusing on rural livelihoods and environmental sustainability. Since the inception of his NGO, he has played a pivotal role in shaping its mission. His work is driven by the vision that, with the right opportunities and support, every individual can contribute to building a more just and equitable world.`,
                 linkedIn: 'https://www.linkedin.com/in/ayush-mondal/',
                 facebook: 'https://www.facebook.com/calcuttansoul/',
@@ -55,7 +55,7 @@ export const membersData = [
             {
                 name: 'Snehesh Guha Thakurta',
                 position: 'Director of Cultural Affairs ',
-                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727534365/Website/partners-logo/members-image/snehesh-guha-thakurta.png',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727534365/Website/members-image/snehesh-guha-thakurta.png',
                 description: `Currently after graduation preparing for Govt jobs. And also a professional tabla player.`,
                 linkedIn: '',
                 facebook: 'https://www.facebook.com/share/kqxormUnEEyKoCYD/?mibextid=qi2Omg',
@@ -64,7 +64,7 @@ export const membersData = [
             {
                 name: 'Ananya Bhowmick ',
                 position: 'Director of Cultural Affairs',
-                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727535354/Website/partners-logo/members-image/ananya-bhowmick.png',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727535354/Website/members-image/ananya-bhowmick.png',
                 description: `Hello, this is Ananya Bhowmick. I am professional Kathak dancer & an Instructor based in Kolkata. Currently, I am working as a dance instructor in Rangmashal Foundation.`,
                 linkedIn: '',
                 facebook: '',
@@ -73,7 +73,7 @@ export const membersData = [
             {
                 name: 'Turja Chowdhury',
                 position: 'Co - founder/ Asst. Treasurer ',
-                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727535856/Website/partners-logo/members-image/turja-chowdhury.png',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727535856/Website/members-image/turja-chowdhury.png',
                 description: `Turja, a postgraduate in Philosophy from Jadavpur University, is a passionate advocate for the Rangmashal Foundation's grassroots initiatives. Currently pursuing a PGDM in Journalism, Turja’s deep understanding of societal complexities drives his active involvement in creating meaningful social change. With a strong commitment to bridging academic insights and practical efforts, he dedicates himself to building a more equitable and informed future.`,
                 linkedIn: '',
                 facebook: '',
@@ -82,7 +82,7 @@ export const membersData = [
             {
                 name: 'Moutushi Mitra ',
                 position: 'Director of Communications',
-                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727536409/Website/partners-logo/members-image/moutushi-mitra.png',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727536409/Website/members-image/moutushi-mitra.png',
                 description: `Moutushi Mitra has been associated with Rangmashal Foundation since April 2023. Initially starting off as a teacher at our Garfa centre and then at Garia, she now takes part in mobilisation of resources, project planning and communications. A retired IT professional and currently working in the financial sector, Moutushi is keenly invested in the cause of social upliftment and works to empower the  women and children from marginalized sections of our society.`,
                 linkedIn: 'https://www.linkedin.com/in/moutushi-mitra-57093b52?trk=contact-info',
                 facebook: 'https://www.facebook.com/moutushi.mitra.52?mibextid=ZbWKwL',

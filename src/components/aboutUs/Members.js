@@ -76,7 +76,7 @@ function TeamSection() {
                                                                 <Avatar
                                                                     src={member.imageUrl || '/default-avatar.png'}
                                                                     alt={member.name}
-                                                                    sx={{ width: 90, height: 90, mb: 2 }}
+                                                                    sx={{ width: 90, height: 90, mb: 2, cursor: 'pointer' }}
                                                                 />
                                                                 <Typography variant="h6">{member.name}</Typography>
                                                                 <Typography variant="body2" color="textSecondary">

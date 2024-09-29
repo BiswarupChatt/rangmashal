@@ -1,48 +1,16 @@
 export const membersData = [
-    // {
-    //     categoryName: "Volunteer",
-    //     members: [
-    //         {
-    //             name: 'Tirthankar Sarkar',
-    //             position: 'President',
-    //             imageUrl: 'https://media.licdn.com/dms/image/v2/D5603AQFXL05uliNGdA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718241558096?e=2147483647&v=beta&t=NJg23Vc5H28LmkrEdxFakeBwq2tbDkipWMrjq_F5TpE',
-    //             description: `Tirthankar Sarkar, a distinguished professional holding a master's degree in economics from the University of Calcutta, presently serves as an Analyst at Ipsos MMA. Renowned for his proactive engagement in social issues, Tirthankar has actively participated in various conferences since his school days, showcasing a profound interest in societal development. With a robust academic background and a steadfast commitment to social causes, he contributes invaluable resources to the Rangmashal Foundation.`,
-    //             linkedIn: 'https://www.linkedin.com/in/tirthankar-sarkar21/',
-    //             facebook: 'https://www.facebook.com/tirthankarsarkar21',
-    //             instagram: 'https://www.instagram.com/itsyourtirtha/?hl=en'
-    //         },
-    //         {
-    //             name: 'Turja Chowdhury',
-    //             position: 'Vice President',
-    //             imageUrl: '',
-    //             description: `Turja Chowdhury, a Jadavpur University Philosophy Postgraduate, ardently supports the Rangmashal Foundation's grassroots initiatives. Currently pursuing a PG in Journalism, his adept understanding of societal intricacies fuels his proactive engagement. With a passion for social change, Turja seamlessly integrates academic insights with practical endeavors for a better tomorrow.`,
-    //             linkedIn: '',
-    //             facebook: 'https://www.facebook.com/turja.chowdhury.3',
-    //             instagram: 'https://www.instagram.com/turja______/?hl=en'
-    //         },
-    //         {
-    //             name: 'Moutushi Mitra',
-    //             position: 'Resource Allocation',
-    //             imageUrl: '',
-    //             description: `I am a sincere, honest, and hardworking individual now engaged with PNB Metlife India as an Insurance Distribution Manager. I lead a team of insurance advisors and am responsible for driving agency channel sales through my team. As director of Resource Mobilization at Rangmashal, I am responsible for generating funds, finding and mobilizing skilled personnel for social projects, and networking with other organizations that are willing to support our cause.`,
-    //             linkedIn: 'https://www.linkedin.com/in/moutushi-mitra-57093b52/',
-    //             facebook: 'https://www.facebook.com/moutushi.mitra.52',
-    //             instagram: 'https://www.instagram.com/moutushi.1703/'
-    //         },
-    //         {
-    //             name: 'Moutushi Mitra',
-    //             position: 'Resource Allocation',
-    //             imageUrl: '',
-    //             description: `I am a sincere, honest, and hardworking individual now engaged with PNB Metlife India as an Insurance Distribution Manager. I lead a team of insurance advisors and am responsible for driving agency channel sales through my team. As director of Resource Mobilization at Rangmashal, I am responsible for generating funds, finding and mobilizing skilled personnel for social projects, and networking with other organizations that are willing to support our cause.`,
-    //             linkedIn: 'https://www.linkedin.com/in/moutushi-mitra-57093b52/',
-    //             facebook: 'https://www.facebook.com/moutushi.mitra.52',
-    //             instagram: 'https://www.instagram.com/moutushi.1703/'
-    //         },
-    //     ]
-    // },
     {
-        categoryName: "Board of Members",
+        categoryName: "Founding Members",
         members: [
+            {
+                name: 'Tirthankar Sarkar',
+                position: 'President',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727603704/Website/members-image/tirthankar-sarkar.png',
+                description: `Tirthankar Sarkar, a distinguished professional holding a master's degree in economics from the University of Calcutta, presently serves as an Analyst at Ipsos MMA. Renowned for his proactive engagement in social issues, Tirthankar has actively participated in various conferences since his school days, showcasing a profound interest in societal development. With a robust academic background and a steadfast commitment to social causes, he contributes invaluable resources to the Rangmashal Foundation.`,
+                linkedIn: 'https://www.linkedin.com/in/tirthankar-sarkar21/',
+                facebook: 'https://www.facebook.com/tirthankarsarkar21?mibextid=ZbWKwL',
+                instagram: 'https://www.instagram.com/itsyourtirtha?igsh=bnYxcmZrNmR4bnBh'
+            },
             {
                 name: 'Ayush Mondal',
                 position: 'Co-Founder and Secretary',
@@ -52,6 +20,47 @@ export const membersData = [
                 facebook: 'https://www.facebook.com/calcuttansoul/',
                 instagram: 'https://www.instagram.com/calcuttan_soul/'
             },
+            {
+                name: 'Turja Chowdhury',
+                position: 'Co - founder/ Asst. Treasurer ',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727535856/Website/members-image/turja-chowdhury.png',
+                description: `Turja, a postgraduate in Philosophy from Jadavpur University, is a passionate advocate for the Rangmashal Foundation's grassroots initiatives. Currently pursuing a PGDM in Journalism, Turja’s deep understanding of societal complexities drives his active involvement in creating meaningful social change. With a strong commitment to bridging academic insights and practical efforts, he dedicates himself to building a more equitable and informed future.`,
+                linkedIn: '',
+                facebook: '',
+                instagram: ''
+            },
+            {
+                name: 'Binita Ghosh',
+                position: 'Joint Secretary',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727603794/Website/members-image/binita-ghosh.png',
+                description: `I am Binita Ghosh, one of the co-founders and Joint Secretary of Rangmashal Foundation. Currently I am working as a technical consultant in a private company in Kolkata. I was always keen to do something for the people , for the society. This urge motivated me to be a part of RMF from beginning till now. The great contribution of RMF to the society  is beyond expectations. It is a pleasure to be a part of such foundation which is working so hard and successfully making a difference in the society for the underprivileged children. I will always try my best to help RMF grow more and more in every possible perspective.`,
+                linkedIn: 'https://www.linkedin.com/in/binitaghosh/',
+                facebook: 'https://www.facebook.com/share/dFQMUAQSuDbmmcJB/',
+                instagram: 'https://www.instagram.com/bini.katha?igsh=MTlnbzl5MGZvdmprYw=='
+            },
+            {
+                name: 'Joydeep Samadder',
+                position: 'Treasurer',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727603772/Website/members-image/joydeep-samadder.png',
+                description: `Joydeep Samadder, co-founder and Treasurer of the Rangmashal Foundation Holds a Master's degree in Botany. Passionate about community service, I contribute voluntarily, showcasing leadership and organizational skills. My commitment extends beyond my professional background, driving positive change through community-oriented projects. As Treasurer, I ensure financial stability, supporting the foundation's mission to uplift and support the community, and fostering a brighter future through meaningful initiatives. Change and making a lasting impact. As Treasurer, I ensure the financial stability and success of the foundation, contributing to its mission to uplift and support the community.`,
+                linkedIn: 'www.linkedin.com/in/joydeep-samadder',
+                facebook: 'https://www.facebook.com/joydeep.samadder.5/',
+                instagram: 'https://www.instagram.com/__an_enigma__/?hl=en'
+            },
+            {
+                name: 'Sukanya Guha',
+                position: 'Vice President & Co-Founder',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727603794/Website/members-image/sukanya-guha.png',
+                description: `I am Sukanya Guha,an analyst by profession, currently working in a private company located in Bangalore.I hold a masters degree in Economics. I have been a part of Rangmashal Foundation since its inception and also one of the founding members of this organisation. Being the Vice President of this organisation I have been handling all the internal matters of it since the very beginning.My motive is to make this world a better place to live in for all and through Rangmashal Foundation I am being able to do so.`,
+                linkedIn: 'https://www.linkedin.com/in/sukanya-guha-671951218',
+                facebook: 'https://www.facebook.com/sukanya.guha.79?mibextid=ZbWKwL',
+                instagram: 'https://www.instagram.com/sukanya_guha_?igsh=MWM2YnRrNTd1dGZqYQ=='
+            },
+        ]
+    },
+    {
+        categoryName: "Board of Members",
+        members: [
             {
                 name: 'Snehesh Guha Thakurta',
                 position: 'Director of Cultural Affairs ',
@@ -71,15 +80,6 @@ export const membersData = [
                 instagram: 'https://www.instagram.com/ananya_bhowmick_official?igsh=bGtqcjIyeGx1ajVv'
             },
             {
-                name: 'Turja Chowdhury',
-                position: 'Co - founder/ Asst. Treasurer ',
-                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727535856/Website/members-image/turja-chowdhury.png',
-                description: `Turja, a postgraduate in Philosophy from Jadavpur University, is a passionate advocate for the Rangmashal Foundation's grassroots initiatives. Currently pursuing a PGDM in Journalism, Turja’s deep understanding of societal complexities drives his active involvement in creating meaningful social change. With a strong commitment to bridging academic insights and practical efforts, he dedicates himself to building a more equitable and informed future.`,
-                linkedIn: '',
-                facebook: '',
-                instagram: ''
-            },
-            {
                 name: 'Moutushi Mitra ',
                 position: 'Director of Communications',
                 imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727536409/Website/members-image/moutushi-mitra.png',
@@ -87,6 +87,42 @@ export const membersData = [
                 linkedIn: 'https://www.linkedin.com/in/moutushi-mitra-57093b52?trk=contact-info',
                 facebook: 'https://www.facebook.com/moutushi.mitra.52?mibextid=ZbWKwL',
                 instagram: 'https://www.instagram.com/moutushi.1703?igsh=MWpmYms3eGR6eDRtMQ=='
+            },
+            {
+                name: 'Banasri Baidya',
+                position: 'Director of Academic Affairs',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727613118/Website/members-image/banasri-baidya.png',
+                description: `Myself Banasri Baidya . I am Head Teacher of a government school. Also I am a Teacher of Rangmashal Foundation. I like to help poor & needy people . I like children.  I love to teach them with special care . I am very pleasure to get chance the member of RF and teach the children.`,
+                linkedIn: '',
+                facebook: '',
+                instagram: ''
+            },
+            {
+                name: 'Sanhita Guha Thakurta',
+                position: 'Director of Child Affairs',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727629253/Website/members-image/sanhita-guha-thakurta.png',
+                description: `Teacher at Rangmashal foundation, also teaches music in the organisation.`,
+                linkedIn: '',
+                facebook: '',
+                instagram: ''
+            },
+            {
+                name: 'Biman Guha Thakurta',
+                position: 'Director of ELEVATE',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727603793/Website/members-image/biman-guha-thakurta.png',
+                description: `A qualified physiotherapist by profession, I have been associated with Rangmashal since its inception and have been actively involved in all its social improvement projects. As director of ELEVATE at Rangmashal, I am responsible for planning, scheduling and proper execution of all events throughout the year. I am responsible for organizing training of children from marginalized sections of our society in various cultural aspects of their training including music, recitation, dance and drama and organizing inter and intra-school competitions. At present, I am Joint Secretary of Pandit Shankar Ghosh Tabla Foundation and attached with Pandit Bickram Ghosh Academy of Performing Arts. I hold a Bachelors degree in Mathematics from Calcutta University and a Bachelor of Physiotherapy degree from Council of Alternative Systems of Medicine (CASM).`,
+                linkedIn: 'https://www.linkedin.com/in/biman-guhathakurta-717ba5118',
+                facebook: 'https://www.facebook.com/biman.guhathakurta?mibextid=ZbWKwL',
+                instagram: 'https://instagram.com/bimanguhathakurta?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D'
+            },
+            {
+                name: 'Aritra Roy',
+                position: 'Director of Legal Affairs',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727603793/Website/members-image/aritra-roy.png',
+                description: `Aritra, an advocate practicing at the High Court of Calcutta, has been associated with Rangmashal Foundation since 2020. With a strong background in legal advocacy, Aritra combines his expertise in law with a commitment to social welfare. His involvement with the foundation allows him to make a meaningful impact, as he passionately contributes to improving the lives of marginalized communities, finding great fulfillment in this work.`,
+                linkedIn: 'https://www.linkedin.com/in/aritra-roy-b56a0a19b/',
+                facebook: 'https://www.facebook.com/share/QsqKAfyHMTsTitzB/?mibextid=qi2Omg',
+                instagram: 'https://www.instagram.com/aritradotroy?igsh=MTNsdXN0eHJ6b2R0eA=='
             },
         ]
     }

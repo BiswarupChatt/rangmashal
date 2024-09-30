@@ -33,7 +33,7 @@ function TeamSection() {
             {
                 AllMembers.map((ele, index) => {
 
-                    const swiperDirection = index % 2 === 0 ? true : false;
+                    // const swiperDirection = index % 2 === 0 ? true : false;
 
                     return (
                         <Box key={index} sx={{ backgroundColor: index % 2 === 0 ? 'rgba(50, 191, 194, 0.1)' : 'rgba(255, 208, 65, 0.2)', width: '100%', py: 5 }}>
@@ -52,12 +52,15 @@ function TeamSection() {
                                                         modules={[Navigation, Pagination, Autoplay]}
                                                         spaceBetween={15}
                                                         pagination={{ clickable: true }}
-                                                        autoplay={{ delay: 6000, disableOnInteraction: false, reverseDirection: swiperDirection }}
+                                                        autoplay={{
+                                                            delay: 6000,
+                                                            disableOnInteraction: false,
+                                                            // reverseDirection: swiperDirection
+                                                        }}
                                                         effect={'coverflow'}
                                                         grabCursor={true}
                                                         loop={true}
                                                         speed={1500}
-                                                        initialSlide={ele.members.length}
                                                         breakpoints={{
                                                             640: { slidesPerView: 1 },
                                                             768: { slidesPerView: 2 },
@@ -94,7 +97,12 @@ function TeamSection() {
                                                     {selectedMember && (
                                                         <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
                                                             <DialogTitle textAlign="center">
-                                                                {selectedMember.name} - {selectedMember.position}
+                                                                <Typography variant='h5' fontWeight='bold' sx={{ mb: 1}}>
+                                                                    {selectedMember.name}
+                                                                </Typography>
+                                                                <Typography variant='body1'>
+                                                                    {selectedMember.position}
+                                                                </Typography>
                                                             </DialogTitle>
                                                             <DialogContent>
                                                                 <Grid container spacing={2} alignItems="center" justifyContent="center">

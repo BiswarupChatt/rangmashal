@@ -133,6 +133,15 @@ export const membersData = [
                 facebook: '',
                 instagram: 'https://www.instagram.com/ananya_bhowmick_official?igsh=bGtqcjIyeGx1ajVv'
             },
+            {
+                name: 'Biswarup Chatterjee',
+                position: 'Director of IT and Web Development',
+                imageUrl: 'https://res.cloudinary.com/dgwgnfulm/image/upload/v1727718014/Website/members-image/biswarup-chatterjee.png',
+                description: `Biswarup is a tech enthusiast and skilled full-stack developer with a passion for philanthropy. As a Director on the board of Rangmashal, he combines his technical expertise with a drive to make a positive impact. He oversees all IT and web development efforts, ensuring the organization stays at the forefront of technology. Biswarup's dedication to both technology and social causes makes him a vital part of Rangmashal's mission.`,
+                linkedIn: 'https://www.linkedin.com/in/biswarupchatt/',
+                facebook: 'https://www.facebook.com/biswarup4969/',
+                instagram: 'https://www.instagram.com/son_of_bruce_banner/'
+            },
         ]
     }
 ]

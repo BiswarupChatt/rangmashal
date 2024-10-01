@@ -10,7 +10,7 @@ export default function SharodiyarPorosh() {
 
     return (
         <>
-        <Helmet>
+            <Helmet>
                 <title>Sharodiya Porosh</title>
             </Helmet>
             <Index />

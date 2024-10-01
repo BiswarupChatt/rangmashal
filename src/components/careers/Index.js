@@ -1,7 +1,11 @@
-import ComingSoon from "../ComingSoon";
+import Hero from "./Hero";
+import WhyRangmashal from "./WhyRangmashal";
 
 export default function Index() {
     return (
-        <ComingSoon />
+        <>
+            <Hero />
+            <WhyRangmashal/>
+        </>
     )
 }

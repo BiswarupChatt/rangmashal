@@ -29,7 +29,7 @@ const navItems = [
     {
         name: 'Join Us',
         subItems: [
-            // { name: 'Volunteering & Internship', path: '/get-involved/careers' },
+            { name: 'Volunteering & Internship', path: '/get-involved/careers' },
             { name: 'CSR Activity', path: '/get-involved/csr' },
         ]
     },

@@ -1,10 +1,9 @@
-import React from 'react';
-import { Box, Typography, Grid, Container, Card, CardContent, CardMedia } from '@mui/material';
-import { Fade, Slide } from 'react-awesome-reveal';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import ImpactIcon from '@mui/icons-material/VolunteerActivism'; // Suitable for making an impact
-import PersonalDevelopmentIcon from '@mui/icons-material/TrendingUp'; // Suitable for personal development
-import YouthMovementIcon from '@mui/icons-material/Groups'; // Suitable for joining a youth-driven movement
+import React from 'react'
+import { Box, Typography, Grid, Container, Card, CardContent, CardMedia } from '@mui/material'
+import { Fade, Slide } from 'react-awesome-reveal'
+import ImpactIcon from '@mui/icons-material/VolunteerActivism'
+import PersonalDevelopmentIcon from '@mui/icons-material/TrendingUp'
+import YouthMovementIcon from '@mui/icons-material/Groups' 
 
 const data = [
     {
@@ -22,7 +21,7 @@ const data = [
         title: 'Join a Youth-Driven Movement',
         description: 'Be a part of a dynamic team of young change makers, where your passion and creativity can truly make a difference.'
     }
-];
+]
 
 export default function WhyRangmashal() {
     return (
@@ -73,5 +72,5 @@ export default function WhyRangmashal() {
                 </Slide>
             </Container>
         </Box>
-    );
+    )
 }

@@ -3,6 +3,7 @@ import { Box, Typography, Grid, Container, Button, Collapse } from '@mui/materia
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import DonateButton from '../reusable/DonateButton'
+import { theme } from '../../global/theme';
 
 
 export default function JoinCelebration() {
@@ -16,7 +17,7 @@ export default function JoinCelebration() {
 
     return (
 
-        <Box sx={{ py: 8, backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
+        <Box sx={{ py: 8, backgroundColor: theme.palette.primary.light }}>
             <Container sx={{ px: { xs: '20px', md: '50px' } }}>
                 <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', mb: 2, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } }}>
                     Join the <Box component="span" sx={{ color: 'primary.main' }}>Celebration!</Box>

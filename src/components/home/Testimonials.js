@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Slide, Fade } from 'react-awesome-reveal';
+import { theme } from '../../global/theme';
 
 const testimonials = [
     {
@@ -38,7 +39,7 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <Box sx={{ width: '100%', py: 6, backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
+        <Box sx={{ width: '100%', py: 6, backgroundColor: theme.palette.primary.light }}>
             <Container>'
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>

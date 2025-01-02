@@ -9,6 +9,7 @@ import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/module
 import CloseIcon from '@mui/icons-material/Close';
 import DonateButton from '../../reusable/DonateButton';
 import { Slide, Fade } from 'react-awesome-reveal';
+import { theme } from '../../../global/theme';
 
 const truncateText = (text, limit) => {
     return text.split(" ").slice(0, limit).join(" ") + "...";
@@ -28,7 +29,7 @@ export default function ProjectDetails({ events, order }) {
         setSelectedEvent(null);
     };
 
-    const backgroundColor = order % 2 === 0 ? 'rgba(50, 191, 194, 0.1)' : 'rgba(255, 208, 65, 0.2)';
+    const backgroundColor = order % 2 === 0 ? theme.palette.primary.light : 'rgba(255, 208, 65, 0.2)';
     const buttonColor = order % 2 === 0 ? 'secondary.main' : 'primary.main'
     const buttonColorHover = order % 2 === 0 ? 'primary.main' : 'secondary.main'
 

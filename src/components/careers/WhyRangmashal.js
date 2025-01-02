@@ -4,6 +4,7 @@ import { Fade, Slide } from 'react-awesome-reveal'
 import ImpactIcon from '@mui/icons-material/VolunteerActivism'
 import PersonalDevelopmentIcon from '@mui/icons-material/TrendingUp'
 import YouthMovementIcon from '@mui/icons-material/Groups' 
+import { theme } from '../../global/theme'
 
 const data = [
     {
@@ -25,7 +26,7 @@ const data = [
 
 export default function WhyRangmashal() {
     return (
-        <Box sx={{ width: '100%', backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
+        <Box sx={{ width: '100%', backgroundColor: theme.palette.primary.light }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>

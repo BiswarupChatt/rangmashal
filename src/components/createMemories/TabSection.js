@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Tabs, Tab, Box, Typography, Container, Paper, Button, Dialog, DialogTitle, DialogContent, IconButton } from '@mui/material';
 import { Slide, Fade } from 'react-awesome-reveal';
 import CloseIcon from '@mui/icons-material/Close';
+import { theme } from '../../global/theme';
 
 export default function TabSection() {
     const [value, setValue] = useState(0)
@@ -53,7 +54,7 @@ export default function TabSection() {
     ];
 
     return (
-        <Box sx={{ width: '100%', backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
+        <Box sx={{ width: '100%', backgroundColor: theme.palette.primary.light }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>

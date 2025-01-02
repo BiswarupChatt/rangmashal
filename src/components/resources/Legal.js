@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography, Box, Grid } from '@mui/material';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf'
 import { Fade, Slide } from 'react-awesome-reveal';
+import { theme } from '../../global/theme';
 
 const documentData = [
     { name: 'Corporate Social Responsibility', date: '03-01-2023', documentLink: 'https://drive.google.com/file/d/1zakAxeoZrPkCXiC5EDQg0Jn8n8zIgR-N/view?usp=sharing', registration: 'SRN-F55749006' },
@@ -15,7 +16,7 @@ const documentData = [
 
 export default function Legal() {
     return (
-        <Box sx={{ width: '100%', backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
+        <Box sx={{ width: '100%', backgroundColor: theme.palette.primary.light }}>
             <Container sx={{ py: { xs: '30px', md: '50px' } }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>

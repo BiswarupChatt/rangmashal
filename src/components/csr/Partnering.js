@@ -3,6 +3,7 @@ import { Box, Typography, Grid, Container, Paper, colors } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import { Fade, Slide } from 'react-awesome-reveal';
+import { theme } from '../../global/theme';
 
 const data = [
     {
@@ -19,7 +20,7 @@ const data = [
 
 export default function Partnering() {
     return (
-        <Box sx={{ width: '100%', backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
+        <Box sx={{ width: '100%', backgroundColor: theme.palette.primary.light }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>

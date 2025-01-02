@@ -4,6 +4,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import DonateButton from '../reusable/DonateButton';
 import { Fade, Slide } from 'react-awesome-reveal';
+import { theme } from '../../global/theme';
 
 const data = [
     {
@@ -20,7 +21,7 @@ const data = [
 
 export default function Empower() {
     return (
-        <Box sx={{ width: '100%', backgroundColor: 'rgba(50, 191, 194, 0.1)' }}>
+        <Box sx={{ width: '100%', backgroundColor: theme.palette.primary.light }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>

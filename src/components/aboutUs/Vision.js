@@ -1,9 +1,10 @@
 import { Box, Typography, Grid, Container } from '@mui/material';
 import { Fade, Slide } from 'react-awesome-reveal';
+import { theme } from '../../global/theme';
 
 export default function Vision() {
     return (
-        <Box sx={{ backgroundColor: 'rgba(50, 191, 194, 0.1)', width: '100%' }}>
+        <Box sx={{ backgroundColor: theme.palette.primary.light, width: '100%' }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>

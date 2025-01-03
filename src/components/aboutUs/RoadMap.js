@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { Fade, Slide } from 'react-awesome-reveal';
+import { theme } from '../../global/theme';
 
 const roadmapData = [
     {
@@ -68,7 +69,7 @@ export default function RoadMap() {
                                                 borderRadius: '12px',
                                                 padding: '30px',
                                                 backgroundColor: '#fff',
-                                                boxShadow: index % 2 === 0 ? '10px 10px 0 #32BFC2' : '10px 10px 0 #FFD041',
+                                                boxShadow: index % 2 === 0 ? `10px 10px 0 ${theme.palette.primary.main}` : `10px 10px 0 ${theme.palette.secondary.main}`,
                                                 display: 'flex',
                                                 flexDirection: 'column',
                                                 justifyContent: 'center',
@@ -85,7 +86,7 @@ export default function RoadMap() {
                                                     textAlign: 'center',
                                                     fontWeight: 'bold',
                                                     mb: 2,
-                                                    background: index % 2 === 0 ? '#32BFC2' : '#FFD041',
+                                                    background: index % 2 === 0 ? theme.palette.primary.main : theme.palette.secondary.main,
                                                     color: '#fff',
                                                     padding: '10px 20px',
                                                     borderRadius: '8px',

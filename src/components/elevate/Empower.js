@@ -4,6 +4,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { Fade, Slide } from 'react-awesome-reveal';
 import DonateButton from '../reusable/DonateButton'
+import { theme } from '../../global/theme';
+
 
 export default function Empower() {
 
@@ -15,7 +17,7 @@ export default function Empower() {
         })
     }
     return (
-        <Box sx={{ width: '100%', backgroundColor: 'rgba(255, 208, 65, 0.2)' }}>
+        <Box sx={{ width: '100%', backgroundColor: theme.palette.secondary.light }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>

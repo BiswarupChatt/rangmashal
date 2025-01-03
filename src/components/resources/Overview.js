@@ -1,11 +1,12 @@
 import React from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
 import { Fade, Slide } from 'react-awesome-reveal';
+import { theme } from '../../global/theme';
 
 
 export default function Overview() {
     return (
-        <Box sx={{ width: '100%', backgroundColor: 'rgba(255, 208, 65, 0.2)' }}>
+        <Box sx={{ width: '100%', backgroundColor: theme.palette.secondary.light }}>
             <Container sx={{ py: '50px' }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>

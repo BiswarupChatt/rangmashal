@@ -5,6 +5,7 @@ import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
 import SchoolIcon from '@mui/icons-material/School';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import { Fade, Slide } from 'react-awesome-reveal';
+import { theme } from '../../global/theme';
 
 export default function Milestones() {
     const counters = [
@@ -36,7 +37,7 @@ export default function Milestones() {
 
 
     return (
-        <Box sx={{ backgroundColor: 'rgba(255, 208, 65, 0.2)', padding: '10px' }}>
+        <Box sx={{ backgroundColor: theme.palette.secondary.light, padding: '10px' }}>
             <Container sx={{ my: '30px', }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>

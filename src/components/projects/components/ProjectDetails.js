@@ -29,7 +29,7 @@ export default function ProjectDetails({ events, order }) {
         setSelectedEvent(null);
     };
 
-    const backgroundColor = order % 2 === 0 ? theme.palette.primary.light : 'rgba(255, 208, 65, 0.2)';
+    const backgroundColor = order % 2 === 0 ? theme.palette.primary.light : theme.palette.secondary.light;
     const buttonColor = order % 2 === 0 ? 'secondary.main' : 'primary.main'
     const buttonColorHover = order % 2 === 0 ? 'primary.main' : 'secondary.main'
 

@@ -3,6 +3,7 @@ import { Box, Typography, Grid, Container, Paper, colors } from '@mui/material';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import { Fade, Slide } from 'react-awesome-reveal';
+import { theme } from '../../global/theme';
 
 const data = [
     {
@@ -19,7 +20,7 @@ const data = [
 
 export default function Marketing() {
     return (
-        <Box sx={{ width: '100%', backgroundColor: 'rgba(255, 208, 65, 0.2)' }}>
+        <Box sx={{ width: '100%', backgroundColor: theme.palette.secondary.light }}>
             <Container sx={{ padding: { xs: '20px', md: '50px' } }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>
                     <Fade cascade triggerOnce>

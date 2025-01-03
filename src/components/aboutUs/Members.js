@@ -37,7 +37,7 @@ function TeamSection() {
                     // const swiperDirection = index % 2 === 0 ? true : false;
 
                     return (
-                        <Box key={index} sx={{ backgroundColor: index % 2 === 0 ? theme.palette.primary.light : 'rgba(255, 208, 65, 0.2)', width: '100%', py: 5 }}>
+                        <Box key={index} sx={{ backgroundColor: index % 2 === 0 ? theme.palette.primary.light : theme.palette.secondary.light, width: '100%', py: 5 }}>
                             <Container>
                                 <Slide direction="up" cascade damping={1} triggerOnce>
                                     <Fade cascade triggerOnce>

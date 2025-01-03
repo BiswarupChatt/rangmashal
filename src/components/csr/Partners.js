@@ -5,6 +5,7 @@ import { Box, Container, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Autoplay } from "swiper/modules";
 import { Fade, Slide } from "react-awesome-reveal";
+import { theme } from "../../global/theme";
 
 
 export default function Partners() {
@@ -20,7 +21,7 @@ export default function Partners() {
     const isSmallScreen = useMediaQuery("(max-width:350px)");
 
     return (
-        <Box sx={{ backgroundColor: 'rgba(255, 208, 65, 0.2)', padding: '10px' }}>
+        <Box sx={{ backgroundColor: theme.palette.secondary.light, padding: '10px' }}>
 
             <Container sx={{ my: '30px', }}>
                 <Slide direction="up" cascade damping={1} triggerOnce>

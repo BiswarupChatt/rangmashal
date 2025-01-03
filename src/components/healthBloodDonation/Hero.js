@@ -12,6 +12,7 @@ export default function Hero() {
                     sm: '50vh',
                     md: '40vh',
                 },
+                marginTop:"15px",
                 backgroundImage: 'url(https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',

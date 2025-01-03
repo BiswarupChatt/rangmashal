@@ -96,7 +96,7 @@ export default function Testimonials() {
                         backgroundColor: "#fff",
                         boxShadow:
                           index % 2 === 0
-                            ? `5px 5px 0 ${primary.main}`
+                            ? `5px 5px 0 ${theme.palette.primary.main}`
                             : `5px 5px 0 ${theme.palette.secondary.main}`,
                         height: "100%",
                         display: "flex",

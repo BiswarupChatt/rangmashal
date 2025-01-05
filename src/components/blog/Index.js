@@ -1,11 +1,11 @@
-import Hero from "./Hero"
-import Blog from "./Blog"
+import Hero from "./Hero";
+import Blog from "./Blog";
 
 export default function Index() {
-    return (
-        <>
-            <Hero />
-            <Blog />
-        </>
-    )
+  return (
+    <>
+      <Hero />
+      <Blog />
+    </>
+  );
 }

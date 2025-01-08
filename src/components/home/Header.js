@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <Box
       position="relative"
-      top="15px"
+      top="25px"
       sx={{
         display: "flex",
         alignItems: "center",
@@ -74,11 +74,10 @@ export default function Header() {
           zIndex: 2,
           textAlign: "center",
           color: "white",
-          padding: "0 20px",
-          maxWidth: "90vw",
+          width: { xs: "90%", md: "70%", lg: "50%" },
         }}
       >
-        <Container>
+        <Container sx={{ marginTop: 5 }}>
           <Box>
             <img
               src="/images/logo.png"
@@ -87,16 +86,17 @@ export default function Header() {
                 width: isSmallScreen
                   ? "150px"
                   : isMediumScreen
-                  ? "250px"
-                  : "350px",
+                  ? "200px"
+                  : "300px",
               }}
             />
           </Box>
 
           <Box>
             <Typography
-              variant={isMediumScreen ? "h4" : "h2"}
-              fontWeight={isMediumScreen ? "bold" : "medium"}
+              variant="h2"
+              fontSize={isMediumScreen ? "1.8rem" : "2.8rem"}
+              fontWeight="medium"
               gutterBottom
               sx={{ wordWrap: "break-word", whiteSpace: "normal" }}
             >
@@ -111,7 +111,7 @@ export default function Header() {
               sx={{
                 mb: 3,
                 fontSize: isMediumScreen ? "1rem" : "1.2rem",
-                textAlign: "justify",
+                textAlign: "center",
                 textAlignLast: "center",
                 whiteSpace: "normal",
               }}

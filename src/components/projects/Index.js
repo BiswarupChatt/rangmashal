@@ -1,10 +1,10 @@
-import Hero from "./Hero"
-import AllProjects from "./AllProjects"
+import Hero from "./Hero";
+import AllProjects from "./AllProjects";
 export default function Index() {
-    return (
-        <>
-            <Hero />
-            <AllProjects />
-        </>
-    )
+  return (
+    <>
+      <Hero />
+      <AllProjects />
+    </>
+  );
 }

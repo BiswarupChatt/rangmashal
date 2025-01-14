@@ -16,6 +16,7 @@ const Blog = lazy(() => import("../pages/Blog"));
 const BlogDetails = lazy(() => import("../pages/BlogDetails"));
 const SharodiyarPorosh = lazy(() => import("../pages/SharodiyarPorosh"));
 const HealthBloodDonation = lazy(() => import("../pages/HealthBloodDonation"));
+const PrivacyPolicy = lazy(()=> import("../pages/PrivacyPolicy"))
 
 
 export default function AppRoutes() {
@@ -46,6 +47,9 @@ export default function AppRoutes() {
         <Route path="/get-involved/csr" element={<CSR />} />
 
         <Route path="/resources/blog" element={<Blog />} />
+        <Route path="/resources/blog/:id" element={<BlogDetails />} />
+
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/resources/blog/:id" element={<BlogDetails />} />
 
         <Route path="*" element={<PageNotFound />} />

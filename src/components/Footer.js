@@ -18,9 +18,11 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   const quickLinks = [
-    { name: "About Us", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Contact", path: "/contact" },
+    { name: "About Us", path: "/who-we-are/about" },
+    { name: "Resources", path: "/who-we-are/resources" },
+    
+    { name: "Privacy Policy", path: "/contact" },
+    { name: "Terms & Conditions", path: "/contact" },
   ];
 
   const socialLinks = [

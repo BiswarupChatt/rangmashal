@@ -16,8 +16,8 @@ const Blog = lazy(() => import("../pages/Blog"));
 const BlogDetails = lazy(() => import("../pages/BlogDetails"));
 const SharodiyarPorosh = lazy(() => import("../pages/SharodiyarPorosh"));
 const HealthBloodDonation = lazy(() => import("../pages/HealthBloodDonation"));
-const PrivacyPolicy = lazy(()=> import("../pages/PrivacyPolicy"))
-
+const PrivacyPolicy = lazy(() => import("../pages/PrivacyPolicy"));
+const Terms = lazy(() => import("../pages/Terms"));
 
 export default function AppRoutes() {
   return (
@@ -50,7 +50,7 @@ export default function AppRoutes() {
         <Route path="/resources/blog/:id" element={<BlogDetails />} />
 
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/resources/blog/:id" element={<BlogDetails />} />
+        <Route path="/terms-conditions" element={<Terms />} />
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>

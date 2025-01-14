@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
-
+import Index from "../components/terms/Index";
 
 export default function Terms() {
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function Terms() {
       <Helmet>
         <title>Rangmashal Foundation | Terms and Conditions</title>
       </Helmet>
-      <h2>terms</h2>
+      <Index />
     </>
   );
 }

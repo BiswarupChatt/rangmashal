@@ -10,14 +10,22 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { theme } from "../../global/theme";
 
 export default function Header() {
-  const backgroundImages = [
+  const slides = [
     {
       src: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg",
-      alt: "Background 1",
+      alt: "Children learning together",
+      accent: "Together we rise,",
+      title: "for a future that's wise.",
+      description:
+        "Welcome to Rangmashal Foundation, a youth-driven NGO empowering underprivileged children and women across India since 2020.",
     },
     {
       src: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899302/Website/nt81qnkkkvjcch48v53k.jpg",
-      alt: "Background 2",
+      alt: "Community support activity",
+      accent: "Every child and woman",
+      title: "deserves the chance to thrive.",
+      description:
+        "We create access, dignity, and opportunity through education, care, and community-led initiatives for families who need it most.",
     },
   ];
 
@@ -39,15 +47,16 @@ export default function Header() {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
         speed={1500}
         modules={[Autoplay]}
+        style={{ width: "100%" }}
       >
-        {backgroundImages.map((image, index) => (
+        {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <Box sx={{ position: "relative", width: "100%", height: "100vh" }}>
-              <LazyLoadImageWithBlur src={image.src} alt={image.alt} />
+              <LazyLoadImageWithBlur src={slide.src} alt={slide.alt} />
               <Box
                 sx={{
                   position: "absolute",
@@ -60,70 +69,69 @@ export default function Header() {
                   zIndex: 1,
                 }}
               />
+
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: "40%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: 2,
+                  textAlign: "center",
+                  color: "white",
+                  width: { xs: "90%", md: "70%", lg: "50%" },
+                }}
+              >
+                <Container sx={{ marginTop: 5 }}>
+                  <Box>
+                    <img
+                      src="/images/logo.png"
+                      alt="Organization Logo"
+                      style={{
+                        width: isSmallScreen
+                          ? "150px"
+                          : isMediumScreen
+                          ? "200px"
+                          : "300px",
+                      }}
+                    />
+                  </Box>
+
+                  <Box>
+                    <Typography
+                      variant="h2"
+                      fontSize={isMediumScreen ? "1.8rem" : "2.8rem"}
+                      fontWeight="medium"
+                      gutterBottom
+                      sx={{ wordWrap: "break-word", whiteSpace: "normal" }}
+                    >
+                      <span style={{ color: theme.palette.primary.main }}>
+                        {slide.accent}{" "}
+                      </span>
+                      {slide.title}
+                    </Typography>
+
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        mb: 3,
+                        fontSize: isMediumScreen ? "1rem" : "1.2rem",
+                        textAlign: "center",
+                        textAlignLast: "center",
+                        whiteSpace: "normal",
+                      }}
+                    >
+                      {slide.description}
+                    </Typography>
+
+                    <DonateButton label="Donate Now" />
+                  </Box>
+                </Container>
+              </Box>
             </Box>
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <Box
-        sx={{
-          position: "absolute",
-          top: "40%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          zIndex: 2,
-          textAlign: "center",
-          color: "white",
-          width: { xs: "90%", md: "70%", lg: "50%" },
-        }}
-      >
-        <Container sx={{ marginTop: 5 }}>
-          <Box>
-            <img
-              src="/images/logo.png"
-              alt="Organization Logo"
-              style={{
-                width: isSmallScreen
-                  ? "150px"
-                  : isMediumScreen
-                  ? "200px"
-                  : "300px",
-              }}
-            />
-          </Box>
-
-          <Box>
-            <Typography
-              variant="h2"
-              fontSize={isMediumScreen ? "1.8rem" : "2.8rem"}
-              fontWeight="medium"
-              gutterBottom
-              sx={{ wordWrap: "break-word", whiteSpace: "normal" }}
-            >
-              <span style={{ color: theme.palette.primary.main }}>
-                Together we rise,{" "}
-              </span>
-              for a future that&#39;s wise.
-            </Typography>
-
-            <Typography
-              variant="body2"
-              sx={{
-                mb: 3,
-                fontSize: isMediumScreen ? "1rem" : "1.2rem",
-                textAlign: "center",
-                textAlignLast: "center",
-                whiteSpace: "normal",
-              }}
-            >
-              Welcome to Rangmashal Foundation, a youth-driven NGO empowering
-              underprivileged children and women across India since 2020.
-            </Typography>
-
-            <DonateButton label="Donate Now" />
-          </Box>
-        </Container>
-      </Box>
     </Box>
   );
 }

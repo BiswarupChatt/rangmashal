@@ -229,7 +229,7 @@ export default function ProjectDetails({ events, order }) {
                   <SwiperSlide key={idx}>
                     <img
                       src={image}
-                      alt={`Event Image ${idx + 1}`}
+                      alt={`${selectedEvent.subTitle} ${idx + 1}`}
                       style={{
                         width: "100%",
                         height: "300px",

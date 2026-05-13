@@ -49,6 +49,7 @@ export default function About() {
                 textAlign: "center",
                 fontWeight: "bold",
                 color: theme.palette.primary.main,
+                mt:3
               }}
             >
               About Us

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   Typography,
@@ -6,14 +6,6 @@ import {
 } from "@mui/material";
 
 export default function Info() {
-  const [_, setExpanded] = useState(false);
-
-  const handleToggleExpand = () => {
-    setExpanded((ele) => {
-      return !ele;
-    });
-  };
-
   return (
     <Box sx={{ width: "100%" }}>
       <Container sx={{ padding: { xs: "20px", md: "50px" } }}>

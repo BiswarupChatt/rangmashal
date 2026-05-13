@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid, Container, Paper, colors } from "@mui/material";
+import { Box, Typography, Grid, Container, Paper } from "@mui/material";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import { Fade, Slide } from "react-awesome-reveal";

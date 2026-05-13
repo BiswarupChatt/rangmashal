@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Box,
   Typography,
-  Grid,
   Container,
   Dialog,
   IconButton,
@@ -16,7 +15,6 @@ import {
   Navigation,
   Pagination,
   Autoplay,
-  EffectCoverflow,
 } from "swiper/modules";
 import CloseIcon from "@mui/icons-material/Close";
 import { Slide, Fade } from "react-awesome-reveal";

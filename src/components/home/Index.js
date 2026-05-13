@@ -14,8 +14,8 @@ export default function Index() {
     return (
         <>
             <Header />
-            <Milestones />
             <About />
+            <Milestones />
             <Testimonials />
         </>
     )

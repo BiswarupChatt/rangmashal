@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Container, Paper, Avatar } from "@mui/material";
+import { Box, Typography, Container, Avatar } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import "swiper/css";

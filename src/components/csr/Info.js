@@ -2,14 +2,11 @@ import React, { useState } from "react";
 import {
   Box,
   Typography,
-  Grid,
   Container,
-  Button,
-  Collapse,
 } from "@mui/material";
 
 export default function Info() {
-  const [expanded, setExpanded] = useState(false);
+  const [_, setExpanded] = useState(false);
 
   const handleToggleExpand = () => {
     setExpanded((ele) => {

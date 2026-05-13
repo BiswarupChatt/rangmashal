@@ -8,7 +8,6 @@ import {
   DialogTitle,
   DialogContent,
   IconButton,
-  Divider,
 } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

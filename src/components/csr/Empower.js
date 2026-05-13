@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid, Container, Paper, colors } from "@mui/material";
+import { Box, Typography, Grid, Container, Paper } from "@mui/material";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import DonateButton from "../reusable/DonateButton";

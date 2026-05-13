@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Container, Grid, Pagination } from "@mui/material";
+import { Box, Pagination } from "@mui/material";
 import ProjectDetails from "./components/ProjectDetails";
 import eventsData from "./eventsData";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid, Container, Paper, colors } from "@mui/material";
+import { Box, Typography, Grid, Container, Paper } from "@mui/material";
 import SchoolIcon from "@mui/icons-material/School";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import { Fade, Slide } from "react-awesome-reveal";

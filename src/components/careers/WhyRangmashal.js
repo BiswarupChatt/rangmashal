@@ -6,7 +6,6 @@ import {
   Container,
   Card,
   CardContent,
-  CardMedia,
 } from "@mui/material";
 import { Fade, Slide } from "react-awesome-reveal";
 import ImpactIcon from "@mui/icons-material/VolunteerActivism";

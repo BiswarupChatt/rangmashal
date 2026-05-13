@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Box, Typography, Grid, Container, Dialog, IconButton } from '@mui/material';
+import { Box, Typography, Container, Dialog, IconButton } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import CloseIcon from '@mui/icons-material/Close';
 import { Slide, Fade } from 'react-awesome-reveal';
 import { theme } from '../../global/theme';

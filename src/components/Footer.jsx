@@ -4,7 +4,6 @@ import {
   Grid,
   Typography,
   IconButton,
-  Avatar,
   Divider,
 } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -91,22 +90,25 @@ export default function Footer() {
       <Divider sx={{ my: 4 }} />
 
       <Grid container spacing={2} justifyContent="center">
-        <Grid
-          item
-          xs={12}
-          md={3}
-          sx={{ textAlign: { xs: "center", md: "left" } }}
-        >
+        <Grid item xs={12} md={3} sx={{ textAlign: "center" }}>
           <Box
             sx={{
               display: "flex",
               justifyContent: { xs: "center", md: "flex-start" },
+              alignItems: "center",
             }}
           >
-            <Avatar
+            <Box
+              component="img"
               alt="Rangmashal Logo"
-              src="/images/logo-black.png"
-              sx={{ width: 200, height: "auto" }}
+              src="/images/logo-only.png"
+              sx={{
+                display: "block",
+                width: { xs: 220, sm: 260, md: 300 },
+                maxWidth: "100%",
+                height: "auto",
+                objectFit: "contain",
+              }}
             />
           </Box>
         </Grid>

@@ -34,8 +34,6 @@ export default function Header() {
 
   return (
     <Box
-      position="relative"
-      top="25px"
       sx={{
         display: "flex",
         alignItems: "center",
@@ -85,7 +83,7 @@ export default function Header() {
                 <Container sx={{ marginTop: 5 }}>
                   <Box>
                     <img
-                      src="/images/logo.png"
+                      src="/images/logo-only.png"
                       alt="Organization Logo"
                       style={{
                         width: isSmallScreen

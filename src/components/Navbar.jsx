@@ -61,6 +61,8 @@ const navItems = [
   },
 ];
 
+const navbarHeight = { xs: 64, md: 72 };
+
 const ItemDisplay = ({ items }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [currentSubItems, setCurrentSubItems] = useState(null);
@@ -273,14 +275,21 @@ export default function Navbar(props) {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            minHeight: navbarHeight,
+            px: { xs: 2, md: 4 },
           }}
         >
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
-            <Button component={Link} to="/" sx={{ padding: 0 }}>
-              <img
+            <Button component={Link} to="/" sx={{ minWidth: 0, padding: 0 }}>
+              <Box
+                component="img"
                 src="/images/logo-only.png"
                 alt="Rangmashal Logo"
-                style={{ width: "80px", height: "auto", padding: "10px" }}
+                sx={{
+                  display: "block",
+                  width: { xs: 118, md: 150 },
+                  height: "auto",
+                }}
               />
             </Button>
           </Box>
@@ -328,10 +337,11 @@ export default function Navbar(props) {
               to="/"
               sx={{ display: "flex", justifyContent: "center", padding: 2 }}
             >
-              <img
+              <Box
+                component="img"
                 src="/images/logo-only.png"
                 alt="Rangmashal Logo"
-                style={{ width: "50px", height: "auto" }}
+                sx={{ width: 130, height: "auto" }}
               />
             </Button>
             <Divider />
@@ -343,7 +353,7 @@ export default function Navbar(props) {
         </Drawer>
       </nav>
 
-      <Toolbar id="back-to-top-anchor" />
+      <Box id="back-to-top-anchor" sx={{ height: navbarHeight }} />
     </Box>
   );
 }

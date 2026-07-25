@@ -26,7 +26,7 @@ import DonateButton from "./reusable/DonateButton";
 const navItems = [
   { name: "Home", path: "/" },
   {
-    name: "Our Mission",
+    name: "Who We Are",
     subItems: [
       { name: "About Us", path: "/who-we-are/about" },
       { name: "Resources", path: "/who-we-are/resources" },
@@ -53,7 +53,7 @@ const navItems = [
     ],
   },
   {
-    name: "Learn More",
+    name: "Resources",
     subItems: [
       { name: "Blog", path: "/resources/blog" },
       // { name: 'Media', path: '/resources/media' },

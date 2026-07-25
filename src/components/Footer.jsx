@@ -19,9 +19,8 @@ export default function Footer() {
   const quickLinks = [
     { name: "About Us", path: "/who-we-are/about" },
     { name: "Resources", path: "/who-we-are/resources" },
-    
-    { name: "Privacy Policy", path: "/contact" },
-    { name: "Terms & Conditions", path: "/contact" },
+    { name: "Privacy Policy", path: "/privacy-policy" },
+    { name: "Terms & Conditions", path: "/terms-conditions" },
   ];
 
   const socialLinks = [

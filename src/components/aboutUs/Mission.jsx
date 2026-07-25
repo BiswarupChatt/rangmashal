@@ -25,42 +25,39 @@ export default function Mission() {
                     Our Mission
                   </Typography>
                   <Typography variant="body1" textAlign="justify">
-                    Our mission is to provide underprivileged children and women
-                    across India with the support they need to succeed in life.
-                    Whether it be through education, healthcare, or improved
-                    living conditions, we are committed to creating a brighter
-                    future for the next generation.
+                    Rangmashal Foundation is committed to empowering
+                    individuals and transforming communities through sustainable
+                    development programmes that promote social welfare, human
+                    dignity, and inclusive growth. Our mission is achieved
+                    through strategic initiatives focused on education,
+                    healthcare awareness, community empowerment, humanitarian
+                    assistance, environmental sustainability, and active citizen
+                    participation.
                     <br />
                     <br />
                   </Typography>
 
                   <Collapse in={expand} timeout="auto" unmountOnExit>
                     <Typography variant="body1" textAlign="justify">
-                      We invite you to join us on this journey of building a
-                      better future for the future generation of India.
-                      Together, we can make a lasting difference in the lives of
-                      those who need it most. Every small effort can make a big
-                      impact, and with your support, we can ensure that every
-                      child and woman has access to equal opportunity as their
-                      privileged counterparts.
+                      We promote holistic child development by ensuring access
+                      to quality education, nutritional support, mentorship,
+                      creativity, life skills, and opportunities that enable
+                      children to grow into confident, responsible, and
+                      compassionate citizens.
                       <br />
                       <br />
-                      As our supporter, you will be a part of a community of
-                      like-minded individuals who are committed to making a
-                      difference in the lives of those who are deprived of even
-                      the basic needs for survival. From supporting our
-                      education endeavors to providing healthcare and improved
-                      living conditions, your support will make a tangible
-                      difference in the lives of those we serve.
+                      We strive to empower women through education, leadership
+                      development, livelihood generation, entrepreneurship,
+                      financial literacy, skill enhancement, and equal
+                      opportunities, enabling them to become independent and
+                      active contributors to society.
                       <br />
                       <br />
-                      We believe that every child and woman has the right to a
-                      brighter future, and we are dedicated to making that a
-                      reality. Join us in our mission to unlock potential and
-                      build futures for underprivileged children and women in
-                      India. Together, we can create a world where every child
-                      and woman has the opportunity to reach their full
-                      potential.
+                      We support senior citizens, underprivileged families, and
+                      marginalized communities through healthcare awareness,
+                      legal literacy, livelihood assistance, skill development,
+                      disaster relief, volunteerism, strategic partnerships, and
+                      environmental sustainability.
                     </Typography>
                   </Collapse>
 

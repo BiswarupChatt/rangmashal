@@ -14,18 +14,18 @@ export default function Header() {
     {
       src: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899112/Website/lwijqhxavefwc1ftue0e.jpg",
       alt: "Children learning together",
-      accent: "Together we rise,",
-      title: "for a future that's wise.",
+      accent: "Lighting Lives.",
+      title: "Building Stronger Communities.",
       description:
-        "Welcome to Rangmashal Foundation, a youth-driven NGO empowering underprivileged children and women across India since 2020.",
+        "Rangmashal Foundation is a registered public charitable trust dedicated to sustainable development, humanitarian service, education, and social welfare.",
     },
     {
       src: "https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899302/Website/nt81qnkkkvjcch48v53k.jpg",
       alt: "Community support activity",
-      accent: "Every child and woman",
-      title: "deserves the chance to thrive.",
+      accent: "Compassion in action,",
+      title: "opportunity with dignity.",
       description:
-        "We create access, dignity, and opportunity through education, care, and community-led initiatives for families who need it most.",
+        "We empower children, women, senior citizens, and vulnerable communities through education, healthcare awareness, livelihood support, and community-led development.",
     },
   ];
 

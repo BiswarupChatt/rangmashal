@@ -40,12 +40,16 @@ export default function Vision() {
                     Our Vision
                   </Typography>
                   <Typography variant="body1" textAlign="justify">
-                    Our vision is to create a world where all children and women
-                    have equal opportunities, regardless of their background. We
-                    believe that proper education, better living conditions, and
-                    access to healthcare are key to empowering them to reach
-                    their full potential and break the cycle of poverty that
-                    they were not born to live in.
+                    At Rangmashal Foundation, our vision is to build an
+                    equitable, inclusive, and resilient society where every
+                    individual, regardless of age, gender, economic status,
+                    social background, ability, or geographical location, has
+                    equal access to quality education, healthcare, livelihood
+                    opportunities, safety, dignity, and sustainable development.
+                    We envision empowered communities that are self-reliant,
+                    socially responsible, environmentally conscious, and united
+                    by the enduring values of compassion, equality, justice,
+                    integrity, and mutual respect.
                   </Typography>
                 </Box>
               </Grid>

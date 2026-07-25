@@ -46,7 +46,7 @@ export default function Footer() {
   const infoItems = [
     {
       icon: <SupportIcon sx={{ fontSize: "2rem", color: "primary.main" }} />,
-      text: "Together, we create meaningful change – your support makes it all possible.",
+      text: "Together, we create meaningful change - your support makes it all possible.",
     },
     {
       icon: <TaxIcon sx={{ fontSize: "2rem", color: "primary.main" }} />,
@@ -54,7 +54,7 @@ export default function Footer() {
     },
     {
       icon: <SecureIcon sx={{ fontSize: "2rem", color: "primary.main" }} />,
-      text: "Your trust matters – every donation is processed with top-notch security and integrity.",
+      text: "Your trust matters - every donation is processed with top-notch security and integrity.",
     },
   ];
 
@@ -214,7 +214,7 @@ export default function Footer() {
 
       <Box textAlign="center" mt={4}>
         <Typography variant="body2" color="textSecondary">
-          © {new Date().getFullYear()} Rangmashal Foundation. All rights
+          (c) {new Date().getFullYear()} Rangmashal Foundation. All rights
           reserved.
         </Typography>
       </Box>

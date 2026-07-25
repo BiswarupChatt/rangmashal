@@ -76,7 +76,7 @@ export default function About() {
                       letterSpacing: "-0.03em",
                     }}
                   >
-                    Building brighter futures for children and women.
+                    Lighting lives through sustainable community development.
                   </Typography>
 
                   <Typography
@@ -86,10 +86,11 @@ export default function About() {
                       lineHeight: { xs: 1.75, sm: 1.9 },
                     }}
                   >
-                    Since 2020, Rangmashal Foundation has worked with
-                    underserved communities to expand access to education,
-                    strengthen support systems for women, and respond with
-                    practical care when families need it most.
+                    Rangmashal Foundation is a registered public charitable
+                    trust and non-profit organization in India dedicated to
+                    empowering communities through humanitarian service,
+                    education, social welfare, and long-term development
+                    initiatives.
                   </Typography>
 
                   <Box

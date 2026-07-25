@@ -9,147 +9,115 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+
 export default function About() {
   const [expanded, setExpanded] = useState(false);
 
-  const handleToggleExpand = () => {
-    setExpanded((ele) => {
-      return !ele;
-    });
-  };
-
   return (
-    <Box>
-      <Box sx={{ width: "100%" }}>
-        <Container sx={{ padding: { xs: "20px", md: "50px" } }}>
-          <Typography
-            variant="h3"
-            sx={{
-              fontWeight: "bold",
-              mb: 3,
-              textAlign: "center",
-              color: "primary.main",
-            }}
+    <Box sx={{ width: "100%" }}>
+      <Container sx={{ padding: { xs: "20px", md: "50px" } }}>
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: "bold",
+            mb: 3,
+            textAlign: "center",
+            color: "primary.main",
+          }}
+        >
+          About Us
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{ fontWeight: "medium", mb: 2, textAlign: "center" }}
+        >
+          Lighting Lives. Building Stronger Communities.
+        </Typography>
+
+        <Typography variant="body1" sx={{ textAlign: "justify", mb: 3 }}>
+          Rangmashal Foundation is a registered charitable trust committed to
+          promoting inclusive development, social justice, and community
+          empowerment across India. Our mission is to improve the quality of
+          life for children, women, senior citizens, economically weaker
+          sections, and vulnerable communities through education, healthcare
+          awareness, livelihood support, environmental responsibility,
+          humanitarian assistance, and community-based development programmes.
+          <br />
+          <br />
+          We believe that true development is measured not merely by economic
+          growth but by the well-being, dignity, and empowerment of every
+          individual. Sustainable progress is possible only when communities
+          actively participate in shaping their own future. This philosophy forms
+          the foundation of every programme and initiative undertaken by
+          Rangmashal Foundation.
+          <br />
+          <br />
+          Our work is guided by the core values of compassion, integrity,
+          transparency, inclusivity, accountability, and social responsibility.
+          Every project is designed to address both immediate needs and the root
+          causes of social challenges, ensuring long-term and measurable impact.
+        </Typography>
+
+        <Box
+          component="img"
+          sx={{
+            width: "100%",
+            height: "auto",
+            borderRadius: "8px",
+            boxShadow: "8px 8px 15px rgba(0, 0, 0, 0.4)",
+            marginBottom: "20px",
+          }}
+          src="https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899302/Website/nt81qnkkkvjcch48v53k.jpg"
+          alt="Rangmashal Foundation community work"
+        />
+
+        <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
+          <Button
+            onClick={() => setExpanded((value) => !value)}
+            endIcon={expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           >
-            About Us
-          </Typography>
-          <Typography
-            variant="h5"
-            sx={{ fontWeight: "medium", mb: 2, textAlign: "center" }}
-          >
-            The Genesis of Rangmashal Foundation
-          </Typography>
+            {expanded ? "Read Less" : "Read More"}
+          </Button>
+        </Box>
 
-          <Typography variant="body1" sx={{ textAlign: "justify", mb: 3 }}>
-            On a cold winter evening, a group of friends passing there free time
-            in a garden. Engaged in light banter and laughter, they reveled in
-            the comfort of each other's company, blissfully unaware that the
-            evening would take an unexpected turn, setting them on a
-            transformative journey of compassion and service to society.
-            <br />
-            <br />
-            As the friends animatedly shared stories and dreams, their attention
-            was abruptly drawn to a beggar woman and her young son who huddled
-            outside, seeking shelter from the winter's harsh embrace. The
-            woman's tired eyes and the child's shivering form struck a chord,
-            prompting an immediate response from the friends.
-            <br />
-            <br />
-            In that moment of spontaneity and empathy, the term "Rangmashal"
-            emerged—a Bengali term translating to "lantern." It signified not
-            only a source of light in the literal darkness but also a
-            metaphorical beacon of hope amidst life's challenges. Rangmashal
-            became a conduit for positive change, focusing particularly on
-            uplifting the lives of women and children facing adversity.
-          </Typography>
-
-          <Box
-            component="img"
-            sx={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "8px",
-              boxShadow: "8px 8px 15px rgba(0, 0, 0, 0.4)",
-              marginBottom: "20px",
-            }}
-            src="https://res.cloudinary.com/dgwgnfulm/image/upload/v1725899302/Website/nt81qnkkkvjcch48v53k.jpg"
-            alt="Genesis of Rangmashal"
-          />
-
-          <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
-            <Button
-              onClick={handleToggleExpand}
-              endIcon={expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-            >
-              {expanded ? "Read Less" : "Read More"}
-            </Button>
-          </Box>
-
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <Grid container spacing={4}>
-              <Grid item xs={12} md={6}>
-                <Typography variant="body1" sx={{ textAlign: "justify" }}>
-                  The first initiative of Rangmashal was the establishment of
-                  free educational programs. Recognizing education as a powerful
-                  tool for breaking the cycles of poverty, the friends set up
-                  impromptu classrooms within the heart of the community they
-                  aimed to serve. Volunteer teachers, inspired by the friends'
-                  commitment, joined the cause, contributing their time and
-                  expertise to empower the underprivileged with knowledge.
-                  <br />
-                  <br />
-                  Beyond conventional subjects, Rangmashal's educational
-                  programs embraced a holistic approach, encompassing life
-                  skills, vocational training, and health awareness. The aim was
-                  not just to impart academic knowledge but to equip individuals
-                  with the practical skills needed for self-sufficiency.
-                  Healthcare soon became another pillar of Rangmashal's mission.
-                  Partnering with medical professionals and institutions, the
-                  organization organized mobile health camps, reaching remote
-                  areas and providing free check-ups, vaccinations, and basic
-                  medical care. The friends understood that a healthy community
-                  was fundamental to sustainable development, and they were
-                  determined to bridge gaps in healthcare access.
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Typography variant="body1" sx={{ textAlign: "justify" }}>
-                  Challenges inevitably surfaced as Rangmashal expanded its
-                  reach. Financial constraints were a constant concern,
-                  prompting the friends to leverage their networks, organize
-                  fundraisers, and collaborate with like-minded NGOs. Social
-                  media became a powerful tool for spreading the word about
-                  their cause and garnering support from a wider audience.
-                  <br />
-                  <br />
-                  <br />
-                  The impact of Rangmashal resonated through stories of
-                  transformation within the communities it touched. Children who
-                  once roamed the streets in search of sustenance now harbored
-                  dreams and aspirations. Mothers, resigned to the hardships of
-                  their circumstances, found solace in the support provided by
-                  Rangmashal. What started as a simple act of kindness on a
-                  winter evening evolved into a lifelong mission for the
-                  friends. Rangmashal became not only a symbol of their
-                  commitment to social change but also a testament to the
-                  profound connections forged with the communities they served.
-                </Typography>
-              </Grid>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={6}>
+              <Typography variant="body1" sx={{ textAlign: "justify" }}>
+                Since its inception, Rangmashal Foundation has worked tirelessly
+                to support child development, women's empowerment, senior
+                citizen welfare, education, healthcare awareness, environmental
+                sustainability, and humanitarian relief. Rather than providing
+                short-term assistance alone, we strive to equip individuals with
+                the knowledge, skills, resources, and opportunities needed to
+                build self-reliant and dignified lives.
+              </Typography>
             </Grid>
+            <Grid item xs={12} md={6}>
+              <Typography variant="body1" sx={{ textAlign: "justify" }}>
+                Our humanitarian commitment has been demonstrated during some of
+                India's most challenging times. During the COVID-19 pandemic and
+                nationwide lockdown, our volunteers mobilized resources and
+                extended essential support to families facing unprecedented
+                hardship. We also provided relief and rehabilitation assistance
+                to communities affected by Cyclone Amphan and Cyclone Yaas.
+              </Typography>
+            </Grid>
+          </Grid>
 
-            <Typography variant="body1" sx={{ textAlign: "justify", mt: 3 }}>
-              In the lazy winter evening where laughter turned into purpose,
-              Rangmashal emerged as a source of light dispelling the darkness of
-              despair. The friends, spurred by a genuine desire to make a
-              difference, discovered the profound joy of service and the lasting
-              impact of small acts of kindness. Rangmashal's lantern, kindled in
-              that winter evening, continued to illuminate paths and inspire
-              change, offering a guiding light for anyone seeking to contribute
-              positively to the world.
-            </Typography>
-          </Collapse>
-        </Container>
-      </Box>
+          <Typography variant="body1" sx={{ textAlign: "justify", mt: 3 }}>
+            As Rangmashal Foundation continues to grow, our vision extends far
+            beyond individual projects. We aspire to build a nationwide network
+            of volunteers, professionals, institutions, community clubs, and
+            socially responsible citizens working together to promote community
+            development, social welfare, and sustainable nation-building. At
+            Rangmashal Foundation, service is not an occasional act of charity.
+            It is a lifelong commitment to empowering people, strengthening
+            communities, and creating a future where every individual has the
+            opportunity to live with dignity, hope, equality, and purpose.
+          </Typography>
+        </Collapse>
+      </Container>
     </Box>
   );
 }

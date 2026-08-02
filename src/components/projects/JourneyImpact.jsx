@@ -18,6 +18,7 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Pagination } from "swiper/modules";
+import { Fade, Slide } from "react-awesome-reveal";
 import "swiper/css";
 import "swiper/css/pagination";
 import {
@@ -56,6 +57,18 @@ const sliderSx = {
     bgcolor: "primary.main",
   },
 };
+
+function SectionReveal({ children, direction = "up" }) {
+  return (
+    <Slide direction={direction} cascade damping={0.18} triggerOnce>
+      <Fade cascade triggerOnce>
+        {children}
+      </Fade>
+    </Slide>
+  );
+}
+
+const revealDirections = ["up", "left", "right"];
 
 function SectionHeading({ eyebrow, title, intro }) {
   return (
@@ -276,7 +289,8 @@ function JourneyIntro() {
   return (
     <Box id="journey-introduction" sx={{ ...sectionSx, bgcolor: "#fff" }}>
       <Container>
-        <Grid container spacing={4} alignItems="center">
+        <SectionReveal>
+          <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={7}>
             <SectionHeading
               eyebrow="A foundation built on service"
@@ -326,7 +340,8 @@ function JourneyIntro() {
               </Typography>
             </Paper>
           </Grid>
-        </Grid>
+          </Grid>
+        </SectionReveal>
       </Container>
     </Box>
   );
@@ -399,12 +414,13 @@ function FeaturedInitiatives() {
   return (
     <Box sx={{ ...sectionSx, bgcolor: "primary.light" }}>
       <Container>
-        <SectionHeading
-          eyebrow="Flagship programmes"
-          title="Flagship Initiatives"
-          intro="Two core programmes receive deeper treatment here because they define the Foundation's journey through crisis response and annual festive compassion."
-        />
-        <Grid container spacing={3}>
+        <SectionReveal direction="right">
+          <SectionHeading
+            eyebrow="Flagship programmes"
+            title="Flagship Initiatives"
+            intro="Two core programmes receive deeper treatment here because they define the Foundation's journey through crisis response and annual festive compassion."
+          />
+          <Grid container spacing={3}>
           {flagshipInitiatives.map((initiative) => {
             const Icon = initiative.icon;
             return (
@@ -490,7 +506,8 @@ function FeaturedInitiatives() {
               </Grid>
             );
           })}
-        </Grid>
+          </Grid>
+        </SectionReveal>
       </Container>
     </Box>
   );
@@ -530,12 +547,13 @@ function SharodiyarTimeline() {
   return (
     <Box sx={{ ...sectionSx, bgcolor: "#fff" }}>
       <Container>
-        <SectionHeading
-          eyebrow="Six annual editions"
-          title="Sharodiyar Porosh Timeline"
-          intro="Each edition adds a new chapter to the same purpose: helping the spirit of Durga Puja reach people who might otherwise be left behind."
-        />
-        <Box sx={{ display: { xs: "block", md: "none" }, ...sliderSx }}>
+        <SectionReveal direction="left">
+          <SectionHeading
+            eyebrow="Six annual editions"
+            title="Sharodiyar Porosh Timeline"
+            intro="Each edition adds a new chapter to the same purpose: helping the spirit of Durga Puja reach people who might otherwise be left behind."
+          />
+          <Box sx={{ display: { xs: "block", md: "none" }, ...sliderSx }}>
           <Swiper
             modules={[Pagination, A11y]}
             pagination={{ clickable: true }}
@@ -553,29 +571,25 @@ function SharodiyarTimeline() {
               </SwiperSlide>
             ))}
           </Swiper>
-        </Box>
-        <Grid
-          container
-          spacing={2.5}
-          sx={{ display: { xs: "none", md: "flex" } }}
-        >
+          </Box>
+          <Grid
+            container
+            spacing={2.5}
+            sx={{ display: { xs: "none", md: "flex" } }}
+          >
           {sharodiyarTimeline.map((edition) => (
             <Grid item xs={12} md={6} lg={4} key={edition.year}>
               {renderEdition(edition)}
             </Grid>
           ))}
-        </Grid>
+          </Grid>
+        </SectionReveal>
       </Container>
     </Box>
   );
 }
 
 function ProgrammeCard({ programme }) {
-  const [expanded, setExpanded] = useState(false);
-  const visibleHighlights = expanded
-    ? programme.highlights
-    : programme.highlights?.slice(0, 3);
-
   return (
     <Paper
       elevation={0}
@@ -632,16 +646,7 @@ function ProgrammeCard({ programme }) {
           ))}
         </Stack>
       ) : (
-        <HighlightList items={visibleHighlights} />
-      )}
-      {programme.highlights?.length > 3 && (
-        <Button
-          onClick={() => setExpanded((value) => !value)}
-          sx={{ mt: 1.5, px: 0, fontWeight: 900, textTransform: "none" }}
-          aria-expanded={expanded}
-        >
-          {expanded ? "Show less" : "Read more"}
-        </Button>
+        <HighlightList items={programme.highlights} />
       )}
     </Paper>
   );
@@ -662,109 +667,111 @@ function InitiativeSection({ section, index }) {
       }}
     >
       <Container>
-        <Box sx={{ maxWidth: 850, mb: { xs: 3, md: 5 } }}>
-          <Stack
-            direction="row"
-            spacing={{ xs: 1.25, sm: 1.5 }}
-            alignItems="center"
-            sx={{ mb: 1.5 }}
+        <SectionReveal direction={revealDirections[index % revealDirections.length]}>
+          <Box sx={{ maxWidth: 850, mb: { xs: 3, md: 5 } }}>
+            <Stack
+              direction="row"
+              spacing={{ xs: 1.25, sm: 1.5 }}
+              alignItems="center"
+              sx={{ mb: 1.5 }}
+            >
+              <Box
+                sx={{
+                  width: { xs: 38, sm: 46 },
+                  height: { xs: 38, sm: 46 },
+                  borderRadius: "10px",
+                  bgcolor: isSoft ? "#fff" : "primary.light",
+                  display: "grid",
+                  placeItems: "center",
+                  color: "primary.main",
+                  flexShrink: 0,
+                }}
+              >
+                <Icon fontSize="small" />
+              </Box>
+              <Typography
+                component="h2"
+                variant="h4"
+                sx={{
+                  fontWeight: 900,
+                  fontSize: { xs: "1.75rem", md: "2.35rem" },
+                  lineHeight: 1.15,
+                }}
+              >
+                {section.title}
+              </Typography>
+            </Stack>
+            <Typography color="text.secondary" sx={{ lineHeight: 1.8 }}>
+              {section.intro}
+            </Typography>
+          </Box>
+          {useSlider && (
+            <Box sx={{ display: { xs: "block", lg: "none" }, ...sliderSx }}>
+              <Swiper
+                modules={[Pagination, A11y]}
+                pagination={{ clickable: true }}
+                spaceBetween={16}
+                slidesPerView={1}
+                centeredSlides={false}
+                watchOverflow
+                a11y={{ enabled: true }}
+                style={{ width: "100%", overflow: "hidden" }}
+              >
+                {section.programmes.map((programme) => (
+                  <SwiperSlide key={programme.title} style={{ width: "100%" }}>
+                    <ProgrammeCard programme={programme} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </Box>
+          )}
+          <Grid
+            container
+            spacing={2.5}
+            sx={{ display: { xs: useSlider ? "none" : "flex", lg: "flex" } }}
           >
+            {section.programmes.map((programme) => (
+              <Grid
+                item
+                xs={12}
+                md={section.programmes.length === 1 ? 12 : 6}
+                lg={section.programmes.length === 1 ? 12 : 4}
+                key={programme.title}
+              >
+                <ProgrammeCard programme={programme} />
+              </Grid>
+            ))}
+          </Grid>
+          {section.id === "csr" && (
             <Box
               sx={{
-                width: { xs: 38, sm: 46 },
-                height: { xs: 38, sm: 46 },
-                borderRadius: "10px",
-                bgcolor: isSoft ? "#fff" : "primary.light",
-                display: "grid",
-                placeItems: "center",
-                color: "primary.main",
-                flexShrink: 0,
+                mt: 4,
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 2,
+                alignItems: "center",
               }}
             >
-              <Icon fontSize="small" />
+              <Typography sx={{ fontWeight: 800 }}>
+                Build a transparent CSR collaboration with Rangmashal Foundation.
+              </Typography>
+              <Button
+                component={Link}
+                to="/get-involved/csr"
+                variant="contained"
+                sx={{
+                  borderRadius: "10px",
+                  textTransform: "none",
+                  fontWeight: 900,
+                  bgcolor: "primary.main",
+                  "&:hover": { bgcolor: "secondary.main", color: "#111" },
+                }}
+              >
+                Partner With Us
+              </Button>
             </Box>
-            <Typography
-              component="h2"
-              variant="h4"
-              sx={{
-                fontWeight: 900,
-                fontSize: { xs: "1.75rem", md: "2.35rem" },
-                lineHeight: 1.15,
-              }}
-            >
-              {section.title}
-            </Typography>
-          </Stack>
-          <Typography color="text.secondary" sx={{ lineHeight: 1.8 }}>
-            {section.intro}
-          </Typography>
-        </Box>
-        {useSlider && (
-          <Box sx={{ display: { xs: "block", lg: "none" }, ...sliderSx }}>
-            <Swiper
-              modules={[Pagination, A11y]}
-              pagination={{ clickable: true }}
-              spaceBetween={16}
-              slidesPerView={1}
-              centeredSlides={false}
-              watchOverflow
-              a11y={{ enabled: true }}
-              style={{ width: "100%", overflow: "hidden" }}
-            >
-              {section.programmes.map((programme) => (
-                <SwiperSlide key={programme.title} style={{ width: "100%" }}>
-                  <ProgrammeCard programme={programme} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </Box>
-        )}
-        <Grid
-          container
-          spacing={2.5}
-          sx={{ display: { xs: useSlider ? "none" : "flex", lg: "flex" } }}
-        >
-          {section.programmes.map((programme) => (
-            <Grid
-              item
-              xs={12}
-              md={section.programmes.length === 1 ? 12 : 6}
-              lg={section.programmes.length === 1 ? 12 : 4}
-              key={programme.title}
-            >
-              <ProgrammeCard programme={programme} />
-            </Grid>
-          ))}
-        </Grid>
-        {section.id === "csr" && (
-          <Box
-            sx={{
-              mt: 4,
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 2,
-              alignItems: "center",
-            }}
-          >
-            <Typography sx={{ fontWeight: 800 }}>
-              Build a transparent CSR collaboration with Rangmashal Foundation.
-            </Typography>
-            <Button
-              component={Link}
-              to="/get-involved/csr"
-              variant="contained"
-              sx={{
-                borderRadius: "10px",
-                textTransform: "none",
-                fontWeight: 900,
-                bgcolor: "primary.main",
-                "&:hover": { bgcolor: "secondary.main", color: "#111" },
-              }}
-            >
-              Partner With Us
-            </Button>
-          </Box>
-        )}
+          )}
+        </SectionReveal>
       </Container>
     </Box>
   );

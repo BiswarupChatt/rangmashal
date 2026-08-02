@@ -8,14 +8,10 @@ const AboutUs = lazy(() => import("../pages/AboutUs"));
 const Projects = lazy(() => import("../pages/Projects"));
 const PageNotFound = lazy(() => import("../pages/PageNotFound"));
 const Resources = lazy(() => import("../pages/Resources"));
-const Elevate = lazy(() => import("../pages/Elevate"));
 const Careers = lazy(() => import("../pages/Careers"));
-const CreateMemories = lazy(() => import("../pages/CreateMemories"));
 const CSR = lazy(() => import("../pages/CSR"));
 const Blog = lazy(() => import("../pages/Blog"));
 const BlogDetails = lazy(() => import("../pages/BlogDetails"));
-const SharodiyarPorosh = lazy(() => import("../pages/SharodiyarPorosh"));
-const HealthBloodDonation = lazy(() => import("../pages/HealthBloodDonation"));
 const PrivacyPolicy = lazy(() => import("../pages/PrivacyPolicy"));
 const Terms = lazy(() => import("../pages/Terms"));
 
@@ -28,19 +24,7 @@ export default function AppRoutes() {
         <Route path="/who-we-are/about" element={<AboutUs />} />
         <Route path="/who-we-are/resources" element={<Resources />} />
 
-        <Route path="/what-we-do/elevate" element={<Elevate />} />
-        <Route
-          path="/what-we-do/create-memories"
-          element={<CreateMemories />}
-        />
-        <Route
-          path="/what-we-do/sharodiyar-porosh"
-          element={<SharodiyarPorosh />}
-        />
-        <Route
-          path="/what-we-do/health-blood-donation"
-          element={<HealthBloodDonation />}
-        />
+        <Route path="/what-we-do" element={<Projects />} />
         <Route path="/what-we-do/past-projects" element={<Projects />} />
 
         <Route path="/get-involved/careers" element={<Careers />} />

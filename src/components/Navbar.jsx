@@ -35,6 +35,7 @@ const navItems = [
   {
     name: "Our Initiatives",
     subItems: [
+      { name: "Our Journey of Impact", path: "/what-we-do/past-projects" },
       { name: "Elevate", path: "/what-we-do/elevate" },
       { name: "Create Memories", path: "/what-we-do/create-memories" },
       { name: "Sharodiyar Porosh", path: "/what-we-do/sharodiyar-porosh" },

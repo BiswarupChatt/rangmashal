@@ -1,10 +1,5 @@
-import Hero from "./Hero";
-import AllProjects from "./AllProjects";
+import JourneyImpact from "./JourneyImpact";
+
 export default function Index() {
-  return (
-    <>
-      <Hero />
-      <AllProjects />
-    </>
-  );
+  return <JourneyImpact />;
 }

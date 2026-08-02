@@ -1,10 +1,14 @@
 import React from "react";
 import {
   Box,
+  Button,
+  Container,
   Grid,
   Typography,
   IconButton,
+  Link as MuiLink,
   Divider,
+  Stack,
 } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -14,6 +18,111 @@ import SupportIcon from "@mui/icons-material/VolunteerActivism";
 import TaxIcon from "@mui/icons-material/VerifiedUser";
 import SecureIcon from "@mui/icons-material/Security";
 import { Link } from "react-router-dom";
+import DonateButton from "./reusable/DonateButton";
+
+function FooterCta() {
+  return (
+    <Box sx={{ py: { xs: 6, md: 8 }, bgcolor: "#1d1d1d", color: "#fff" }}>
+      <Container>
+        <Grid container spacing={3} alignItems="center">
+          <Grid item xs={12} md={7}>
+            <Typography
+              component="h2"
+              variant="h4"
+              sx={{ fontWeight: 900, mb: 1 }}
+            >
+              Together, We Create Impact
+            </Typography>
+            <Typography
+              sx={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.8 }}
+            >
+              Volunteer, donate, partner, or start a conversation with the
+              Foundation. Every act of support helps extend education,
+              healthcare, relief, child welfare, and community development to
+              people who need it most.
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={5}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: { xs: "flex-start", md: "flex-end" },
+            }}
+          >
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              spacing={1.5}
+              justifyContent={{ xs: "flex-start", md: "flex-end" }}
+              alignItems={{ xs: "stretch", sm: "center" }}
+              sx={{ width: { xs: "100%", sm: "auto" } }}
+            >
+              <DonateButton label="Donate Now" sx={{ minHeight: 46 }} />
+              <Button
+                component={Link}
+                to="/get-involved/careers"
+                variant="outlined"
+                sx={{
+                  minHeight: 46,
+                  borderColor: "primary.main",
+                  color: "#fff",
+                  borderRadius: "10px",
+                  textTransform: "none",
+                  fontWeight: 900,
+                  "&:hover": {
+                    borderColor: "secondary.main",
+                    bgcolor: "rgba(255,255,255,0.08)",
+                  },
+                }}
+              >
+                Volunteer
+              </Button>
+              <Button
+                component={Link}
+                to="/get-involved/csr"
+                variant="outlined"
+                sx={{
+                  minHeight: 46,
+                  borderColor: "primary.main",
+                  color: "#fff",
+                  borderRadius: "10px",
+                  textTransform: "none",
+                  fontWeight: 900,
+                  "&:hover": {
+                    borderColor: "secondary.main",
+                    bgcolor: "rgba(255,255,255,0.08)",
+                  },
+                }}
+              >
+                Partner
+              </Button>
+            </Stack>
+            <Typography
+              sx={{
+                mt: 2,
+                color: "rgba(255,255,255,0.7)",
+                fontSize: "0.9rem",
+                textAlign: { xs: "left", md: "right" },
+                maxWidth: "100%",
+                overflowWrap: "anywhere",
+              }}
+            >
+              Contact:{" "}
+              <MuiLink
+                href="mailto:connecttorangmashal@gmail.com"
+                color="inherit"
+              >
+                connecttorangmashal@gmail.com
+              </MuiLink>
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+}
 
 export default function Footer() {
   const quickLinks = [
@@ -58,9 +167,11 @@ export default function Footer() {
   ];
 
   return (
-    <Box sx={{ p: 4, borderTop: "1px solid #e0e0e0" }}>
-      {/* Info Section */}
-      <Grid container spacing={3} justifyContent="center">
+    <>
+      <FooterCta />
+      <Box sx={{ p: 4, borderTop: "1px solid #e0e0e0" }}>
+        {/* Info Section */}
+        <Grid container spacing={3} justifyContent="center">
         {infoItems.map((item, index) => (
           <Grid
             key={index}
@@ -84,11 +195,11 @@ export default function Footer() {
             </Typography>
           </Grid>
         ))}
-      </Grid>
+        </Grid>
 
-      <Divider sx={{ my: 4 }} />
+        <Divider sx={{ my: 4 }} />
 
-      <Grid container spacing={2} justifyContent="center">
+        <Grid container spacing={2} justifyContent="center">
         <Grid item xs={12} md={3} sx={{ textAlign: "center" }}>
           <Box
             sx={{
@@ -209,14 +320,15 @@ export default function Footer() {
             ))}
           </Box>
         </Grid>
-      </Grid>
+        </Grid>
 
-      <Box textAlign="center" mt={4}>
-        <Typography variant="body2" color="textSecondary">
-          (c) {new Date().getFullYear()} Rangmashal Foundation. All rights
-          reserved.
-        </Typography>
+        <Box textAlign="center" mt={4}>
+          <Typography variant="body2" color="textSecondary">
+            (c) {new Date().getFullYear()} Rangmashal Foundation. All rights
+            reserved.
+          </Typography>
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 }

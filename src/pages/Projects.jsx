@@ -13,7 +13,11 @@ export default function Projects() {
     return (
         <>
             <Helmet>
-                <title>Projects of Rangmashal Foundation</title>
+                <title>Our Journey of Impact | Rangmashal Foundation</title>
+                <meta
+                    name="description"
+                    content="Explore Rangmashal Foundation initiatives across COVID-19 relief, Durga Puja outreach, disaster rehabilitation, education, healthcare, social welfare, CSR partnerships, and fundraising."
+                />
             </Helmet>
             <Index />
         </>

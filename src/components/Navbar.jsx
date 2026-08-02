@@ -25,14 +25,8 @@ import DonateButton from "./reusable/DonateButton";
 
 const navItems = [
   { name: "Home", path: "/" },
-  {
-    name: "Who We Are",
-    subItems: [
-      { name: "About Us", path: "/who-we-are/about" },
-      { name: "Resources", path: "/who-we-are/resources" },
-    ],
-  },
-  { name: "Our Initiatives", path: "/what-we-do" },
+  { name: "About Us", path: "/about-us" },
+  { name: "Our Initiatives", path: "/our-initiatives" },
   {
     name: "Join Us",
     subItems: [
@@ -40,13 +34,7 @@ const navItems = [
       { name: "CSR Activity", path: "/get-involved/csr" },
     ],
   },
-  {
-    name: "Resources",
-    subItems: [
-      { name: "Blog", path: "/resources/blog" },
-      // { name: 'Media', path: '/resources/media' },
-    ],
-  },
+  { name: "Blog", path: "/resources/blog" },
 ];
 
 const navbarHeight = { xs: 64, md: 72 };

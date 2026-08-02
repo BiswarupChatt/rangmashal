@@ -136,8 +136,8 @@ function FooterCta() {
 
 export default function Footer() {
   const quickLinks = [
-    { name: "About Us", path: "/who-we-are/about" },
-    { name: "Resources", path: "/who-we-are/resources" },
+    { name: "About Us", path: "/about-us" },
+    { name: "Resources", path: "/resources" },
     { name: "Privacy Policy", path: "/privacy-policy" },
     { name: "Terms & Conditions", path: "/terms-conditions" },
   ];

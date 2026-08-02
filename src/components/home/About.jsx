@@ -104,7 +104,7 @@ export default function About() {
                   >
                     <Link
                       component={RouterLink}
-                      to="/who-we-are/about"
+                      to="/about-us"
                       underline="none"
                       sx={{
                         display: "inline-flex",

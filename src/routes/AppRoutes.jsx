@@ -21,9 +21,10 @@ export default function AppRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="/who-we-are/about" element={<AboutUs />} />
-        <Route path="/who-we-are/resources" element={<Resources />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/resources" element={<Resources />} />
 
+        <Route path="/our-initiatives" element={<Projects />} />
         <Route path="/what-we-do" element={<Projects />} />
         <Route path="/what-we-do/past-projects" element={<Projects />} />
 

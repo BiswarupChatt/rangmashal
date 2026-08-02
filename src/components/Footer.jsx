@@ -23,18 +23,27 @@ import DonateButton from "./reusable/DonateButton";
 function FooterCta() {
   return (
     <Box sx={{ py: { xs: 6, md: 8 }, bgcolor: "#1d1d1d", color: "#fff" }}>
-      <Container>
-        <Grid container spacing={3} alignItems="center">
-          <Grid item xs={12} md={7}>
+      <Container maxWidth={false} sx={{ px: { xs: 3, md: 6, lg: 10 } }}>
+        <Grid
+          container
+          spacing={{ xs: 3, md: 6 }}
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <Grid item xs={12} md={7} lg={6}>
             <Typography
               component="h2"
               variant="h4"
-              sx={{ fontWeight: 900, mb: 1 }}
+              sx={{ fontWeight: 900, mb: 1, fontSize: { xs: "2rem", md: "2.4rem" } }}
             >
               Together, We Create Impact
             </Typography>
             <Typography
-              sx={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.8 }}
+              sx={{
+                color: "rgba(255,255,255,0.78)",
+                lineHeight: 1.8,
+                maxWidth: 760,
+              }}
             >
               Volunteer, donate, partner, or start a conversation with the
               Foundation. Every act of support helps extend education,
@@ -46,6 +55,7 @@ function FooterCta() {
             item
             xs={12}
             md={5}
+            lg={4}
             sx={{
               display: "flex",
               flexDirection: "column",
